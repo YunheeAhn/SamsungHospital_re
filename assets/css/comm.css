@@ -290,19 +290,4 @@ legend {
   font-size: 0;
   clear: both;
   content: "";
-}
-
-.depth1 {
-  background: aqua;
-  opacity: 90%;
-}
-
-.depth2 {
-  background: pink;
-  opacity: 90%;
-}
-
-.depth3 {
-  background: lightgreen;
-  opacity: 90%;
 }/*# sourceMappingURL=comm.css.map */
