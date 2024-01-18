@@ -232,55 +232,178 @@
         </header>
     </div>
 
-    <!-- 윤희님 메인 -->
+    <!-- 윤희님 메인 구역 -->
     <main id="main">
+        <!-- 메인 이너 시작 -->
         <div class="inner">
+            <!-- 이너 상단 페이지 타이틀 구역 시작 -->
             <div class="tit">
                 <div class="tit back-btn">
+
+                    <!-- before 이전 아이콘 -->
+                    <!-- a태그 텍스트 비하인드 -->
                     <a href="#">뒤로가기버튼</a>
                 </div>
+                <!-- 페이지 타이틀 -->
                 <div class="tit txt">
                     <p>예약하기</p>
                 </div>
             </div>
+            <!-- 이너 상단 페이지 타이틀 구역 끝 -->
 
+
+            <!-- 메인컨텐츠 시작 -->
             <div class="contets">
-
+                <!-- sec01 회원예약하기 시작 -->
                 <section id="sec01" class="member" style="color: blue;">
-                    <div class="member head-wrap">
-                        <!-- before user아이콘 -->
-                        <p class="rev">회원예약</p>
-                        <p class="rev desc">삼성서울병원 홈페이지 회원 서비스는 로그인 후 이용하실 수 있습니다.</p>
-                    </div>
-                    <div class="member idpw-wrap">
-                        <div class="idpw id">아이디인풋박스</div>
-                        <div class="idpw pw">비밀번호인풋박스</div>
-                        <div class="idpw login-btn">회원 예약하기</div>
-                    </div>
-                    <div class="member find-wrap">
-                        <div class="find idpw">아이디/비밀번호찾기</div>
-                        <div class="find join">회원가입</div>
-                    </div>
-                    <div class="member quick-wrap">
-                        <div class="quick naver">네이버 아이디로 로그인</div>
-                        <div class="quick kakaotalk">카카오톡 아이디로 로그인</div>
-                    </div>
-                    <div class="member tel-wrap">
-                        <p class="tel txt">대표전화|진료예약</p>
-                        <p class="tel number">1599 - 3114</p>
-                    </div>
-                </section>
+                    <!-- 회원예약하기 이너 구역 시작 -->
+                    <div class="member inner">
+                        <!-- 회원 예약 이너 타이틀 구역 시작 -->
+                        <div class="member head-wrap">
+                            <!-- before user아이콘 -->
+                            <p class="rev">회원예약</p>
+                            <p class="rev desc">삼성서울병원 홈페이지 회원 서비스는 로그인 후 이용하실 수 있습니다.</p>
+                        </div>
+                        <!-- 회원 예약 이너 타이틀 구역 끝 -->
 
-                <section id="sec02" class="N-member" style="color: red;">
-                    <div class="N-member head-wrap">
-                        <!-- before user아이콘 -->
-                        <p class="N-member rev">비회원예약</p>
+                        <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 시작 -->
+                        <div class="member idpw-wrap">
+                            <!-- 아이디 입력하기 -->
+                            <div class="idpw id">
+                                <label>
+                                    <input name="idlog" id="idlog" placeholder="아이디/진찰 번호(환자번호)" type="text" class="inputText">
+                                </label>
+                            </div>
+                            <!-- 비밀번호 입력하기 -->
+                            <div class="idpw pw">
+                                <label>
+                                    <input name="pwlog" id="pwlog" onkeydown="check()" placeholder="비밀번호" type="password" maxlength="13" class="inputText">
+                                </label>
+                            </div>
+                            <!-- 회원 예약하기 입력 버튼 -->
+                            <!-- 아이디, 비밀번호 입력 하면 버튼 활성화 -->
+                            <div class="idpw reserve-box">
+                                <button class="reserve-Btn" type="button" id="reserve-Btn">회원 예약하기</button>
+                            </div>
+                        </div>
+                        <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 끝 -->
+
+                        <!-- 찾기 구역 시작 -->
+                        <div class="member find-wrap">
+                            <!-- 아이디, 비밀번호 찾기 -->
+                            <div class="find idpw">
+                                <a class="idpwbtn" href="#" role="button">아이디/비밀번호찾기</a>
+                            </div>
+                            <!-- 회원가입 하기 -->
+                            <!-- find join ::before 구분 아이콘 삽입 -->
+                            <div class="find join">
+                                <a class="joinbtn" href="#">회원가입</a>
+                            </div>
+                        </div>
+                        <!-- 찾기 구역 끝 -->
+                        
+                        <!-- 빠른 로그인 구역 시작 -->
+                        <div class="member quick-wrap">
+                            <!-- 네이버로 로그인 -->
+                            <div class="quick naver">
+                                <a href="#" class="naverLog">네이버 아이디로 로그인</a>
+                            </div>
+                            <!-- 카카오톡으로 로그인 -->
+                            <div class="quick kakaotalk">
+                                <a href="#" class="kakakoLog">카카오톡 아이디로 로그인</a>
+                            </div>
+                        </div>
+                        <!-- 빠른 로그인 구역 끝 -->
+
+                        <!-- 대표전화 구역 시작 -->
+                        <div class="member tel-wrap">
+                            <p class="tel txt">대표전화|진료예약</p>
+                            <p class="tel number">1599 - 3114</p>
+                        </div>
+                        <!-- 대표전화 구역 끝 -->
                     </div>
+                    <!-- 회원예약하기 이너 구역 끝 -->
                 </section>
-            </div>
+                <!-- sec01 회원예약하기 끝 -->
+
+
+                <!-- sec02 비회원예약하기 시작 -->
+                <section id="sec02" class="N-member" style="color: red;">
+                    <!-- 비회원 예약 이너 전체 구역 시작 -->
+                    <div class="N-member inner">
+                        <!-- 비회원 예약 이너 타이틀 구역 시작 -->
+                        <div class="N-member head-wrap">
+                            <!-- before user아이콘 -->
+                            <p class="N-member rev">비회원예약</p>
+                        </div>
+                        <!-- 비회원 예약 이너 타이틀 구역 끝 -->
+                        
+                        <!-- 이름,핸드폰 입력 후 인증하기 구역 시작 -->
+                        <div class="N-member certification-wrap">
+                            <!-- 이름 입력하기 -->
+                            <div class="certification name">
+                                <label>
+                                    <input type="text" name="ptnm" id="ptnm" class="inputText" placeholder="이름">
+                                </label>
+                            </div>
+                            <!-- 핸드폰 번호 입력하기 -->
+                            <div class="certification phone">
+                                <div class="certification phone-num">
+                                    <label>
+                                        <input type="text" name="hpno" id="hpno" class="inputText" placeholder="휴대전화번호(010-0000-0000)" maxlength="13">
+                                    </label>
+                                    <!-- 이름/핸드폰 번호 입력 후 인증 버튼 활성화 -->
+                                    <button type="button" class="certification phone-certi" onclick="smsSend();">인증</button>
+                                </div>
+                            </div>
+                            <!-- 인증번호 입력하기 -->
+                            <div class="certification certi-num">
+                                <label>
+                                    <input type="text" id="certi-num" name="confirmNo" class="inputText" placeholder="인증번호입력하기">
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 이름,핸드폰 입력 후 인증하기 구역 끝 -->
+    
+                        <!-- 동의 스크롤박스 구역 시작 -->
+                        <div class="N-member scrollBox">
+                            <div class="scrollBox inner">
+                                <strong>※ 개인정보 수집 및 이용에 대한 안내</strong>
+                                <p>1. 수집/이용 목적 : 비회원 환자의 진료예약 신청, 확인 및 취소에 대한 이용 기록 보관.</p>
+                                <p>2. 수집하는 항목 : 이름, 환자등록번호(진찰권 번호), 휴대전화번호</p>
+                                <p> 3. 개인정보의 보유 및 이용 기간 : 2년</p>
+                                <p>4. 동의를 거부할 권리가 있으며, 대표전화(전화 : 1599-3114)로 이용하실 수 있습니다.</p>
+                                
+                            </div>
+                            <!-- 수집동의 체크하기 -->
+                            <div class="scrollBox usercheck">
+                                <label for="userchk" class="chkform">
+                                    <input type="checkbox" id="userchk" title="개인정보 이용 동의">
+                                </label>
+                                <!-- 텍스트 눌러도 체크 딤 -->
+                                <label for="userchk" class="txtform">
+                                    "환자 및 법적 대리인만 서비스 이용이 가능하며 개인정보 이용에 동의 합니다."
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 동의 스크롤박스 구역 끝 -->
+
+                        <!-- 수집동의까지 완료 되면 버튼 활성화 -->
+                        <div class="N-member rev">
+                            <button class="confirmBtn" type="button" id="confirmBtn">비회원 예약하기</button>
+                        </div>
+                    </div>
+                    <!-- 비회원 예약 이너 전체 구역 끝 -->
+                </section>
+                <!-- sec02 비회원 예약하기 끝 -->
             
+            </div>
+            <!-- 메인컨텐츠 끝 -->
         </div>
+        <!-- 메인 이너 끝 -->
     </main>
+    <!-- 윤희님 메인 구역 -->
+
 
     <!-- 안윤희 - 풋터 -->
     <div class="wrap">
