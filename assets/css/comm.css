@@ -290,4 +290,13 @@ legend {
   font-size: 0;
   clear: both;
   content: "";
+}
+
+#wrap {
+  max-width: 1280px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=comm.css.map */

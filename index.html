@@ -42,6 +42,10 @@
         rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" type="text/css" href="./assets/css/comm.css">
 
     <!-- 스와이퍼 -->
@@ -49,6 +53,7 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script defer type="text/javascript" src="./assets/js/comm.js"></script>
+    <script defer src="./assets/js/main.js"></script>
 </head>
 <body>
     <!-- 웹접근성 -->
@@ -59,6 +64,7 @@
     </div>
 
     <!-- 안윤희 - 헤더, GNB -->
+    <div id="wrap">
     <div class="wrap">
         <header id="header">
             <div class="inner">
@@ -236,6 +242,70 @@
 
     <!-- 가영님 메인 -->
     <main id="main">
+        <section class="main_banner">
+            <div class="swiper slide-intro">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="../images/main-banner1.jpg" alt="삼성서울병원건물">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../SamsungHospital_re/assets/images/mainPage_images/main_banner2.png" alt="삼성서울병원 의료진">
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+              
+            
+            <div class="servicebox_wrapper">
+                <div class="servicebox1">
+                    진료예약
+                    <p>
+                    빠르고 쉽게 진료예약을 하실 수<br>
+                    있습니다.
+                    </p>
+                    <a href="#">진료예약</a>
+                    <a href="#">첫방문예약</a>
+                </div>
+                <div class="servicebox2">
+                진료과/센터
+                    <p>
+                    병원의 진료과/센터를 상세히 확<br>
+                    인 할 수 있습니다.
+                    </p>
+                    <a href="#">본원</a>
+                    <a href="#">어린이병원</a>
+                    <a href="#">암병원</a>
+                </div>
+                <div class="servicebox3">
+                    제증명 발급서비스
+                    <p>
+                    로그인 하신 후 각종 제증명서류<br>
+                    를 받으실 수 있습니다.
+                    </p>
+                    <a href="#">온라인 신청</a>
+                </div>
+                <div class="servicebox4">
+                    로그인 비회원로그인
+                    <div>
+                        <label for="username">아이디</label>
+                        <input type="text" id="username" name="name" placeholder="아이디">
+                    </div>
+
+                    <div>
+                        <label for="password">비밀번호</label>
+                        <input type="text" id="password" name="password" placeholder="비밀번호">
+                    </div>
+                    <div>
+                        <a href="#">회원가입</a>
+                        <a href="#">아이디/비밀번호 찾기</a>
+                    </div>
+                    <button type="submit">로그인</button>
+                </div>
+    
+            </div>
+        </section>
 
     </main>
 
@@ -304,6 +374,7 @@
             </div>
         </footer>
     </div>
+ </div>
 
 
 </body>
