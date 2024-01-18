@@ -1,5 +1,5 @@
 // 가영님 자바스크립트
-const swiper = new Swiper('.slide-intro', {
+const introswiper = new Swiper('.slide-intro', {
 
     loop: true,
   
@@ -9,6 +9,26 @@ const swiper = new Swiper('.slide-intro', {
     },
   
     // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+
+  const noticeswiper = new Swiper('.slide-notice', {
+
+    loop: true,
+  
+    slidesPerView: 3,
+
+    spaceBetween: 30,
+   
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
