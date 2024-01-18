@@ -1,10 +1,88 @@
-@import 'variables','mixins', 'fonts', 'resets';
+@import "variables", "mixins", "fonts", "resets";
 
 // GNB
 
+//이현정 - main
+body {
+  //   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
+}
+
+.header-width {
+  height: 100px;
+  background: rgba($color: $Gray_C7, $alpha: 0.5);
+}
+
+#main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.healthcare-wrap {
+  display: flex;
+}
+
+// 사이드메뉴
+.sidemenubar {
+  //   background: rgba($color: lightblue, $alpha: 0.3);
+  background: $white;
+  width: 237px;
+  height: 3248px; //나중에 calc로 계산
+  padding-top: 147px;
+  border-left: 1px solid $Gray_C7;
+  border-right: 1px solid $Gray_C7;
+  .sec-tit {
+    color: $secondary_B5;
+    @include Bold-30;
+    padding-left: 104px;
+    padding-bottom: 22px;
+  }
+}
+.menu-box {
+  width: 237px;
+  height: 56px;
+  border: 0.8px solid $Gray_C7;
+  a {
+    @include Bold-20;
+    height: 100%;
+    padding-top: 15px;
+    padding-right: 34px;
+    // padding: 13px 34px 13px 0;
+    text-align: right;
+    display: block;
+  }
+}
+
+.menu-box-bg {
+  background: $primary;
+  a {
+    color: $white;
+  }
+}
+.menu-box-sub {
+  width: 237px;
+  height: 319px;
+  padding: 28px 0;
+  text-align: right;
+  background: $Gray_BW;
+  li {
+    height: 35px;
+  }
+  a {
+    height: 100%;
+    padding-right: 40px;
+    display: block;
+    @include SemiBold-16;
+  }
+}
+.bnr-container {
+  width: 198px;
+  height: 356px;
+  margin: 20px auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 // Footer
 
-
-
-@import 'main', 'healthCare', 'reservation';
+@import "main", "healthCare", "reservation";
