@@ -1,4 +1,5 @@
 // 가영님 메인페이지 scss
+// section1
 
 .slide-intro{
     width: 100%;
@@ -9,6 +10,27 @@
         height: 100%;
         object-fit: cover;
     }
+}
+section .servicebox_wrapper{
+ max-width: 1280px;
+    .servicebox{
+     width: 304px;
+     height: 300px;
+    }
+    .servicebox1{
+        background-color: $secondary_B4;
+    }
+    .servicebox2{
+        background-color: $secondary_B3;
+    }
+    .servicebox3{
+        background-color: $secondary_B2;
+    }
+    .servicebox4{
+        background-color: $white;
+        display: block;
+    }
+
 }
 .notice-wrapper{
 background: $primary;
@@ -21,3 +43,4 @@ height: 390px;
     height: 260px;
  }
 }
+

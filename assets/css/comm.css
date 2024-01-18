@@ -303,6 +303,27 @@ legend {
      object-fit: cover;
 }
 
+section .servicebox_wrapper {
+  max-width: 1280px;
+}
+section .servicebox_wrapper .servicebox {
+  width: 304px;
+  height: 300px;
+}
+section .servicebox_wrapper .servicebox1 {
+  background-color: #0054d1;
+}
+section .servicebox_wrapper .servicebox2 {
+  background-color: #007cfb;
+}
+section .servicebox_wrapper .servicebox3 {
+  background-color: #0094fb;
+}
+section .servicebox_wrapper .servicebox4 {
+  background-color: #fff;
+  display: block;
+}
+
 .notice-wrapper {
   background: #0B50A1;
   width: 100%;
