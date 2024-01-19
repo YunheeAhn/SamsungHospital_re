@@ -5,6 +5,35 @@
 // Footer
 
 @import "main", "healthCare", "reservation";
+#header {
+  width: 100%;
+
+  position: relative;
+
+  .inner {
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    height: $hd-height;
+
+    position: relative;
+
+    #logo {
+      @include posY;
+    }
+  }
+}
+#gnb {
+  .gnb-wrap {
+    margin: 0 auto;
+
+    @include posXY;
+  }
+
+  .gnb_search {
+    @include posXY; 
+  }
+}
 
 .depth1 {
   display: flex;
