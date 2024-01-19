@@ -19,3 +19,5 @@
 <안윤희>  
 1. html문서 언어 오류 수정(lang="en" -> lang="ko")
 2. 이미지 폴더 생성
+3. 회원예약 / 비회원 예약 sec(예약.html) html작성 완료
+4. 회원예약 / 비회원 예약 sec(input&button) 설정 완료
