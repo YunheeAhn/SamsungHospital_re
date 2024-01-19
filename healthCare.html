@@ -47,6 +47,7 @@
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
     />
+
     <!-- 구글아이콘 -->
     <!-- icons -->
     <link
@@ -66,7 +67,7 @@
       src="./assets/js/healthCare.js"
     ></script>
   </head>
-  <body>
+  <body class="healthCare-body">
     <!-- 웹접근성 -->
     <div id="u-skip">
       <!-- 웹접근성, 꼭 있어야 함 -->
@@ -79,7 +80,7 @@
     <!-- 이현정 - 건강정보페이지 메인 -->
 
     <div class="header-width">높이용 header</div>
-    <main id="main">
+    <main id="main-h">
       <div class="healthcare-wrap">
         <!-- 사이드메뉴바 -->
         <div class="sidemenubar">
@@ -102,7 +103,7 @@
           <div class="menu-box">
             <a href="#">나만의 건강코치</a>
           </div>
-          <div class="menu-box">
+          <div class="menu-box menu-box-btm">
             <a href="#">자가건강체크</a>
           </div>
 
@@ -118,37 +119,60 @@
         <div class="contents-wrap">
           <!-- 질환정보 -->
           <div class="sec-disease-tab">
-            <h3>질환정보</h3>
-            <div class="search-box">
-              <form action="">
-                <label for="search"></label>
-                <input
-                  type="text"
-                  id="search"
-                  name="search"
-                  value="질환명을 입력해주세요"
-                />
-              </form>
-            </div>
-            <div class="disease-tab">
-              <div class="tab-part">
-                <p>부위별</p>
-                <ul>
-                  <li><a href="#">전신부위</a></li>
-                  <li><a href="#">뇌/머리</a></li>
-                  <li><a href="#">정신/심리</a></li>
-                  <li><a href="#">얼굴/안면부위</a></li>
-                  <li><a href="#">목/갑상선</a></li>
-                  <li><a href="#">가슴/심장(폐) 등</a></li>
-                  <li><a href="#">복뷔/위장</a></li>
-                  <li><a href="#">생식/비뇨기</a></li>
-                  <li><a href="#">팔과 손</a></li>
-                  <li><a href="#">다리와 발</a></li>
-                  <li><a href="#">뼈/근육</a></li>
-                  <li><a href="#">피부</a></li>
-                </ul>
+            <div class="sec-tit-container">
+              <h3 class="sec-tit">질환정보</h3>
+              <div class="search-box">
+                <form action="">
+                  <label for="search"></label>
+                  <input
+                    type="text"
+                    id="search"
+                    class="search"
+                    name="search"
+                    value="질환명을 입력해주세요"
+                  />
+                </form>
               </div>
-              <div class="tab-category"></div>
+            </div>
+            <div class="disease-tab-container">
+              <div class="disease-tab tab-part">
+                <p>부위별</p>
+                <div class="tab-box">
+                  <ul>
+                    <li><a href="#">전신부위</a></li>
+                    <li><a href="#">뇌/머리</a></li>
+                    <li><a href="#">정신/심리</a></li>
+                    <li><a href="#">얼굴/안면부위</a></li>
+                    <li><a href="#">목/갑상선</a></li>
+                    <li><a href="#">가슴/심장(폐) 등</a></li>
+                    <li><a href="#">복뷔/위장</a></li>
+                    <li><a href="#">생식/비뇨기</a></li>
+                    <li><a href="#">팔과 손</a></li>
+                    <li><a href="#">다리와 발</a></li>
+                    <li><a href="#">뼈/근육</a></li>
+                    <li><a href="#">피부</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="disease-tab tab-category">
+                <p>질환별</p>
+                <div class="tab-box">
+                  <ul>
+                    <li><a href="#">감염성 질환</a></li>
+                    <li><a href="#">근골격계 질환</a></li>
+                    <li><a href="#">내분비/유방 질환</a></li>
+                    <li><a href="#">뇌/신경/정신질환</a></li>
+                    <li><a href="#">이빈후/치과 질환</a></li>
+                    <li><a href="#">소화기계 질환</a></li>
+                    <li><a href="#">신장/비뇨기계 질환</a></li>
+                    <li><a href="#">심혈관계 질환</a></li>
+                    <li><a href="#">소아/신생아 질환</a></li>
+                    <li><a href="#">호흡기계 질환</a></li>
+                    <li><a href="#">혈액/종양 질환</a></li>
+                    <li><a href="#">여성질환</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <!-- 많이찾는 질환정보 -->
