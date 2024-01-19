@@ -1,6 +1,9 @@
 // 가영님 메인페이지 scss
 // section1
-
+.sec-g{
+    
+    position: relative;
+}
 .slide-intro{
     width: 100%;
     height: 100%;
@@ -11,14 +14,40 @@
         object-fit: cover;
     }
 }
-section .servicebox_wrapper{
- max-width: 1280px;
+.servicebox_wrapper{
+    width: 100%;
+    max-width: 1280px;
+    position: absolute;
+    display: flex;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-130%);
+    z-index: 1;
+ 
     .servicebox{
-     width: 304px;
+     width: 25%;
      height: 300px;
+     margin-right: 18px;
+     border-radius: 10px;
+     color: $white;
+     a{
+        display: inline-block;
+        color: $white;
+        padding: 9.5px 18px;
+        border: 1px solid $white;
+        text-align: center;
+     }
     }
     .servicebox1{
         background-color: $secondary_B4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .service-text{
+            margin-bottom: 100px;
+            
+        }
     }
     .servicebox2{
         background-color: $secondary_B3;
@@ -29,6 +58,8 @@ section .servicebox_wrapper{
     .servicebox4{
         background-color: $white;
         display: block;
+        border-color:$Gray_C7;
+        // border: 1px;
     }
 
 }
