@@ -4,7 +4,7 @@
 
 // Footer
 
-@import "main", "healthCare", "reservation";
+
 #header {
   width: 100%;
 
@@ -18,25 +18,124 @@
 
     position: relative;
 
+
     #logo {
       @include posY;
+
+      display: block;
+
+      text-indent: -9999px;
+      a {
+
+        &::before {
+          content: '';
+          display: block;
+          width: 200px;
+          height: 80px;
+          background: url(../images/loginPage_images/logoImages.png) $bg-img;
+          background-size: 100%;
+          
+          @include posY
+        }
+      }
+      
     }
   }
 }
 #gnb {
   .gnb-wrap {
-    margin: 0 auto;
+    
+    width: 60%;
 
     @include posXY;
   }
 
   .gnb_search {
-    @include posXY; 
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform : translateY(-50%);
+
+    width: 250px;
+    height: 55px;
+    border-radius: 50px;
+    
+    background-color: $Gray_BW;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding-left: 8px;
+    padding-right: 28px;
+
+    .search_bar {
+      border: none;
+      background: none;
+
+      width: 147px;
+
+      @include Regular-16;
+    }
+    .search_btn {
+      background: none;
+      
+      text-indent: -9999px;
+
+
+      &::after {
+        content: '';
+          display: block;
+          width: 22px;
+          height: 22px;
+          background: url(../images/loginPage_images/search-interface-symbol.png) $bg-img;
+          background-size: 100%;
+
+          position: absolute;
+          top: 25%;
+      }
+    }
   }
 }
 
 .depth1 {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 780px;
+
+  
+  li {
+    width: 100%;
+    margin: 0 20px;
+    margin-left: 0;
+    height: $hd-height;
+
+    display: flex;
+    align-items: center;
+    @include Bold-20;
+
+    border: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid $primary; 
+    }
+
+    
+    ~ :last-of-type {
+      margin-right: 0;
+    }
+
+    a {
+      width: 100%;
+
+      text-align: center;
+
+      &:hover {
+        color: $primary;
+      }
+    };
+  }
 }
 
 .depth2,
@@ -48,6 +147,14 @@
 #footer {
   width: 100%;
   height: $ft-height;
+
+  .inner {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
 }
 
 @import "main", "healthCare", "reservation";
