@@ -38,5 +38,11 @@
 4. 건강정보페이지 - header & footer 삭제 (작업 후 추가할 예정)
 5. 건강정보페이지 - 사이드메뉴바 작업중...ing
 
+2024-01-19
 
+<이가영>
+1.section4 스와이퍼추가
+2.html 전부완료
+3.section1 css 일부추가
+4.section1 css 작업중...ing
 
