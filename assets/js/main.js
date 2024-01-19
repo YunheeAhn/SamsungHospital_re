@@ -3,12 +3,12 @@ const introswiper = new Swiper('.slide-intro', {
 
     loop: true,
   
-    // If we need pagination
+    
     pagination: {
       el: '.swiper-pagination',
     },
   
-    // Navigation arrows
+    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -16,11 +16,23 @@ const introswiper = new Swiper('.slide-intro', {
   
   });
 
-  const noticeswiper = new Swiper('.slide-notice', {
+  var noticeswiper = new Swiper(".slide-notice", {
+    slidesPerView: 4,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  const tvswiper = new Swiper('.slide-tv', {
 
     loop: true,
   
-    slidesPerView: 3,
+    slidesPerView: 2,
 
     spaceBetween: 30,
    
@@ -35,3 +47,4 @@ const introswiper = new Swiper('.slide-intro', {
     },
   
   });
+
