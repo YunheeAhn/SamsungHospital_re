@@ -10,16 +10,20 @@
   background: rgba($color: $Gray_C7, $alpha: 0.5);
 }
 
+
 .healthcare-wrap {
   display: flex;
   width: 1280px;
   margin: 0 auto;
 }
 
+
 //공통사항
 .sec-tit {
   @include Bold-30;
 }
+
+
 // 사이드메뉴
 .sidemenubar {
   //   background: rgba($color: lightblue, $alpha: 0.3);
