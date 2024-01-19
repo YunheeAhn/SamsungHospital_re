@@ -353,37 +353,6 @@ body {
   display: flex;
 }
 
-#header {
-  width: 100%;
-  position: relative;
-}
-#header .inner {
-  max-width: 1280px;
-  display: flex;
-  margin: 0 auto;
-  height: 100px;
-  position: relative;
-}
-#header .inner #logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#gnb .gnb-wrap {
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#gnb .gnb_search {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .sidemenubar {
   background: #fff;
   width: 237px;
@@ -451,6 +420,37 @@ body {
 .bnr-container img {
   width: 100%;
   height: auto;
+}
+
+#header {
+  width: 100%;
+  position: relative;
+}
+#header .inner {
+  max-width: 1280px;
+  display: flex;
+  margin: 0 auto;
+  height: 100px;
+  position: relative;
+}
+#header .inner #logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#gnb .gnb-wrap {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#gnb .gnb_search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .depth1 {
@@ -526,37 +526,6 @@ body {
 
 .healthcare-wrap {
   display: flex;
-}
-
-#header {
-  width: 100%;
-  position: relative;
-}
-#header .inner {
-  max-width: 1280px;
-  display: flex;
-  margin: 0 auto;
-  height: 100px;
-  position: relative;
-}
-#header .inner #logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#gnb .gnb-wrap {
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#gnb .gnb_search {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .sidemenubar {
