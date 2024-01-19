@@ -1,65 +1,253 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>회원예약 및 비회원 예약 | 삼성서울병원</title>
     <!-- 오픈그래프 -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="페이지 제목" />
     <meta property="og:description" content="페이지 설명" />
     <meta
-        property="og:image"
-        content="http://www.mysite.com/article/article1_featured_image.jpg"
+      property="og:image"
+      content="http://www.mysite.com/article/article1_featured_image.jpg"
     />
-    <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+    <meta
+      property="og:url"
+      content="http://www.mysite.com/article/article1.html"
+    />
     <!-- 트위터카드 -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="페이지 제목" />
     <meta name="twitter:description" content="페이지 설명" />
     <meta
-        name="twitter:image"
-        content="http://www.mysite.com/article/article1.html"
+      name="twitter:image"
+      content="http://www.mysite.com/article/article1.html"
     />
     <meta name="twitter:domain" content="사이트 명" />
     <!-- favicon -->
     <link rel="icon" href="./favicon.png" />
     <!-- reset-css CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
     <!-- 폰트 -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600;700;900&display=swap"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
     />
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- 라인어썸 -->
-    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" >
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+    />
     <!-- 구글아이콘 -->
     <!-- icons -->
     <link
-        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/comm.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/comm.css" />
 
     <!-- 스와이퍼 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script defer type="text/javascript" src="./assets/js/reservation.js"></script>
-</head>
-<body>
+    <script
+      defer
+      type="text/javascript"
+      src="./assets/js/reservation.js"
+    ></script>
+  </head>
+  <body>
     <!-- 웹접근성 -->
     <div id="u-skip">
-        <!-- 웹접근성, 꼭 있어야 함 -->
-        <a href="#gnb">주메뉴 바로가기</a>
-        <a href="#main">본문 바로가기</a>
+      <!-- 웹접근성, 꼭 있어야 함 -->
+      <a href="#gnb">주메뉴 바로가기</a>
+      <a href="#main">본문 바로가기</a>
     </div>
 
     <!-- 안윤희 - 헤더, GNB -->
     <div class="wrap">
+
+      <header id="header">
+        <div class="inner">
+          <div id="gnb">
+            <h1 id="logo">
+              <a href="#">삼성서울병원</a>
+            </h1>
+            <div class="gnb-wrap">
+              <ul class="depth1">
+                <li>
+                  <a href="#">예약/증명</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="#">예약하기</a>
+                      <ul class="depth3">
+                        <li><a href="#">회원/비회원 예약</a></li>
+                        <li><a href="#">건강검진 예약</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">진료예약 현황</a>
+                      <ul class="depth3">
+                        <li><a href="#">진료예약확인</a></li>
+                        <li><a href="#">검진예약확인</a></li>
+                        <li><a href="#">진료이력조회</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">온라인 발급 서비스</a>
+                      <ul class="depth3">
+                        <li><a href="#">증명서 발급</a></li>
+                        <li><a href="#">진단서 발급</a></li>
+                        <li><a href="#">의무기록 사본 발급</a></li>
+                        <li><a href="#">영상복사본 발급</a></li>
+                        <li><a href="#">서식다운로드</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">진료과/의료진</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="#">진료과 찾기</a>
+                    </li>
+                    <li>
+                      <a href="#">의료진 찾기</a>
+                    </li>
+                    <li>
+                      <a href="#">센터</a>
+                    </li>
+                    <li>
+                      <a href="#">클리닉</a>
+                      <ul class="depth3">
+                        <li><a href="#">성인</a></li>
+                        <li><a href="#">소아</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">이용안내</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="#">진료 안내</a>
+                      <ul class="depth3">
+                        <li><a href="#">외래진료 안내</a></li>
+                        <li><a href="#">응급진료 안내</a></li>
+                        <li><a href="#">입/퇴원 안내</a></li>
+                        <li><a href="#">약 수령 안내</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">병원생활 안내</a>
+                      <ul class="depth3">
+                        <li><a href="#">면회 안내</a></li>
+                        <li><a href="#">주요 전화 번호</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">병원시설 안내</a>
+                      <ul class="depth3">
+                        <li><a href="#">층별 시설</a></li>
+                        <li><a href="#">병원 전경</a></li>
+                        <li><a href="#">편의 시설</a></li>
+                        <li><a href="#">주차 안내</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">자주묻는 질문</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">건강정보</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="#">의료정보</a>
+                      <ul class="depth3">
+                        <li><a href="#">질환 정보</a></li>
+                        <li><a href="#">증상 백과</a></li>
+                        <li><a href="#">영양 정보</a></li>
+                        <li><a href="#">건강 TV</a></li>
+                        <li><a href="#">의약품 정보</a></li>
+                        <li><a href="#">검사/시술/수술 정보</a></li>
+                        <li><a href="#">알기쉬운 의학용어</a></li>
+                        <li><a href="#">건강 교실</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">나만의 건강코치</a>
+                      <ul class="depth3">
+                        <li><a href="#">인공지능 질병 위험도</a></li>
+                        <li><a href="#">메디컬 칼럼</a></li>
+                        <li><a href="#">건강 이야기</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">자가건강체크</a>
+                      <ul class="depth3">
+                        <li><a href="#">스트레스 정도 측정</a></li>
+                        <li><a href="#">심장질환 위험도</a></li>
+                        <li><a href="#">비만도 측정</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">병원소개</a>
+                  <ul class="depth2">
+                    <li>
+                      <a href="#">인사말</a>
+                      <ul class="depth3">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">역대 병원장</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">병원 개요</a>
+                      <ul class="depth3">
+                        <li><a href="#">미션$비전</a></li>
+                        <li><a href="#">현황</a></li>
+                        <li><a href="#">조직도</a></li>
+                        <li><a href="#">연혁</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">병원 소식</a>
+                      <ul class="depth3">
+                        <li><a href="#">소식/공지</a></li>
+                        <li><a href="#">소식 영상</a></li>
+                        <li><a href="#">언론 보도</a></li>
+                        <li><a href="#">건강 강좌</a></li>
+                        <li><a href="#">채용 공고</a></li>
+                        <li><a href="#">입찰 공고</a></li>
+                        <li><a href="#">학술 행사</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- 검색버튼 -->
+              <div class="gnb_search">
+                <input
+                  type="text"
+                  name=""
+                  value=""
+                  placeholder="검색어를 입력하세요."
+                />
+                <button type="button" onclick="">검색</button>
+              </div>
+
         <header id="header">
             <div class="inner">
                 <div id="gnb">
@@ -220,252 +408,320 @@
                                 </ul>
                             </li>
                         </ul>
-                        <!-- 검색버튼 -->
-                        <div class="gnb_search">
-                            <input type="text" name="" value="" placeholder="검색어를 입력하세요.">
-                            <button type="button" onclick="">검색</button>
-                        </div>
+                    </div>
+                    <!-- 검색버튼 -->
+                    <div class="gnb_search">
+                        <input class="search_bar" type="text" name="" value="" placeholder="검색어를 입력하세요.">
+                        <button class="search_btn" type="button" onclick="">검색</button>
                     </div>
                 </div>
                 
 
+
             </div>
-        </header>
+          </div>
+        </div>
+      </header>
     </div>
 
     <!-- 윤희님 메인 구역 -->
+
     <main id="main">
+      <!-- 메인 이너 시작 -->
+      <div class="inner">
+        <!-- 이너 상단 페이지 타이틀 구역 시작 -->
+        <div class="tit">
+          <div class="tit back-btn">
+            <!-- before 이전 아이콘 -->
+            <!-- a태그 텍스트 비하인드 -->
+            <a href="#">뒤로가기버튼</a>
+          </div>
+          <!-- 페이지 타이틀 -->
+          <div class="tit txt">
+            <p>예약하기</p>
+          </div>
+        </div>
+        <!-- 이너 상단 페이지 타이틀 구역 끝 -->
+
+    <main id="main_r">
         <!-- 메인 이너 시작 -->
         <div class="inner">
             <!-- 이너 상단 페이지 타이틀 구역 시작 -->
             <div class="tit">
                 <div class="tit back-btn">
 
-                    <!-- before 이전 아이콘 -->
-                    <!-- a태그 텍스트 비하인드 -->
-                    <a href="#">뒤로가기버튼</a>
+
+        <!-- 메인컨텐츠 시작 -->
+        <div class="contets">
+          <!-- sec01 회원예약하기 시작 -->
+          <section id="sec01" class="member" style="color: blue">
+            <!-- 회원예약하기 이너 구역 시작 -->
+            <div class="member inner">
+              <!-- 회원 예약 이너 타이틀 구역 시작 -->
+              <div class="member head-wrap">
+                <!-- before user아이콘 -->
+                <p class="rev">회원예약</p>
+                <p class="rev desc">
+                  삼성서울병원 홈페이지 회원 서비스는 로그인 후 이용하실 수
+                  있습니다.
+                </p>
+              </div>
+              <!-- 회원 예약 이너 타이틀 구역 끝 -->
+
+              <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 시작 -->
+              <div class="member idpw-wrap">
+                <!-- 아이디 입력하기 -->
+                <div class="idpw id">
+                  <label>
+                    <input
+                      name="idlog"
+                      id="idlog"
+                      placeholder="아이디/진찰 번호(환자번호)"
+                      type="text"
+                      class="inputText"
+                    />
+                  </label>
                 </div>
-                <!-- 페이지 타이틀 -->
-                <div class="tit txt">
-                    <p>예약하기</p>
+                <!-- 비밀번호 입력하기 -->
+                <div class="idpw pw">
+                  <label>
+                    <input
+                      name="pwlog"
+                      id="pwlog"
+                      onkeydown="check()"
+                      placeholder="비밀번호"
+                      type="password"
+                      maxlength="13"
+                      class="inputText"
+                    />
+                  </label>
                 </div>
+                <!-- 회원 예약하기 입력 버튼 -->
+                <!-- 아이디, 비밀번호 입력 하면 버튼 활성화 -->
+                <div class="idpw reserve-box">
+                  <button class="reserve-Btn" type="button" id="reserve-Btn">
+                    회원 예약하기
+                  </button>
+                </div>
+              </div>
+              <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 끝 -->
+
+              <!-- 찾기 구역 시작 -->
+              <div class="member find-wrap">
+                <!-- 아이디, 비밀번호 찾기 -->
+                <div class="find idpw">
+                  <a class="idpwbtn" href="#" role="button"
+                    >아이디/비밀번호찾기</a
+                  >
+                </div>
+                <!-- 회원가입 하기 -->
+                <!-- find join ::before 구분 아이콘 삽입 -->
+                <div class="find join">
+                  <a class="joinbtn" href="#">회원가입</a>
+                </div>
+              </div>
+              <!-- 찾기 구역 끝 -->
+
+              <!-- 빠른 로그인 구역 시작 -->
+              <div class="member quick-wrap">
+                <!-- 네이버로 로그인 -->
+                <div class="quick naver">
+                  <a href="#" class="naverLog">네이버 아이디로 로그인</a>
+                </div>
+                <!-- 카카오톡으로 로그인 -->
+                <div class="quick kakaotalk">
+                  <a href="#" class="kakakoLog">카카오톡 아이디로 로그인</a>
+                </div>
+              </div>
+              <!-- 빠른 로그인 구역 끝 -->
+
+              <!-- 대표전화 구역 시작 -->
+              <div class="member tel-wrap">
+                <p class="tel txt">대표전화|진료예약</p>
+                <p class="tel number">1599 - 3114</p>
+              </div>
+              <!-- 대표전화 구역 끝 -->
             </div>
-            <!-- 이너 상단 페이지 타이틀 구역 끝 -->
+            <!-- 회원예약하기 이너 구역 끝 -->
+          </section>
+          <!-- sec01 회원예약하기 끝 -->
 
+          <!-- sec02 비회원예약하기 시작 -->
+          <section id="sec02" class="N-member" style="color: red">
+            <!-- 비회원 예약 이너 전체 구역 시작 -->
+            <div class="N-member inner">
+              <!-- 비회원 예약 이너 타이틀 구역 시작 -->
+              <div class="N-member head-wrap">
+                <!-- before user아이콘 -->
+                <p class="N-member rev">비회원예약</p>
+              </div>
+              <!-- 비회원 예약 이너 타이틀 구역 끝 -->
 
-            <!-- 메인컨텐츠 시작 -->
-            <div class="contets">
-                <!-- sec01 회원예약하기 시작 -->
-                <section id="sec01" class="member" style="color: blue;">
-                    <!-- 회원예약하기 이너 구역 시작 -->
-                    <div class="member inner">
-                        <!-- 회원 예약 이너 타이틀 구역 시작 -->
-                        <div class="member head-wrap">
-                            <!-- before user아이콘 -->
-                            <p class="rev">회원예약</p>
-                            <p class="rev desc">삼성서울병원 홈페이지 회원 서비스는 로그인 후 이용하실 수 있습니다.</p>
-                        </div>
-                        <!-- 회원 예약 이너 타이틀 구역 끝 -->
+              <!-- 이름,핸드폰 입력 후 인증하기 구역 시작 -->
+              <div class="N-member certification-wrap">
+                <!-- 이름 입력하기 -->
+                <div class="certification name">
+                  <label>
+                    <input
+                      type="text"
+                      name="ptnm"
+                      id="ptnm"
+                      class="inputText"
+                      placeholder="이름"
+                    />
+                  </label>
+                </div>
+                <!-- 핸드폰 번호 입력하기 -->
+                <div class="certification phone">
+                  <div class="certification phone-num">
+                    <label>
+                      <input
+                        type="text"
+                        name="hpno"
+                        id="hpno"
+                        class="inputText"
+                        placeholder="휴대전화번호(010-0000-0000)"
+                        maxlength="13"
+                      />
+                    </label>
+                    <!-- 이름/핸드폰 번호 입력 후 인증 버튼 활성화 -->
+                    <button
+                      type="button"
+                      class="certification phone-certi"
+                      onclick="smsSend();"
+                    >
+                      인증
+                    </button>
+                  </div>
+                </div>
+                <!-- 인증번호 입력하기 -->
+                <div class="certification certi-num">
+                  <label>
+                    <input
+                      type="text"
+                      id="certi-num"
+                      name="confirmNo"
+                      class="inputText"
+                      placeholder="인증번호입력하기"
+                    />
+                  </label>
+                </div>
+              </div>
+              <!-- 이름,핸드폰 입력 후 인증하기 구역 끝 -->
 
-                        <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 시작 -->
-                        <div class="member idpw-wrap">
-                            <!-- 아이디 입력하기 -->
-                            <div class="idpw id">
-                                <label>
-                                    <input name="idlog" id="idlog" placeholder="아이디/진찰 번호(환자번호)" type="text" class="inputText">
-                                </label>
-                            </div>
-                            <!-- 비밀번호 입력하기 -->
-                            <div class="idpw pw">
-                                <label>
-                                    <input name="pwlog" id="pwlog" onkeydown="check()" placeholder="비밀번호" type="password" maxlength="13" class="inputText">
-                                </label>
-                            </div>
-                            <!-- 회원 예약하기 입력 버튼 -->
-                            <!-- 아이디, 비밀번호 입력 하면 버튼 활성화 -->
-                            <div class="idpw reserve-box">
-                                <button class="reserve-Btn" type="button" id="reserve-Btn">회원 예약하기</button>
-                            </div>
-                        </div>
-                        <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 끝 -->
+              <!-- 동의 스크롤박스 구역 시작 -->
+              <div class="N-member scrollBox">
+                <div class="scrollBox inner">
+                  <strong>※ 개인정보 수집 및 이용에 대한 안내</strong>
+                  <p>
+                    1. 수집/이용 목적 : 비회원 환자의 진료예약 신청, 확인 및
+                    취소에 대한 이용 기록 보관.
+                  </p>
+                  <p>
+                    2. 수집하는 항목 : 이름, 환자등록번호(진찰권 번호),
+                    휴대전화번호
+                  </p>
+                  <p>3. 개인정보의 보유 및 이용 기간 : 2년</p>
+                  <p>
+                    4. 동의를 거부할 권리가 있으며, 대표전화(전화 : 1599-3114)로
+                    이용하실 수 있습니다.
+                  </p>
+                </div>
+                <!-- 수집동의 체크하기 -->
+                <div class="scrollBox usercheck">
+                  <label for="userchk" class="chkform">
+                    <input
+                      type="checkbox"
+                      id="userchk"
+                      title="개인정보 이용 동의"
+                    />
+                  </label>
+                  <!-- 텍스트 눌러도 체크 딤 -->
+                  <label for="userchk" class="txtform">
+                    "환자 및 법적 대리인만 서비스 이용이 가능하며 개인정보
+                    이용에 동의 합니다."
+                  </label>
+                </div>
+              </div>
+              <!-- 동의 스크롤박스 구역 끝 -->
 
-                        <!-- 찾기 구역 시작 -->
-                        <div class="member find-wrap">
-                            <!-- 아이디, 비밀번호 찾기 -->
-                            <div class="find idpw">
-                                <a class="idpwbtn" href="#" role="button">아이디/비밀번호찾기</a>
-                            </div>
-                            <!-- 회원가입 하기 -->
-                            <!-- find join ::before 구분 아이콘 삽입 -->
-                            <div class="find join">
-                                <a class="joinbtn" href="#">회원가입</a>
-                            </div>
-                        </div>
-                        <!-- 찾기 구역 끝 -->
-                        
-                        <!-- 빠른 로그인 구역 시작 -->
-                        <div class="member quick-wrap">
-                            <!-- 네이버로 로그인 -->
-                            <div class="quick naver">
-                                <a href="#" class="naverLog">네이버 아이디로 로그인</a>
-                            </div>
-                            <!-- 카카오톡으로 로그인 -->
-                            <div class="quick kakaotalk">
-                                <a href="#" class="kakakoLog">카카오톡 아이디로 로그인</a>
-                            </div>
-                        </div>
-                        <!-- 빠른 로그인 구역 끝 -->
-
-                        <!-- 대표전화 구역 시작 -->
-                        <div class="member tel-wrap">
-                            <p class="tel txt">대표전화|진료예약</p>
-                            <p class="tel number">1599 - 3114</p>
-                        </div>
-                        <!-- 대표전화 구역 끝 -->
-                    </div>
-                    <!-- 회원예약하기 이너 구역 끝 -->
-                </section>
-                <!-- sec01 회원예약하기 끝 -->
-
-
-                <!-- sec02 비회원예약하기 시작 -->
-                <section id="sec02" class="N-member" style="color: red;">
-                    <!-- 비회원 예약 이너 전체 구역 시작 -->
-                    <div class="N-member inner">
-                        <!-- 비회원 예약 이너 타이틀 구역 시작 -->
-                        <div class="N-member head-wrap">
-                            <!-- before user아이콘 -->
-                            <p class="N-member rev">비회원예약</p>
-                        </div>
-                        <!-- 비회원 예약 이너 타이틀 구역 끝 -->
-                        
-                        <!-- 이름,핸드폰 입력 후 인증하기 구역 시작 -->
-                        <div class="N-member certification-wrap">
-                            <!-- 이름 입력하기 -->
-                            <div class="certification name">
-                                <label>
-                                    <input type="text" name="ptnm" id="ptnm" class="inputText" placeholder="이름">
-                                </label>
-                            </div>
-                            <!-- 핸드폰 번호 입력하기 -->
-                            <div class="certification phone">
-                                <div class="certification phone-num">
-                                    <label>
-                                        <input type="text" name="hpno" id="hpno" class="inputText" placeholder="휴대전화번호(010-0000-0000)" maxlength="13">
-                                    </label>
-                                    <!-- 이름/핸드폰 번호 입력 후 인증 버튼 활성화 -->
-                                    <button type="button" class="certification phone-certi" onclick="smsSend();">인증</button>
-                                </div>
-                            </div>
-                            <!-- 인증번호 입력하기 -->
-                            <div class="certification certi-num">
-                                <label>
-                                    <input type="text" id="certi-num" name="confirmNo" class="inputText" placeholder="인증번호입력하기">
-                                </label>
-                            </div>
-                        </div>
-                        <!-- 이름,핸드폰 입력 후 인증하기 구역 끝 -->
-    
-                        <!-- 동의 스크롤박스 구역 시작 -->
-                        <div class="N-member scrollBox">
-                            <div class="scrollBox inner">
-                                <strong>※ 개인정보 수집 및 이용에 대한 안내</strong>
-                                <p>1. 수집/이용 목적 : 비회원 환자의 진료예약 신청, 확인 및 취소에 대한 이용 기록 보관.</p>
-                                <p>2. 수집하는 항목 : 이름, 환자등록번호(진찰권 번호), 휴대전화번호</p>
-                                <p> 3. 개인정보의 보유 및 이용 기간 : 2년</p>
-                                <p>4. 동의를 거부할 권리가 있으며, 대표전화(전화 : 1599-3114)로 이용하실 수 있습니다.</p>
-                                
-                            </div>
-                            <!-- 수집동의 체크하기 -->
-                            <div class="scrollBox usercheck">
-                                <label for="userchk" class="chkform">
-                                    <input type="checkbox" id="userchk" title="개인정보 이용 동의">
-                                </label>
-                                <!-- 텍스트 눌러도 체크 딤 -->
-                                <label for="userchk" class="txtform">
-                                    "환자 및 법적 대리인만 서비스 이용이 가능하며 개인정보 이용에 동의 합니다."
-                                </label>
-                            </div>
-                        </div>
-                        <!-- 동의 스크롤박스 구역 끝 -->
-
-                        <!-- 수집동의까지 완료 되면 버튼 활성화 -->
-                        <div class="N-member rev">
-                            <button class="confirmBtn" type="button" id="confirmBtn">비회원 예약하기</button>
-                        </div>
-                    </div>
-                    <!-- 비회원 예약 이너 전체 구역 끝 -->
-                </section>
-                <!-- sec02 비회원 예약하기 끝 -->
-            
+              <!-- 수집동의까지 완료 되면 버튼 활성화 -->
+              <div class="N-member rev">
+                <button class="confirmBtn" type="button" id="confirmBtn">
+                  비회원 예약하기
+                </button>
+              </div>
             </div>
-            <!-- 메인컨텐츠 끝 -->
+            <!-- 비회원 예약 이너 전체 구역 끝 -->
+          </section>
+          <!-- sec02 비회원 예약하기 끝 -->
         </div>
-        <!-- 메인 이너 끝 -->
+        <!-- 메인컨텐츠 끝 -->
+      </div>
+      <!-- 메인 이너 끝 -->
     </main>
     <!-- 윤희님 메인 구역 -->
 
-
     <!-- 안윤희 - 풋터 -->
     <div class="wrap">
-        <footer id="footer">
-            <div class="inner">
-                <div class="footer-nav">
-                    <ul>
-                        <li>
-                            <a href="#">삼성서울병원</a>
-                        </li>
-                        <li>
-                            <a href="#">건강의학센터</a>
-                        </li>
-                        <li>
-                            <a href="#">심장뇌혈관병원</a>
-                        </li>
-                        <li>
-                            <a href="#">암병원</a>
-                        </li>
-                        <li>
-                            <a href="#">미래의학연구원</a>
-                        </li>
-                        <li>
-                            <a href="#">양성자치료센터</a>
-                        </li>
-                        <li>
-                            <a href="#">인재채용</a>
-                        </li>
-                        <li>
-                            <a href="#">장례식장</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="sns">
-                    <ul>
-                        <li>
-                            <!-- before 트위터 아이콘 -->
-                            <a href="#">트위터</a>
-                        </li>
-                        <li>
-                            <!-- before 트위터 아이콘 -->
-                            <a href="#">페이스북</a>
-                        </li>
-                        <li>
-                            <!-- before 트위터 아이콘 -->
-                            <a href="#">유튜브</a>
-                        </li>
-                    </ul>
-                </div>
+      <footer id="footer">
+        <div class="inner">
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a href="#">삼성서울병원</a>
+              </li>
+              <li>
+                <a href="#">건강의학센터</a>
+              </li>
+              <li>
+                <a href="#">심장뇌혈관병원</a>
+              </li>
+              <li>
+                <a href="#">암병원</a>
+              </li>
+              <li>
+                <a href="#">미래의학연구원</a>
+              </li>
+              <li>
+                <a href="#">양성자치료센터</a>
+              </li>
+              <li>
+                <a href="#">인재채용</a>
+              </li>
+              <li>
+                <a href="#">장례식장</a>
+              </li>
+            </ul>
+          </div>
 
-                <div class="copyright">
-                    <p>서울 특별시 강남구 일원로 B1 (06351)</p>
-                    <p>대표전화 : 1599 - 3114</p>
-                    <p>사업자 등록번호 : 213-82-05096 박승우</p>
-                    <p>COPYRIGHT@1996-2015 BY SAMSUNGMEDICAL CENTER ALL RIGHT RESERVED.</p>
-                </div>
+          <div class="sns">
+            <ul>
+              <li>
+                <!-- before 트위터 아이콘 -->
+                <a href="#">트위터</a>
+              </li>
+              <li>
+                <!-- before 트위터 아이콘 -->
+                <a href="#">페이스북</a>
+              </li>
+              <li>
+                <!-- before 트위터 아이콘 -->
+                <a href="#">유튜브</a>
+              </li>
+            </ul>
+          </div>
 
-            </div>
-        </footer>
+          <div class="copyright">
+            <p>서울 특별시 강남구 일원로 B1 (06351)</p>
+            <p>대표전화 : 1599 - 3114</p>
+            <p>사업자 등록번호 : 213-82-05096 박승우</p>
+            <p>
+              COPYRIGHT@1996-2015 BY SAMSUNGMEDICAL CENTER ALL RIGHT RESERVED.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
-    
-</body>
+  </body>
 </html>

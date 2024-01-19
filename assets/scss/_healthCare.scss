@@ -1,52 +1,31 @@
 // 현정님 건강정보 페이지 scss
 
 //이현정 - main
-// body {
-//   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
-// }
+
+.healthCare-body {
+  background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
+}
+
 
 .header-width {
   height: 100px;
   background: rgba($color: $Gray_C7, $alpha: 0.5);
 }
 
-#main_h {
-  max-width: 1280px;
-  margin: 0 auto;
-}
+
+
 .healthcare-wrap {
   display: flex;
+  width: 1280px;
+  margin: 0 auto;
 }
 
-#header {
-  width: 100%;
 
-  position: relative;
-
-  .inner {
-    max-width: 1280px;
-    display: flex;
-    margin: 0 auto;
-    height: $hd-height;
-
-    position: relative;
-
-    #logo {
-      @include posY;
-    }
-  }
+//공통사항
+.sec-tit {
+  @include Bold-30;
 }
-#gnb {
-  .gnb-wrap {
-    margin: 0 auto;
 
-    @include posXY;
-  }
-
-  .gnb_search {
-    @include posXY;
-  }
-}
 
 // 사이드메뉴
 .sidemenubar {
@@ -59,7 +38,6 @@
   border-right: 1px solid $Gray_C7;
   .sec-tit {
     color: $secondary_B5;
-    @include Bold-30;
     padding-left: 104px;
     padding-bottom: 22px;
   }
@@ -67,16 +45,18 @@
 .menu-box {
   width: 237px;
   height: 56px;
-  border: 0.8px solid $Gray_C7;
+  border-top: 1.5px solid $Gray_C7;
+
   a {
     @include Bold-20;
-    height: 100%;
-    padding-top: 15px;
-    padding-right: 34px;
-    // padding: 13px 34px 13px 0;
+    padding: 15px 34px 15px 0;
     text-align: right;
     display: block;
   }
+}
+
+.menu-box-btm {
+  border-bottom: 1.5px solid $Gray_C7;
 }
 
 .menu-box-bg {
@@ -86,7 +66,7 @@
   }
 }
 .menu-box-sub {
-  width: 237px;
+  width: 235px;
   height: 319px;
   padding: 28px 0;
   text-align: right;
@@ -96,7 +76,7 @@
   }
   a {
     height: 100%;
-    padding-right: 40px;
+    padding-right: 36px;
     display: block;
     @include SemiBold-16;
   }
@@ -109,4 +89,110 @@
     width: 100%;
     height: auto;
   }
+}
+
+// 건강정보 내용
+
+.contents-wrap {
+  width: 1043px;
+  margin-left: 77px;
+}
+
+// 질환정보
+.sec-disease-tab {
+  margin-top: 203px;
+  width: 955px;
+  height: 395px;
+  background: rgba($color: lightblue, $alpha: 0.3);
+  .sec-tit {
+    padding: 7px 0;
+  }
+}
+
+.sec-tit-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-box {
+  margin-top: 12px;
+  .search {
+    width: 235px;
+    height: 40px;
+    background: $Gray_BW;
+    border: 2px solid rgba($primary, 0.1);
+    border-radius: 10px;
+    color: $Gray_C7;
+    @include Regular-13;
+    padding-left: 14px;
+    &:focus {
+      outline: none;
+      border: 2px solid rgba($primary, 0.7);
+    }
+    &::before {
+      content: "\f002";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+    }
+  }
+}
+
+.disease-tab-container {
+  display: flex;
+}
+
+.disease-tab {
+  margin-top: 25px;
+  p {
+    border: 0.8px solid $Gray-C7;
+    border-radius: 4px;
+    padding: 15px 0;
+    width: 480px;
+    height: 45px;
+    text-align: center;
+    display: block;
+    @include Bold-16;
+    color: $Gray_88;
+  }
+}
+
+.tab-part {
+  p {
+    background: $primary;
+    color: $white;
+    border: none;
+  }
+  .tab-box {
+    background: $primary;
+    margin-top: -4px;
+    width: 955px;
+    height: 274px;
+    border-radius: 4px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 37px;
+    padding-left: 29px;
+  }
+  li {
+    width: 207px;
+    height: 53px;
+    background: $white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    a {
+      display: block;
+      padding: 14px 0;
+      @include SemiBold-18;
+      color: $Gray_55;
+    }
+  }
+}
+
+.tab-category {
+  display: none;
 }
