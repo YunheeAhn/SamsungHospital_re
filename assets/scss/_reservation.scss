@@ -1,1 +1,27 @@
 // 윤희님 예약 페이지 scss
+
+
+.contents {
+    max-width: 1280px;
+}
+
+#sec01,
+#sec02 {
+    width: 50%;
+    height: 800px;
+
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    background-color: $Gray_BW;
+
+}
+
+.rev {
+    @include SemiBold-30;
+    text-align: center;
+}
+.desc {
+    @include Regular-16;
+    color: $Gray_55;
+}
