@@ -3,10 +3,6 @@
 
 // GNB
 
-// Footer
-
-
-
 #header {
   width: 100%;
 
@@ -99,8 +95,6 @@
   }
 }
 
-
-
 .depth1 {
   display: flex;
   justify-content: space-between;
@@ -117,7 +111,7 @@
 
     display: flex;
     align-items: center;
-    @include Bold-20;
+    
 
     border: 3px solid transparent;
 
@@ -125,7 +119,6 @@
       border-bottom: 3px solid $primary; 
     }
 
-    
     ~ :last-of-type {
       margin-right: 0;
     }
@@ -135,8 +128,11 @@
 
       text-align: center;
 
+      @include Bold-20;
+
       &:hover {
         color: $primary;
+        @include Bold-20;
       }
     };
   }
@@ -148,9 +144,27 @@
 }
 
 // Footer
+.sns-depth {
+
+  li {
+    display: inline;
+    margin-right: 15px;
+  }
+
+}
+
+.ft-wrap {
+  background: $secondary_B5;
+  color: $white;
+
+}
 #footer {
   width: 100%;
   height: $ft-height;
+  color: $white;
+
+  padding-top: 32px;
+
 
   .inner {
     max-width: 1280px;
@@ -158,7 +172,30 @@
     flex-direction: column;
 
     margin: 0 auto;
+
+    .footer-nav {
+      ul {
+        display: flex;
+        color: $white;
+        
+        @include SemiBold-18;
+
+        padding-bottom: 24px;
+
+        border-bottom: 1px solid $white;
+
+        li  {
+          a {
+            color: $white;
+
+            margin-right: 23px;
+          }
+
+        }
+      }
+    }
+   
   }
 }
 
-@import "main", "healthCare", "reservation";
+@import "_main", "_healthCare", "_reservation";
