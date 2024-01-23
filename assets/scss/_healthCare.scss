@@ -350,3 +350,23 @@
     height: 100%;
   }
 }
+
+//나만의 건강코치
+
+.sec-coach {
+  width: 965px;
+  height: 455px;
+  background: rgba($color: lightblue, $alpha: 0.5);
+  margin-top: 51px;
+}
+
+.coach-bnr-box {
+  width: 295px;
+  height: 386px;
+  margin-top: 30px;
+  a,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
