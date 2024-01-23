@@ -2,9 +2,9 @@
 
 //이현정 - main
 
-.healthCare-body {
-  background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
-}
+// .healthCare-body {
+//   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
+// }
 
 .header-width {
   height: 100px;
@@ -206,7 +206,7 @@
   background: rgba($color: lightcoral, $alpha: 0.5);
   width: 965px;
   height: 638px;
-  margin-top: 43px;
+  margin-top: $subhc-margin-top;
 }
 .sub-tit {
   h3 {
@@ -256,7 +256,7 @@
 .sec-search {
   width: 965px;
   height: 280px;
-  margin-top: 55px;
+  margin-top: $subhc-margin-top;
   background: rgba($color: lightblue, $alpha: 0.5);
 }
 .search-box-container {
@@ -298,9 +298,9 @@
 
 .sec-nutritions {
   width: 967px;
-  height: 480px;
+  height: 440px;
   background: rgba($color: lightblue, $alpha: 0.5);
-  margin-top: 68px;
+  margin-top: $subhc-margin-top;
   .sec-tit-container {
     display: flex;
     align-items: flex-end;
@@ -333,9 +333,9 @@
 
 // 건강TV
 .sec-healthtv {
-  margin-top: 65px;
+  margin-top: $subhc-margin-top;
   width: 967px;
-  height: 400px;
+  height: 370px;
   background: rgba($color: lightcoral, $alpha: 0.5);
   .sec-tit {
     padding-bottom: 30px;
@@ -357,7 +357,7 @@
   width: 965px;
   height: 455px;
   background: rgba($color: lightblue, $alpha: 0.5);
-  margin-top: 51px;
+  margin-top: $subhc-margin-top;
 }
 
 .coach-bnr-box {

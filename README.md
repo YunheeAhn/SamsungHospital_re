@@ -73,3 +73,4 @@
 <이현정>
 
 1. 질환정보 tab 작업
+2. 변수 추가 : $subhc-margin-top: 60px
