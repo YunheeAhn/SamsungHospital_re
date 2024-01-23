@@ -182,7 +182,9 @@
           </div>
           <!-- 많이찾는 질환정보 -->
           <div class="sec-disease">
-            <h3>많이 찾는 질환정보</h3>
+            <div class="sub-tit">
+              <h3>많이 찾는 질환정보</h3>
+            </div>
             <div class="disease-card-container">
               <div class="disease-card">
                 <div class="img-box">
@@ -262,64 +264,43 @@
                       alt="고혈압"
                   /></a>
                 </div>
-                <span>고혈압(Hypertension) </span>
+                <span>고혈압(Hypertension)</span>
               </div>
             </div>
           </div>
           <!-- 의약품정보 검색 -->
           <div class="sec-search">
-            <h3>의약품정보 검색</h3>
+            <h3 class="sec-tit">의약품정보 검색</h3>
             <div class="search-box-container">
-              <span>의약품 이름</span>
-              <form action="">
+              <span class="sub-tit">의약품 이름</span>
+              <form action="text">
                 <label for="search"></label>
                 <input
                   type="text"
                   id="search"
+                  class="search-box"
                   value="의약품 이름을 입력해 주세요"
                 />
               </form>
-              <span>검색</span>
+              <span class="search-btn">검색</span>
             </div>
           </div>
           <!-- 영양정보 -->
           <div class="sec-nutritions">
-            <h3>영양정보</h3>
-            <span><a href="#">더 보기</a></span>
+            <div class="sec-tit-container">
+              <h3 class="sec-tit">영양정보</h3>
+              <span class="more-tit"><a href="#">더 보기</a></span>
+            </div>
             <div class="nutritions-card">
-              <div class="nutritions-img-box">
+              <div class="img-box">
                 <a href="#"
                   ><img
                     src="./assets/images/healthCarePage_images/nutrition/nutrition_1.png"
                     alt="당근"
                 /></a>
               </div>
-              <span>[컬러풀 식품] 심장을 지키는 파수꾼, 당근</span>
-              <span>2024.01.23</span>
-            </div>
-            <div class="nutritions-card">
-              <div class="nutritions-img-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/nutrition/nutrition_2.png"
-                    alt="두부견과쉐이크"
-                /></a>
-              </div>
-              <span
-                >[알고싶은 요리레시피] 영양듬뿍~ 건강음료! 두부견과쉐이크</span
-              >
-              <span>2024.01.12</span>
-            </div>
-            <div class="nutritions-card">
-              <div class="nutritions-img-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/nutrition/nutrition_3.png"
-                    alt="우유"
-                /></a>
-              </div>
-              <span>[궁금한 식품이야기] 우유와 건강이야기</span>
-              <span>2023.12.19</span>
+              <span class="tit">[컬러풀 식품] 심장을 지키는 파수꾼, 당근</span>
+              <span class="date">2024.01.23</span>
             </div>
           </div>
           <!-- 건강TV -->
