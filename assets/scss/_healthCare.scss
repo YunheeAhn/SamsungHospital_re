@@ -6,13 +6,10 @@
   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
 }
 
-
 .header-width {
   height: 100px;
   background: rgba($color: $Gray_C7, $alpha: 0.5);
 }
-
-
 
 .healthcare-wrap {
   display: flex;
@@ -20,12 +17,10 @@
   margin: 0 auto;
 }
 
-
 //공통사항
 .sec-tit {
   @include Bold-30;
 }
-
 
 // 사이드메뉴
 .sidemenubar {
@@ -98,7 +93,8 @@
   margin-left: 77px;
 }
 
-// 질환정보
+// 질환정보 - 제목과 검색창
+
 .sec-disease-tab {
   margin-top: 203px;
   width: 955px;
@@ -138,11 +134,8 @@
   }
 }
 
-.disease-tab-container {
-  display: flex;
-}
-
-.disease-tab {
+// 질환정보 - tab박스
+.tab-tit {
   margin-top: 25px;
   p {
     border: 0.8px solid $Gray-C7;
@@ -157,19 +150,21 @@
   }
 }
 
-.tab-part {
+.tab-tit {
   p {
     background: $primary;
     color: $white;
     border: none;
   }
-  .tab-box {
-    background: $primary;
-    margin-top: -4px;
-    width: 955px;
-    height: 274px;
-    border-radius: 4px;
-  }
+}
+
+.tab-box {
+  background: $primary;
+  margin-top: -4px;
+  width: 955px;
+  height: 274px;
+  border-radius: 4px;
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -191,6 +186,13 @@
       color: $Gray_55;
     }
   }
+}
+
+// 질환정보 탭
+.tab-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .tab-category {
