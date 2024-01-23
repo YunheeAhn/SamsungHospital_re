@@ -297,10 +297,12 @@
 // 영양정보
 
 .sec-nutritions {
+  display: block;
   width: 967px;
   height: 440px;
   background: rgba($color: lightblue, $alpha: 0.5);
   margin-top: $subhc-margin-top;
+  overflow: hidden;
   .sec-tit-container {
     display: flex;
     align-items: flex-end;
@@ -308,26 +310,36 @@
   }
 }
 
-.nutritions-card {
-  .img-box {
-    width: 300px;
-    height: 279px;
+.swiper-nutritions {
+  padding: 0 5px;
+  width: 967px;
+  height: 440px;
+  .swiper-wrapper {
+    display: flex;
   }
-  a,
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  span {
-    display: block;
-  }
-  .tit {
-    margin-top: 21px;
-    @include Bold-16;
-  }
-  .date {
-    margin-top: 34px;
-    @include Regular-13;
+  .nutritions-card {
+    .img-box {
+      width: 300px;
+      height: 279px;
+    }
+    a,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    span {
+      display: block;
+    }
+    .tit {
+      width: 300px;
+      height: 40px;
+      margin-top: 21px;
+      @include Bold-16;
+    }
+    .date {
+      margin-top: 14px;
+      @include Regular-13;
+    }
   }
 }
 
