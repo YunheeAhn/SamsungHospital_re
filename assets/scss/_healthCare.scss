@@ -2,17 +2,14 @@
 
 //이현정 - main
 
-.healthCare-body {
-  background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
-}
-
+// .healthCare-body {
+//   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
+// }
 
 .header-width {
   height: 100px;
   background: rgba($color: $Gray_C7, $alpha: 0.5);
 }
-
-
 
 .healthcare-wrap {
   display: flex;
@@ -20,12 +17,13 @@
   margin: 0 auto;
 }
 
-
 //공통사항
 .sec-tit {
   @include Bold-30;
 }
-
+.more-tit {
+  @include Regular-18;
+}
 
 // 사이드메뉴
 .sidemenubar {
@@ -98,7 +96,8 @@
   margin-left: 77px;
 }
 
-// 질환정보
+// 질환정보 - 제목과 검색창
+
 .sec-disease-tab {
   margin-top: 203px;
   width: 955px;
@@ -116,7 +115,6 @@
 }
 
 .search-box {
-  margin-top: 12px;
   .search {
     width: 235px;
     height: 40px;
@@ -138,11 +136,8 @@
   }
 }
 
-.disease-tab-container {
-  display: flex;
-}
-
-.disease-tab {
+// 질환정보 - tab박스
+.tab-tit {
   margin-top: 25px;
   p {
     border: 0.8px solid $Gray-C7;
@@ -157,19 +152,21 @@
   }
 }
 
-.tab-part {
+.tab-tit {
   p {
     background: $primary;
     color: $white;
     border: none;
   }
-  .tab-box {
-    background: $primary;
-    margin-top: -4px;
-    width: 955px;
-    height: 274px;
-    border-radius: 4px;
-  }
+}
+
+.tab-box {
+  background: $primary;
+  margin-top: -4px;
+  width: 955px;
+  height: 274px;
+  border-radius: 4px;
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +190,203 @@
   }
 }
 
+// 질환정보 탭
+.tab-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .tab-category {
   display: none;
+}
+
+// 많이찾는 질환정보
+.sec-disease {
+  background: rgba($color: lightcoral, $alpha: 0.5);
+  width: 965px;
+  height: 638px;
+  margin-top: $subhc-margin-top;
+}
+.sub-tit {
+  h3 {
+    @include SemiBold-26;
+  }
+}
+
+.disease-card-container {
+  width: 965px;
+  height: 589px;
+  background: rgba($color: lightgray, $alpha: 0.5);
+  margin-top: 13px;
+  border-top: 1px solid $Gray_55;
+  border-bottom: 1px solid $Gray_55;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  padding: 44px 2px;
+  justify-content: center;
+}
+
+.disease-card {
+  .img-box {
+    width: 208px;
+    height: 183px;
+    background: $white;
+    border: 1px solid $Gray-C7;
+  }
+  a,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  span {
+    width: 208px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include Bold-16;
+    margin-top: 16px;
+  }
+}
+
+// 의약품검색
+.sec-search {
+  width: 965px;
+  height: 280px;
+  margin-top: $subhc-margin-top;
+  background: rgba($color: lightblue, $alpha: 0.5);
+}
+.search-box-container {
+  width: 967px;
+  height: 215px;
+  margin-top: 26px;
+  display: flex;
+  background: $primary;
+  justify-content: center;
+  align-items: center;
+
+  .sub-tit {
+    @include SemiBold-20;
+    color: $white;
+    margin-right: 20px;
+  }
+  .search-box {
+    width: 480px;
+    height: 50px;
+    background: $Gray_BW;
+    border: none;
+    @include Regular-16;
+    color: $Gray-C7;
+    padding-left: 20px;
+  }
+  .search-btn {
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    background: $secondary_B2;
+    @include SemiBold-18;
+    line-height: 50px;
+    margin-left: 4px;
+    color: $white;
+  }
+}
+
+// 영양정보
+
+.sec-nutritions {
+  display: block;
+  width: 967px;
+  height: 440px;
+  background: rgba($color: lightblue, $alpha: 0.5);
+  margin-top: $subhc-margin-top;
+  overflow: hidden;
+  .sec-tit-container {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 30px;
+  }
+}
+
+.swiper-nutritions {
+  padding: 0 5px;
+  width: 967px;
+  height: 440px;
+  .swiper-wrapper {
+    display: flex;
+  }
+  .nutritions-card {
+    .img-box {
+      width: 300px;
+      height: 279px;
+    }
+    a,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    span {
+      display: block;
+    }
+    .tit {
+      width: 300px;
+      height: 40px;
+      margin-top: 21px;
+      @include Bold-16;
+    }
+    .date {
+      margin-top: 14px;
+      @include Regular-13;
+    }
+  }
+}
+
+// 건강TV
+.sec-healthtv {
+  margin-top: $subhc-margin-top;
+  width: 967px;
+  height: 370px;
+  background: rgba($color: lightcoral, $alpha: 0.5);
+  .sec-tit {
+    padding-bottom: 30px;
+  }
+}
+ㄴ .swiper-healthtv {
+  padding: 0 30px;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $primary;
+  }
+}
+.tv-img-box {
+  margin: 0 auto;
+  //   width: 460px;
+  //   height: 258px;
+  a,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//나만의 건강코치
+
+.sec-coach {
+  width: 965px;
+  height: 455px;
+  background: rgba($color: lightblue, $alpha: 0.5);
+  margin-top: $subhc-margin-top;
+}
+
+.coach-bnr-box {
+  width: 295px;
+  height: 386px;
+  margin-top: 30px;
+  a,
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }

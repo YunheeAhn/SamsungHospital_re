@@ -1,6 +1,6 @@
 // 공통 베리어블 설정
 // 주요색
-$primary: #0B50A1;
+$primary: #0b50a1;
 
 // 블루스케일
 $secondary_B1: #2faaff;
@@ -9,12 +9,11 @@ $secondary_B3: #007cfb;
 $secondary_B4: #0054d1;
 $secondary_B5: #003d7d;
 
-
 // 그레이스케일
 $Gray_BW: #f9fafb;
-$Gray_E3: #E3E3E3;
-$Gray_D9: #D9D9D9;
-$Gray_C7: #C7C7C7;
+$Gray_E3: #e3e3e3;
+$Gray_D9: #d9d9d9;
+$Gray_C7: #c7c7c7;
 $Gray_88: #888888;
 $Gray_55: #555555;
 
@@ -23,9 +22,12 @@ $white: #fff;
 $black: #222;
 
 // 폰트 설정
-$font-family:"Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+$font-family: "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 $font-size: 16px;
 
+// 서브페이지- 건강정보
+$subhc-margin-top: 60px;
 
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;

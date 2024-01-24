@@ -55,6 +55,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="./assets/css/comm.css" />
 
     <!-- 스와이퍼 -->
@@ -82,7 +86,6 @@
     <div class="header-width">높이용 header</div>
 
     <main id="main-h">
-
       <div class="healthcare-wrap">
         <!-- 사이드메뉴바 -->
         <div class="sidemenubar">
@@ -137,8 +140,10 @@
               </div>
             </div>
             <div class="disease-tab-container">
-              <div class="disease-tab tab-part">
-                <p>부위별</p>
+              <div class="tab-part">
+                <div class="tab-tit">
+                  <p>부위별</p>
+                </div>
                 <div class="tab-box">
                   <ul>
                     <li><a href="#">전신부위</a></li>
@@ -156,8 +161,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="disease-tab tab-category">
-                <p>질환별</p>
+              <div class="tab-category">
+                <div class="tab-tit">
+                  <p>질환별</p>
+                </div>
                 <div class="tab-box">
                   <ul>
                     <li><a href="#">감염성 질환</a></li>
@@ -179,7 +186,9 @@
           </div>
           <!-- 많이찾는 질환정보 -->
           <div class="sec-disease">
-            <h3>많이 찾는 질환정보</h3>
+            <div class="sub-tit">
+              <h3>많이 찾는 질환정보</h3>
+            </div>
             <div class="disease-card-container">
               <div class="disease-card">
                 <div class="img-box">
@@ -259,115 +268,157 @@
                       alt="고혈압"
                   /></a>
                 </div>
-                <span>고혈압(Hypertension) </span>
+                <span>고혈압(Hypertension)</span>
               </div>
             </div>
           </div>
           <!-- 의약품정보 검색 -->
           <div class="sec-search">
-            <h3>의약품정보 검색</h3>
+            <h3 class="sec-tit">의약품정보 검색</h3>
             <div class="search-box-container">
-              <span>의약품 이름</span>
-              <form action="">
+              <span class="sub-tit">의약품 이름</span>
+              <form action="text">
                 <label for="search"></label>
                 <input
                   type="text"
                   id="search"
+                  class="search-box"
                   value="의약품 이름을 입력해 주세요"
                 />
               </form>
-              <span>검색</span>
+              <span class="search-btn">검색</span>
             </div>
           </div>
           <!-- 영양정보 -->
           <div class="sec-nutritions">
-            <h3>영양정보</h3>
-            <span><a href="#">더 보기</a></span>
-            <div class="nutritions-card">
-              <div class="nutritions-img-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/nutrition/nutrition_1.png"
-                    alt="당근"
-                /></a>
-              </div>
-              <span>[컬러풀 식품] 심장을 지키는 파수꾼, 당근</span>
-              <span>2024.01.23</span>
+            <div class="sec-tit-container">
+              <h3 class="sec-tit">영양정보</h3>
+              <span class="more-tit"><a href="#">더 보기</a></span>
             </div>
-            <div class="nutritions-card">
-              <div class="nutritions-img-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/nutrition/nutrition_2.png"
-                    alt="두부견과쉐이크"
-                /></a>
+            <div class="swiper swiper-nutritions">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="nutritions-card">
+                    <div class="img-box">
+                      <a href="#"
+                        ><img
+                          src="./assets/images/healthCarePage_images/nutrition/nutrition_1.png"
+                          alt="당근"
+                      /></a>
+                    </div>
+                    <span class="tit"
+                      >[컬러풀 식품] 심장을 지키는 파수꾼, 당근</span
+                    >
+                    <span class="date">2024.01.23</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="nutritions-card">
+                    <div class="img-box">
+                      <a href="#"
+                        ><img
+                          src="./assets/images/healthCarePage_images/nutrition/nutrition_2.png"
+                          alt="두부견과쉐이크"
+                      /></a>
+                    </div>
+                    <span class="tit"
+                      >[알고싶은 요리레시피] 영양듬뿍~ 건강음료!
+                      두부견과쉐이크</span
+                    >
+                    <span class="date">2024.01.12</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="nutritions-card">
+                    <div class="img-box">
+                      <a href="#"
+                        ><img
+                          src="./assets/images/healthCarePage_images/nutrition/nutrition_3.png"
+                          alt="우유"
+                      /></a>
+                    </div>
+                    <span class="tit"
+                      >[궁금한 식품이야기] 우유와 건강이야기</span
+                    >
+                    <span class="date">2023.12.19</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="nutritions-card">
+                    <div class="img-box">
+                      <a href="#"
+                        ><img
+                          src="./assets/images/healthCarePage_images/nutrition/nutrition_4.png"
+                          alt="잡곡류"
+                      /></a>
+                    </div>
+                    <span class="tit"
+                      >[건강한 밥상] 전곡류로 내 건강을 지킨다!</span
+                    >
+                    <span class="date">2023.12.17</span>
+                  </div>
+                </div>
               </div>
-              <span
-                >[알고싶은 요리레시피] 영양듬뿍~ 건강음료! 두부견과쉐이크</span
-              >
-              <span>2024.01.12</span>
-            </div>
-            <div class="nutritions-card">
-              <div class="nutritions-img-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/nutrition/nutrition_3.png"
-                    alt="우유"
-                /></a>
-              </div>
-              <span>[궁금한 식품이야기] 우유와 건강이야기</span>
-              <span>2023.12.19</span>
             </div>
           </div>
           <!-- 건강TV -->
           <div class="sec-healthtv">
-            <h3>건강TV</h3>
-            <span><a href="#">더 보기</a></span>
-            <div class="healthtv-img-box">
-              <a href="#"
-                ><img
-                  src="./assets/images/healthCarePage_images/healthtv/healthtv_1.png"
-                  alt="뇌혈관 수술 후 안경&모자 착용 된다? 안 된다?"
-              /></a>
+            <div class="sec-tit-container">
+              <h3 class="sec-tit">건강TV</h3>
+              <span class="more-tit"><a href="#">더 보기</a></span>
             </div>
-            <div class="healthtv-img-box">
-              <a href="#"
-                ><img
-                  src="./assets/images/healthCarePage_images/healthtv/healthtv_2.png"
-                  alt="가슴이 아플 때 공황장애를 의심해봐야 하는 이유"
-              /></a>
+            <div class="swiper swiper-healthtv">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="tv-img-box">
+                    <a href="#"
+                      ><img
+                        src="./assets/images/healthCarePage_images/healthtv/healthtv_1.png"
+                        alt="뇌혈관 수술 후 안경&모자 착용 된다? 안 된다?"
+                    /></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="tv-img-box">
+                    <a href="#"
+                      ><img
+                        src="./assets/images/healthCarePage_images/healthtv/healthtv_2.png"
+                        alt="가슴이 아플 때 공황장애를 의심해봐야 하는 이유"
+                    /></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="tv-img-box">
+                    <a href="#"
+                      ><img
+                        src="./assets/images/healthCarePage_images/healthtv/healthtv_3.png"
+                        alt="입력필요"
+                    /></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="tv-img-box">
+                    <a href="#"
+                      ><img
+                        src="./assets/images/healthCarePage_images/healthtv/healthtv_4.png"
+                        alt="입력필요"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
           <!-- 나만의 건강코치 -->
           <div class="sec-coach">
-            <h3>나만의 건강코치</h3>
+            <h3 class="sec-tit">나만의 건강코치</h3>
             <div class="coach-bnr-container">
               <div class="coach-bnr-box">
                 <a href="#"
                   ><img
                     src="./assets/images/healthCarePage_images/healthcoach/healthcoach_bnr_1.png"
                     alt="내 체중은 정상범위일까? 건강한 삶을 위해 체중관리를 해 보세요. 1일 섭취 칼로리와 맞춤식단을 제공해 드립니다. "
-                /></a>
-              </div>
-              <div class="coach-bnr-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/healthcoach/healthcoach_bnr_2.png"
-                    alt="내 혈압은 정상일까? 건강한 삶을 위해 혈압관리를 해 보세요. 건강한 혈압을 위해 전문가 조언을 제공해 드립니다. "
-                /></a>
-              </div>
-              <div class="coach-bnr-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/healthcoach/healthcoach_bnr_3.png"
-                    alt="나에게도 당뇨가? 당뇨병 예방과 치료를 위해서는 일상생활에서 혈당을 수시로 관리하는 것이 효과적입니다. "
-                /></a>
-              </div>
-              <div class="coach-bnr-box">
-                <a href="#"
-                  ><img
-                    src="./assets/images/healthCarePage_images/healthcoach/healthcoach_bnr_4.png"
-                    alt="자가진단 건강 Check! 나의 건강지수는 얼마일까? 나의 건강상태를 체크해보고 예방과 치료를 준비해보세요."
                 /></a>
               </div>
             </div>
