@@ -6,6 +6,8 @@
 #header {
   width: 100%;
 
+  border-bottom: 1px solid $Gray_BW;
+
   position: relative;
 
   .inner {
@@ -100,7 +102,18 @@
   justify-content: space-between;
   align-items: center;
 
+  position: relative;
+
   width: 780px;
+
+  &:hover {
+    .depth2 {
+      visibility: visible;
+      height: 400px;
+
+      
+    }
+  }
 
   
   li {
@@ -139,6 +152,24 @@
 }
 
 .depth2,
+.depth3 {
+  visibility: hidden;
+
+}
+
+.depth2 {
+  background: lightcoral;
+  position: absolute;
+  top: 100px;
+
+  display: flex;
+
+  &:hover {
+    .depth3 {
+      // visibility: visible;
+    }
+  }
+}
 .depth3 {
   display: none;
 }
