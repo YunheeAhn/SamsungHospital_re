@@ -19,3 +19,13 @@ var swiper = new Swiper(".swiper-healthtv", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+var swiper = new Swiper(".swiper-coach", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 2300,
+    disableOnInteraction: false,
+  },
+});
