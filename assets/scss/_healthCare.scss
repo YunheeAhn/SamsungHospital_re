@@ -136,33 +136,33 @@
 }
 
 // 질환정보 - tab박스
-.tab-tit {
-  margin-top: 25px;
-  p {
-    border: 0.8px solid $Gray-C7;
-    border-radius: 4px;
-    padding: 15px 0;
-    width: 480px;
-    height: 45px;
-    text-align: center;
-    display: block;
-    @include Bold-16;
-    color: $Gray_88;
-  }
+
+.disease-tab-container {
+  display: flex;
+  position: relative;
 }
 
+.sec-tabs {
+  width: 50%;
+}
 .tab-tit {
-  p {
-    background: $primary;
-    color: $white;
-    border: none;
+  @include tab-tit;
+}
+
+.tab-part,
+.tab-category {
+  &.active {
+    .tab-tit {
+      @include tab-tit-active;
+    }
   }
 }
 
 .tab-box {
+  position: relative;
   background: $primary;
   margin-top: -4px;
-  width: 955px;
+  width: 958px;
   height: 274px;
   border-radius: 4px;
 
@@ -189,15 +189,10 @@
   }
 }
 
-// 질환정보 탭
 .tab-category {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.tab-category {
-  display: none;
+  .tab-box {
+    transform: translateX(-478px);
+  }
 }
 
 // 많이찾는 질환정보

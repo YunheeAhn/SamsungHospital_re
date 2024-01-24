@@ -32,3 +32,26 @@ var swiper = new Swiper(".swiper-coach", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const secTabs = document.querySelectorAll(".sec-tabs");
+  const tabPart = document.querySelectorAll(".tab-part");
+  const tabCategory = document.querySelectorAll(".tab-category");
+  const tabTit = document.querySelectorAll(".tab-tit");
+
+  function showTab(tab) {
+    tabPart.classList.remove("active");
+    tabCategory.classList.remove("active");
+    tab.classList.add("active");
+  }
+
+  tabTit.forEach(function (tabTit) {
+    tabTit.addEventListener("click", function () {
+      if (tabTit.parentElement.classList.contains("tab-part")) {
+        showTab(tabPart);
+      } else if (tabTit.parentElement.classList.contains("tab-category")) {
+        showTab(tabCategory);
+      }
+    });
+  });
+});
