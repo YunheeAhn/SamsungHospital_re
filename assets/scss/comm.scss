@@ -4,11 +4,11 @@
 // GNB
 
 #header {
+  z-index: 10000;
   width: 100%;
+  height: $hd-height;
 
-  border-bottom: 1px solid $Gray_BW;
-
-  position: relative;
+  border-bottom: 1px solid $Gray_C7;
 
   .inner {
     max-width: 1280px;
@@ -16,46 +16,39 @@
     margin: 0 auto;
     height: $hd-height;
 
-    position: relative;
-
-
-    #logo {
-      @include posY;
-
-      display: block;
-
-      text-indent: -9999px;
-      a {
-
-        &::before {
-          content: '';
-          display: block;
-          width: 200px;
-          height: 80px;
-          background: url(../images/loginPage_images/logoImages.png) $bg-img;
-          background-size: 100%;
-          
-          @include posY
-        }
-      }
-      
-    }
+    position: relative;    
   }
 }
 #gnb {
-  .gnb-wrap {
+  width: 100%;
+  height: $hd-height;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
+  #logo {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-indent: -9999px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 200px;
+        height: 80px;
+        background: url(../images/loginPage_images/logoImages.png) $bg-img;
+        background-size: 100%;
+      
+        
+      }
+    }
     
-    width: 60%;
-
-    @include posXY;
   }
-
   .gnb_search {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform : translateY(-50%);
-
     width: 250px;
     height: 55px;
     border-radius: 50px;
@@ -91,87 +84,84 @@
           background-size: 100%;
 
           position: absolute;
-          top: 25%;
+          top: 50%;
+          transform: translateY(-50%);
+
       }
     }
   }
 }
+// 메뉴바들
 
-.depth1 {
+#gnbb {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: $hd-height;
 
-  position: relative;
+  
+  .gnb-menu {
+    display: flex;
+    align-items: center;
+    margin-left:  10px;
+    margin-right: 10px;
+    padding: 10px;
 
-  width: 780px;
+    text-align: center;
+    // background: lightcoral;
 
-  &:hover {
-    .depth2 {
-      visibility: visible;
-      height: 400px;
+    @include Bold-20;
+
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid $primary;
+    }
+
+    .tit {
+      height: 100%;
+      
+      border: none;
 
       
     }
-  }
-
-  
-  li {
-    width: 100%;
-    margin: 0 20px;
-    margin-left: 0;
-    height: $hd-height;
-
-    display: flex;
-    align-items: center;
     
-
-    border: 3px solid transparent;
-
-    &:hover {
-      border-bottom: 3px solid $primary; 
-    }
-
-    ~ :last-of-type {
-      margin-right: 0;
-    }
-
-    a {
-      width: 100%;
-
-      text-align: center;
-
-      @include Bold-20;
-
-      &:hover {
-        color: $primary;
-        @include Bold-20;
-      }
-    };
   }
+  
 }
 
-.depth2,
-.depth3 {
-  visibility: hidden;
+.menu01-wrap,
+.menu02-wrap,
+.menu03-wrap,
+.menu04-wrap,
+.menu05-wrap {
+  z-index: 10000;
+
+  width: 100%;
+  height: 400px;
+
+  padding-top: 30px;
+
+  display: none;
+
+  background: lightcyan;
+
+  @include Medium-18;
 
 }
 
-.depth2 {
-  background: lightcoral;
+.menu001
+.menu002,
+.menu003,
+.menu004,
+.menu005 {
+  margin-top: 30px;
+}
+
+.menu01-wrap {
   position: absolute;
   top: 100px;
+  left: 0;
 
   display: flex;
-
-  &:hover {
-    .depth3 {
-      // visibility: visible;
-    }
-  }
-}
-.depth3 {
-  display: none;
 }
 
 // Footer

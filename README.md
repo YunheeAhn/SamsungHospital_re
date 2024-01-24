@@ -95,4 +95,4 @@
 <안윤희>  
   
 1. gnb메뉴 구조 변경 완료  
-2. gnb scss변경 중...ing 
+2. gnb scss변경 중...ing ...ing
