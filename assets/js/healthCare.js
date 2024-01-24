@@ -13,10 +13,9 @@ var swiper = new Swiper(".swiper-healthtv", {
   slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  autoplay: {
+    delay: 2700,
+    disableOnInteraction: false,
   },
 });
 
@@ -25,7 +24,11 @@ var swiper = new Swiper(".swiper-coach", {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 2300,
+    delay: 2500,
     disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

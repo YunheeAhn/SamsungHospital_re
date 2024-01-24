@@ -102,7 +102,6 @@
   margin-top: 203px;
   width: 955px;
   height: 395px;
-  background: rgba($color: lightblue, $alpha: 0.3);
   .sec-tit {
     padding: 7px 0;
   }
@@ -203,7 +202,6 @@
 
 // 많이찾는 질환정보
 .sec-disease {
-  background: rgba($color: lightcoral, $alpha: 0.5);
   width: 965px;
   height: 638px;
   margin-top: $subhc-margin-top;
@@ -217,7 +215,6 @@
 .disease-card-container {
   width: 965px;
   height: 589px;
-  background: rgba($color: lightgray, $alpha: 0.5);
   margin-top: 13px;
   border-top: 1px solid $Gray_55;
   border-bottom: 1px solid $Gray_55;
@@ -255,9 +252,8 @@
 // 의약품검색
 .sec-search {
   width: 965px;
-  height: 280px;
+  height: 290px;
   margin-top: $subhc-margin-top;
-  background: rgba($color: lightblue, $alpha: 0.5);
 }
 .search-box-container {
   width: 967px;
@@ -299,8 +295,7 @@
 .sec-nutritions {
   display: block;
   width: 967px;
-  height: 440px;
-  background: rgba($color: lightblue, $alpha: 0.5);
+  height: 450px;
   margin-top: $subhc-margin-top;
   overflow: hidden;
   .sec-tit-container {
@@ -348,18 +343,12 @@
   margin-top: $subhc-margin-top;
   width: 967px;
   height: 370px;
-  background: rgba($color: lightcoral, $alpha: 0.5);
+  //   background: rgba($color: lightblue, $alpha: 0.7);
   .sec-tit {
     padding-bottom: 30px;
   }
 }
-ㄴ .swiper-healthtv {
-  padding: 0 30px;
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: $primary;
-  }
-}
+
 .tv-img-box {
   margin: 0 auto;
   //   width: 460px;
@@ -375,12 +364,13 @@
 
 .sec-coach {
   width: 965px;
-  height: 455px;
-  background: rgba($color: lightblue, $alpha: 0.5);
+  height: 480px;
   margin-top: $subhc-margin-top;
+  //   background: rgba($color: lightblue, $alpha: 0.7);
 }
 
 .swiper-coach {
+  height: 470px;
   a {
     display: block;
     width: 295px;
@@ -390,5 +380,9 @@
   img {
     width: 100%;
     height: 100%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: rgba($color: $Gray_88, $alpha: 0.5);
   }
 }
