@@ -46,18 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-});
 
-// const secTabs = document.querySelectorAll(".sec-tabs");
-// const tabPart = document.querySelectorAll(".tab-part");
-// const tabCategory = document.querySelectorAll(".tab-category");
-// const tabTit = document.querySelectorAll(".tab-tit");
-// secTabs.forEach(function (element) {
-//     element.classList.remove("active");
-//   });
-//   tabPart.forEach(function (element) {
-//     element.classList.add("active");
-//     element.addEventListener("click", function () {
-//       element.classList.add("active");
-//     });
-//   });
+  const tabBtns = document.querySelectorAll(".sec-tabs .tab-box a");
+
+  tabBtns.forEach(function (tabBtn) {
+    tabBtn.addEventListener("click", function () {
+      tabBtn.classList.toggle("active");
+    });
+  });
+});
