@@ -192,4 +192,59 @@
 }
 
 //section(last section,오시는길)
+.sec6{
+  max-width:1280px;
+  width: 100%;
+  height: 900px;
+  margin: auto;
+  h2{  
+    @include SemiBold-30;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 16px;
+  }
+  .mapbox-txt{
+    text-align: center;
+  }
+  .mabbox-goto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+  }
+  ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+  }
+  ul li a{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:100px;
+  }
+  .map-img{
+    width: 70%;
+    background-color:$Gray_C7;
+    height:600px;
+    margin-top:40px;
+  }
+  .map-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+
+  }
+  .map-info{
+    width: 70%;
+    height: 100px;
+    background-color:$primary;
+  }
+}
+
 
