@@ -28,8 +28,8 @@ var swiper = new Swiper(".swiper-coach", {
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".coach-next",
+    prevEl: ".coach-prev",
   },
 });
 

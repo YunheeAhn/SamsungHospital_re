@@ -126,17 +126,27 @@
       &::placeholder {
         color: $Gray_C7;
       }
-      &::before {
-        content: "\f002";
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-      }
+
       &:focus {
         outline: none;
         border: 2px solid rgba($primary, 0.7);
         &::placeholder {
           color: transparent;
         }
+      }
+    }
+    form {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        content: "\f002";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        font-size: 25px;
+        color: $primary;
+        transform: scaleX(-1) translateY(-50%);
       }
     }
   }
@@ -318,6 +328,7 @@
     line-height: 50px;
     margin-left: 4px;
     color: $white;
+    cursor: pointer;
   }
 }
 
