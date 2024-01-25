@@ -147,18 +147,11 @@
 }
 .tab-tit {
   @include tab-tit;
-}
-
-.tab-part,
-.tab-category {
-  &.active {
-    .tab-tit {
-      @include tab-tit-active;
-    }
-  }
+  cursor: pointer;
 }
 
 .tab-box {
+  display: none;
   position: relative;
   background: $primary;
   margin-top: -4px;
@@ -195,6 +188,17 @@
   }
 }
 
+.tab-part,
+.tab-category {
+  &.active {
+    .tab-tit {
+      @include tab-tit-active;
+    }
+    .tab-box {
+      display: block;
+    }
+  }
+}
 // 많이찾는 질환정보
 .sec-disease {
   width: 965px;

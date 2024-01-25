@@ -34,8 +34,30 @@ var swiper = new Swiper(".swiper-coach", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const secTabs = document.querySelectorAll(".sec-tabs");
-  const tabPart = document.querySelectorAll(".tab-part");
-  const tabCategory = document.querySelectorAll(".tab-category");
-  const tabTit = document.querySelectorAll(".tab-tit");
+  const tabs = document.querySelectorAll(".sec-tabs");
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tab.classList.add("active");
+      tabs.forEach(function (otherTab) {
+        if (otherTab !== tab) {
+          otherTab.classList.remove("active");
+        }
+      });
+    });
+  });
 });
+
+// const secTabs = document.querySelectorAll(".sec-tabs");
+// const tabPart = document.querySelectorAll(".tab-part");
+// const tabCategory = document.querySelectorAll(".tab-category");
+// const tabTit = document.querySelectorAll(".tab-tit");
+// secTabs.forEach(function (element) {
+//     element.classList.remove("active");
+//   });
+//   tabPart.forEach(function (element) {
+//     element.classList.add("active");
+//     element.addEventListener("click", function () {
+//       element.classList.add("active");
+//     });
+//   });
