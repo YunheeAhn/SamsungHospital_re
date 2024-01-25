@@ -42,6 +42,16 @@
   justify-content: center;
 }
 
+// 보더 오른쪽만(투명도포함)
+@mixin transparent-border-R($color, $alpha) {
+  border-right: 1px solid rgba($color, $alpha);
+}
+
+// 보더 왼쪽만(투명도포함)
+@mixin transparent-border-L($color, $alpha) {
+  border-left: 1px solid rgba($color, $alpha);
+}
+
 // 폰트 설정
 
 @mixin Bold-48 {
