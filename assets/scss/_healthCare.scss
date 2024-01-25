@@ -226,11 +226,7 @@
   width: 965px;
   height: 638px;
   margin-top: $subhc-margin-top;
-}
-.sub-tit {
-  h3 {
-    @include SemiBold-26;
-    font-weight: 700;
+  .sec-tit {
     color: $secondary_B5;
   }
 }
@@ -405,16 +401,20 @@
 }
 
 .swiper-coach {
-  height: 470px;
-  a {
-    display: block;
-    width: 295px;
-    height: 386px;
-    margin-top: 30px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
+  height: 100%;
+  padding: 0 10px;
+  .swiper-slide {
+    box-sizing: border-box;
+    a {
+      display: block;
+      width: 300px;
+      height: 386px;
+      margin-top: 30px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .swiper-button-next,
   .swiper-button-prev {
