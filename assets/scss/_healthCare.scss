@@ -163,15 +163,16 @@
   background: $primary;
   margin-top: -4px;
   width: 958px;
-  height: 274px;
+  height: 270px;
   border-radius: 4px;
 
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
     padding-top: 37px;
-    padding-left: 29px;
   }
   li {
     width: 207px;
@@ -208,11 +209,13 @@
 
 .sec-tabs {
   .tab-box {
-    a {
+    li {
       transition: all 0.2s ease-in-out;
       &.active {
-        color: $white;
         background: $secondary_B5;
+        a {
+          color: $white;
+        }
       }
     }
   }

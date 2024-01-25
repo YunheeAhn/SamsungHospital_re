@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const tabBtns = document.querySelectorAll(".sec-tabs .tab-box a");
+  const tabBtns = document.querySelectorAll(".sec-tabs .tab-box li");
 
   tabBtns.forEach(function (tabBtn) {
     tabBtn.addEventListener("click", function () {
