@@ -34,11 +34,11 @@ const introswiper = new Swiper('.slide-intro', {
   
     slidesPerView: 2,
 
-    spaceBetween: 30,
+    spaceBetween: 20,
    
-    pagination: {
-      el: '.swiper-pagination',
-    },
+     pagination: {
+       el: '.swiper-pagination',
+     },
   
     
     navigation: {
@@ -47,4 +47,26 @@ const introswiper = new Swiper('.slide-intro', {
     },
   
   });
+
+  const infoswiper = new Swiper('.slide-info', {
+
+    loop: true,
+  
+    slidesPerView: 2,
+
+    spaceBetween: 20,
+   
+     pagination: {
+       el: '.swiper-pagination',
+     },
+  
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+
+
 
