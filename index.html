@@ -56,10 +56,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer type="text/javascript" src="./assets/js/comm.js"></script>
     <script defer src="./assets/js/main.js"></script>
 </head>
-<>
+<a>
     <!-- 웹접근성 -->
     <div id="u-skip">
         <!-- 웹접근성, 꼭 있어야 함 -->
@@ -278,11 +279,11 @@
                   </div>
                 </div>               
                 <div class="servicebox servicebox2">
-                진료과/센터
-                    <div class="service-text">
+                <div class="service-text">
+                진료과/센터<br>
                     병원의 진료과/센터를 상세히 확<br>
                     인 할 수 있습니다.
-                    </div>
+                </div>
                     <div>
                         <a href="#">본원</a>
                         <a href="#">어린이병원</a>
@@ -291,24 +292,29 @@
                    
                 </div>
                 <div class="servicebox servicebox3">
-                    제증명 발급서비스
                     <div class="service-text">
+                    제증명 발급서비스<br>
                     로그인 하신 후 각종 제증명서류<br>
                     를 받으실 수 있습니다.
                     </div>
-                    <a href="#">온라인 신청</a>
+                    <a class="box3-button" href="#">온라인 신청</a>
                 </div>
                 <div class="servicebox servicebox4">
-                    로그인 비회원로그인
-                    <div>                 
+                    <div class="loginbox1">
+                         <a class="member-text" href="#">로그인</a>
+                        
+                        <a class="non-member-text" href="#">비회원로그인</a>
+                    </div>
+                    <div class="inputbox">                 
                         <label for="username"></label>
                         <input type="text" id="username" name="name" placeholder="아이디">
                                    
                         <label for="password"></label>
                         <input type="text" id="password" name="password" placeholder="비밀번호">
                     </div>
-                    <div>
+                    <div class="loginbox2">
                         <a href="#">회원가입</a>
+                        
                         <a href="#">아이디/비밀번호 찾기</a>
                     </div>
                     <button type="submit">로그인</button>

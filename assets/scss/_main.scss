@@ -40,9 +40,16 @@
         border: 1px solid $white;
         text-align: center;
      }
+     a:hover{
+      color: $black;
+      background-color: $white;
+     }
+     .box3-button{
+      padding: 9.5px 60px;
+     }
     }
   .service-text{
-      margin-bottom: 100px;            
+      margin-bottom: 100px;           
   }
 
     //박스 개별 속성
@@ -72,8 +79,46 @@
         background-color: $white;
         display: block;
         border-color:$Gray_C7;
+        color:$black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      a{align-content: baseline;}
+      .loginbox1 .non-member-text{
+        color: $secondary_B1;
+        @include SemiBold-24; 
+      }
+      .loginbox1 .member-text{
+        color: $black;
+        @include SemiBold-24; 
+      }
+      .loginbox2 a{
+        color:$black;
+      }
+      .loginbox2 a:hover{
+        text-decoration: underline;
+      }
+      .inputbox{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      input{
+        padding: 12px 0;
+        width: 239px;
+        margin-top: 7px;
+       }  
+      }
+      button{
+        background-color: $secondary_B4;
+        color: $white;
+        padding: 11.5px 94px;  
+        margin-bottom: 26px;      
+      }
     }
   }
+  
 //박스 개별 속성
 
 //section3(공지글)
