@@ -69,6 +69,11 @@
       type="text/javascript"
       src="./assets/js/reservation.js"
     ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="./assets/js/comm.js"
+    ></script>
   </head>
   <body>
     <!-- 웹접근성 -->
@@ -95,7 +100,7 @@
                         <!-- 첫번째 탭 예약증명 시작 -->
                         <li id="menu1">
                             <!-- 첫번째 탭 예약증명 헤더 타이틀 -->
-                            <a href="#"><span class="menu1-tit">예약/증명</span></a>
+                            <a href="#"><span class="menu1-tit clicker">예약/증명</span></a>
                             <!-- 첫번째 탭 클릭시 드롭 다운 -->
                             <div id="menu101" class="smenu_area">
                                 <!-- 드롭 다운된 구역 -->
@@ -144,7 +149,7 @@
                         <!-- 두번째 탭 진료과/의료진 시작 -->
                         <li id="menu2">
                             <!-- 두번째 탭 진료과/의료진 헤더 타이틀 -->
-                            <a href="#"><span class="menu2-tit">진료과/의료진</span></a>
+                            <a href="#"><span class="menu2-tit clicker">진료과/의료진</span></a>
                             <!-- 두번째 탭 클릭시 드롭 다운 -->
                             <div id="menu201" class="smenu_area">
                                 <!-- 드롭 다운된 구역 -->
@@ -160,24 +165,18 @@
                                             <li class="gnb_padding"><a href="#" class="gnb_margin">진료과 찾기</a>
                                                 <ul class="gnb_depth">
                                                     <!-- 진료과/의료진 뎁스1 진료과찾기 뎁스101 -->
-                                                    <li><a href="#" class="blank">blank</a></li>
-                                                    <li><a href="#" class="blank">blank</a></li>
                                                 </ul>
                                             </li>
                                             <!-- 진료과/의료진 뎁스2 -->
                                             <li class="gnb_padding"><a href="#" class="gnb_margin">의료진 찾기</a>
                                                 <ul class="gnb_depth">
                                                     <!-- 진료과/의료진 뎁스2 의료진찾기 뎁스201 -->
-                                                    <li><a href="#" class="blank">blank</a></li>
-                                                    <li><a href="#" class="blank">blank</a></li>
                                                 </ul>
                                             </li>
                                             <!-- 진료과/의료진 뎁스3 -->
                                             <li class="gnb_padding"><a href="#" class="gnb_margin">센터</a>
                                                 <ul class="gnb_depth">
                                                     <!-- 진료과/의료진 뎁스3 센터 뎁스301 -->
-                                                    <li><a href="#" class="blank">blank</a></li>
-                                                    <li><a href="#" class="blank">blank</a></li>
                                                 </ul>
                                             </li>
                                             <!-- 진료과/의료진 뎁스4 -->
@@ -198,7 +197,7 @@
                         <!-- 세번째 탭 이용안내 시작 -->
                         <li id="menu3">
                             <!-- 세번째 탭 이용안내 헤더 타이틀 -->
-                            <a href="#"><span class="menu3-tit">이용안내</span></a>
+                            <a href="#"><span class="menu3-tit clicker">이용안내</span></a>
                             <!-- 세번째 탭 클릭시 드롭 다운 -->
                             <div id="menu301" class="smenu_area">
                                 <!-- 드롭 다운된 구역 -->
@@ -242,8 +241,6 @@
                                             <li class="gnb_padding"><a href="#" class="gnb_margin">자주묻는 질문</a>
                                                 <ul class="gnb_depth">
                                                     <!-- 이용안내 뎁스3 자주묻는질문 뎁스401 -->
-                                                    <li><a href="#" class="blank">blank</a></li>
-                                                    <li><a href="#" class="blank">blank</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -256,9 +253,9 @@
                         <!-- 네번째 탭 건강정보 시작 -->
                         <li id="menu4">
                             <!-- 네번째 탭 건강정보 헤더 타이틀 -->
-                            <a href="#"><span class="menu4-tit">건강정보</span></a>
+                            <a href="#"><span class="menu4-tit clicker">건강정보</span></a>
                             <!-- 네번째 탭 클릭시 드롭 다운 -->
-                            <div id="menu04" class="smenu_area">
+                            <div id="menu401" class="smenu_area">
                                 <!-- 드롭 다운된 구역 -->
                                 <div class="section">
                                     <!-- 드롭 다운된 구역 첫번째 공간 -->
@@ -310,9 +307,9 @@
                         <!-- 다섯번째 탭 벙원소개 시작 -->
                         <li id="menu5">
                             <!-- 다섯번째 탭 병원소개 헤더 타이틀 -->
-                            <a href="#"><span class="menu5-tit">병원소개</span></a>
+                            <a href="#"><span class="menu5-tit clicker">병원소개</span></a>
                             <!-- 다섯번째 탭 클릭시 드롭 다운 -->
-                            <div id="menu05" class="smenu_area">
+                            <div id="menu501" class="smenu_area">
                                 <!-- 드롭 다운된 구역 -->
                                 <div class="section">
                                     <!-- 드롭 다운된 구역 첫번째 공간 -->
@@ -370,13 +367,10 @@
 
               <!-- 검색버튼 시작 -->
               <div class="gnb_search">
-                <input class="search_bar" type="text" name="" value="" placeholder="검색어를 입력하세요.">
+                <input class="search_bar" type="text" id="srchBtn" name="srchBtn" value="" placeholder="검색어를 입력하세요.">
                 <button class="search_btn" type="button" onclick="">검색</button>
               </div>
               <!-- 검색버튼 끝 -->
-                
-            </div>
-          </div>
         </div>
       </header>
     </div>
@@ -552,7 +546,7 @@
                     <input
                       type="text"
                       id="certi-num"
-                      name="confirmNo"
+                      name="certi-num"
                       class="inputText"
                       placeholder="인증번호입력하기"
                     />
@@ -584,6 +578,7 @@
                   <label for="userchk" class="chkform">
                     <input
                       type="checkbox"
+                      name="userchk"
                       id="userchk"
                       title="개인정보 이용 동의"
                     />
@@ -651,15 +646,15 @@
             <ul class="sns-depth">
               <li>
                 <!-- before 트위터 아이콘 -->
-                <a href="#">트위터</a>
+                <a href="#"></a>
               </li>
               <li>
                 <!-- before 트위터 아이콘 -->
-                <a href="#">페이스북</a>
+                <a href="#"></a>
               </li>
               <li>
                 <!-- before 트위터 아이콘 -->
-                <a href="#">유튜브</a>
+                <a href="#"></a>
               </li>
             </ul>
           </div>
