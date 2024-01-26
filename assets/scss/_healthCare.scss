@@ -102,7 +102,6 @@
   margin-top: 203px;
   width: 955px;
   height: 395px;
-  background: rgba($color: lightblue, $alpha: 0.3);
   .sec-tit {
     padding: 7px 0;
   }
@@ -114,65 +113,77 @@
   justify-content: space-between;
 }
 
-.search-box {
-  .search {
-    width: 235px;
-    height: 40px;
-    background: $Gray_BW;
-    border: 2px solid rgba($primary, 0.1);
-    border-radius: 10px;
-    color: $Gray_C7;
-    @include Regular-13;
-    padding-left: 14px;
-    &:focus {
-      outline: none;
-      border: 2px solid rgba($primary, 0.7);
+.sec-disease-tab {
+  .search-box {
+    .search {
+      width: 235px;
+      height: 40px;
+      background: $Gray_BW;
+      border: 2px solid rgba($primary, 0.1);
+      border-radius: 10px;
+      @include Regular-13;
+      padding-left: 14px;
+      &::placeholder {
+        color: $Gray_C7;
+      }
+
+      &:focus {
+        outline: none;
+        border: 2px solid rgba($primary, 0.7);
+        &::placeholder {
+          color: transparent;
+        }
+      }
     }
-    &::before {
-      content: "\f002";
-      font-family: "Line Awesome Free";
-      font-weight: 900;
+    form {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        content: "\f002";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 25px;
+        color: $primary;
+        transform: translateY(-50%);
+        opacity: 0.9;
+      }
     }
   }
 }
 
 // 질환정보 - tab박스
-.tab-tit {
-  margin-top: 25px;
-  p {
-    border: 0.8px solid $Gray-C7;
-    border-radius: 4px;
-    padding: 15px 0;
-    width: 480px;
-    height: 45px;
-    text-align: center;
-    display: block;
-    @include Bold-16;
-    color: $Gray_88;
-  }
+
+.disease-tab-container {
+  display: flex;
+  position: relative;
 }
 
+.sec-tabs {
+  width: 50%;
+}
 .tab-tit {
-  p {
-    background: $primary;
-    color: $white;
-    border: none;
-  }
+  @include tab-tit;
+  cursor: pointer;
 }
 
 .tab-box {
+  display: none;
+  position: relative;
   background: $primary;
   margin-top: -4px;
-  width: 955px;
-  height: 274px;
+  width: 958px;
+  height: 270px;
   border-radius: 4px;
 
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
     padding-top: 37px;
-    padding-left: 29px;
   }
   li {
     width: 207px;
@@ -183,62 +194,81 @@
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     a {
       display: block;
-      padding: 14px 0;
+      padding: 16px 0;
       @include SemiBold-18;
       color: $Gray_55;
     }
   }
 }
 
-// 질환정보 탭
 .tab-category {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  .tab-box {
+    transform: translateX(-478px);
+  }
 }
 
-.tab-category {
-  display: none;
+.sec-tabs {
+  &.active {
+    .tab-tit {
+      @include tab-tit-active;
+    }
+    .tab-box {
+      display: block;
+    }
+  }
+}
+
+.sec-tabs {
+  .tab-box {
+    li {
+      transition: all 0.2s ease-in-out;
+      &.active {
+        background: $secondary_B5;
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 // 많이찾는 질환정보
 .sec-disease {
-  background: rgba($color: lightcoral, $alpha: 0.5);
   width: 965px;
   height: 638px;
   margin-top: $subhc-margin-top;
-}
-.sub-tit {
-  h3 {
-    @include SemiBold-26;
+  .sec-tit {
+    color: $secondary_B5;
   }
 }
 
 .disease-card-container {
-  width: 965px;
-  height: 589px;
-  background: rgba($color: lightgray, $alpha: 0.5);
-  margin-top: 13px;
-  border-top: 1px solid $Gray_55;
+  width: 950px;
+  margin-top: 20px;
+  border-top: 2px solid $Gray_55;
   border-bottom: 1px solid $Gray_55;
   display: flex;
   flex-wrap: wrap;
-  gap: 42px;
-  padding: 44px 2px;
+  gap: 40px;
+  padding: 40px 0px;
   justify-content: center;
 }
 
 .disease-card {
+  width: 196px;
+  height: 220px;
   .img-box {
-    width: 208px;
-    height: 183px;
+    width: 190px;
+    height: 168px;
     background: $white;
     border: 1px solid $Gray-C7;
   }
   a,
   img {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 
   span {
@@ -255,11 +285,10 @@
 // 의약품검색
 .sec-search {
   width: 965px;
-  height: 280px;
+  height: 290px;
   margin-top: $subhc-margin-top;
-  background: rgba($color: lightblue, $alpha: 0.5);
 }
-.search-box-container {
+.sec-search-container {
   width: 967px;
   height: 215px;
   margin-top: 26px;
@@ -273,14 +302,23 @@
     color: $white;
     margin-right: 20px;
   }
-  .search-box {
+  .search {
     width: 480px;
     height: 50px;
     background: $Gray_BW;
     border: none;
     @include Regular-16;
-    color: $Gray-C7;
     padding-left: 20px;
+    &::placeholder {
+      color: $Gray-C7;
+    }
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
   }
   .search-btn {
     width: 80px;
@@ -291,6 +329,7 @@
     line-height: 50px;
     margin-left: 4px;
     color: $white;
+    cursor: pointer;
   }
 }
 
@@ -299,8 +338,7 @@
 .sec-nutritions {
   display: block;
   width: 967px;
-  height: 440px;
-  background: rgba($color: lightblue, $alpha: 0.5);
+  height: 450px;
   margin-top: $subhc-margin-top;
   overflow: hidden;
   .sec-tit-container {
@@ -348,18 +386,12 @@
   margin-top: $subhc-margin-top;
   width: 967px;
   height: 370px;
-  background: rgba($color: lightcoral, $alpha: 0.5);
+  //   background: rgba($color: lightblue, $alpha: 0.7);
   .sec-tit {
     padding-bottom: 30px;
   }
 }
-ㄴ .swiper-healthtv {
-  padding: 0 30px;
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: $primary;
-  }
-}
+
 .tv-img-box {
   margin: 0 auto;
   //   width: 460px;
@@ -375,18 +407,61 @@
 
 .sec-coach {
   width: 965px;
-  height: 455px;
-  background: rgba($color: lightblue, $alpha: 0.5);
+  height: 480px;
   margin-top: $subhc-margin-top;
+  //   background: rgba($color: lightblue, $alpha: 0.7);
 }
 
-.coach-bnr-box {
-  width: 295px;
-  height: 386px;
-  margin-top: 30px;
-  a,
-  img {
-    width: 100%;
-    height: 100%;
+.slide-coach-wrapper {
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .coach-card {
+    width: 295px;
+    box-sizing: border-box;
+    text-align: center;
+    a {
+      display: block;
+      width: 276px;
+      //   height: 362px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+  }
+  .slick-prev {
+    left: -10px;
+    &::before {
+      content: "\f053";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 36px;
+      color: rgba($color: $primary, $alpha: 0.5);
+    }
+  }
+  .slick-next {
+    right: 5px;
+    &::before {
+      content: "\f054";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 36px;
+      color: rgba($color: $primary, $alpha: 0.5);
+    }
+  }
+
+  .slick-list {
+    width: 882px;
   }
 }
