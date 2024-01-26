@@ -26,6 +26,9 @@
     left:50%;
     transform: translate(-50%,-130%);     
     z-index: 1;
+    span{
+      @include SemiBold-24; 
+    }
  
     .servicebox{
      width: 25%;
@@ -59,7 +62,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        opacity: 1;
       }
+    .servicebox1.active{
+      
+    }
 
     .servicebox2{
         background-color: $secondary_B3;
@@ -84,7 +91,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      a{align-content: baseline;}
       .loginbox1 .non-member-text{
         color: $secondary_B1;
         @include SemiBold-24; 
@@ -92,6 +98,9 @@
       .loginbox1 .member-text{
         color: $black;
         @include SemiBold-24; 
+      }
+      .loginbox1 a:hover{
+        text-decoration: underline;
       }
       .loginbox2 a{
         color:$black;
@@ -113,8 +122,8 @@
       button{
         background-color: $secondary_B4;
         color: $white;
-        padding: 11.5px 94px;  
-        margin-bottom: 26px;      
+        padding: 12px 94px;  
+        margin-bottom: 18px;      
       }
     }
   }
@@ -130,22 +139,49 @@
   background: $primary;
   width: 100%;
   height: 390px;
+  a{
+    display: block;
+  }
+
+  h2{
+    @include Bold-48;
+    margin-bottom: 20px;
+  }
 
  .notice-wrapper{
   display: flex;
   width: 100%;
   max-width:1280px;
   margin: auto;
+  .swiper-slide{
+    border-radius: 5px;
+  }
+  .notice{
+    width: 70px;
+    height: 40px;
+    background-color: $primary;
+    color: $white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
+  }
   .notice-text{
    width:328px;
    height:260px;
+   color: $white;
+   margin-top: 6%;
   }
 .slide-notice{
+  margin-top: 60px;
   position: absolute;
   left:calc(50% - 312px);
   right: 0;
-}
+ }
+ .number{
+  color:$Gray_88;
+  @include Regular-13;
+ }
 }
 
  

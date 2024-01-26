@@ -74,3 +74,9 @@ const introswiper = new Swiper('.slide-intro', {
   
   });
 
+
+  // 이미지 클릭 시 슬라이드 넘기기 함수
+  function goToSlide(index) {
+      swiper.slideTo(index); // Swiper API의 slideTo 메서드 사용
+  }
+
