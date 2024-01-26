@@ -104,7 +104,7 @@
       display: flex;
       align-items: center;
 
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: right;
 
       #menu1, 
@@ -132,6 +132,7 @@
     }
   }
 }
+
 .smenu_area {
   display: none;
   position: absolute;
@@ -139,19 +140,18 @@
   left: 50%;
   width: 100%;
   margin-left: -50%;
+
   background: $white;
-  z-index: 30;
+  z-index: 10000;
 
   box-shadow: 0 3px 10px -8px $Gray_E3;
 
-  transition: all 0.3 ease-out;
-
 
   .section {
-    position: relative;
+    
     display: flex;
     max-width: 1280px;
-    min-height: 300px;
+    min-height: 310px;
     margin: 0 auto;
     text-align: left;
 
@@ -242,48 +242,58 @@
   }
 }
 
-.menu1-tit-clickable {
-  cursor: pointer;
-}
-
-.smenu_area {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
-
+// .menu1-tit-clickable {
+//   cursor: pointer;
+// }
 
 // Footer
 .sns {
   margin-left: auto;
 
-  padding: 10px;
+  padding: 3px;
   padding-right: 0;
 
   .sns-depth {
-
+    display: flex;
+    
     li {
-      display: inline;
+      display: flex;
       margin-right: 15px;
 
-      text-indent: -9999px;
-
+      
       &:first-of-type {
         &::before {
           display: block;
-          content: '';
+          content: '\e61b';
+          box-sizing: border-box;
+          font-family: "Font Awesome 6 Brands";
+          line-height: 1;
+          font-weight: 400;
           width: 22px;
           height: 22px;
-          background: url(../images/loginPage_images/leftArrow_icon.png) $bg-img;
         }
       }
 
       &:nth-of-type(2) {
-
+        display: block;
+          content: '\e61b';
+          box-sizing: border-box;
+          font-family: "Font Awesome 6 Brands";
+          line-height: 1;
+          font-weight: 400;
+          width: 22px;
+          height: 22px;
       }
 
       &:last-of-type {
-        margin-right: 0;
+        display: block;
+          content: '\e61b';
+          box-sizing: border-box;
+          font-family: "Font Awesome 6 Brands";
+          line-height: 1;
+          font-weight: 400;
+          width: 22px;
+          height: 22px;
       }
 
       a {
