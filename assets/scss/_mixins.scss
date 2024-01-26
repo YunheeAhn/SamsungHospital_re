@@ -42,6 +42,16 @@
   justify-content: center;
 }
 
+// 보더 오른쪽만(투명도포함)
+@mixin transparent-border-R($color, $alpha) {
+  border-right: 1px solid rgba($color, $alpha);
+}
+
+// 보더 왼쪽만(투명도포함)
+@mixin transparent-border-L($color, $alpha) {
+  border-left: 1px solid rgba($color, $alpha);
+}
+
 // 폰트 설정
 
 @mixin Bold-48 {
@@ -150,4 +160,30 @@
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.0625rem;
+}
+
+// 건강정보페이지
+@mixin tab-tit {
+  margin-top: 25px;
+  p {
+    border-radius: 4px;
+    width: 480px;
+    height: 55px;
+    text-align: center;
+    display: block;
+    @include Bold-16;
+    background: $Gray_BW;
+    color: $Gray_88;
+    border: 1px solid $Gray-C7;
+    padding: 15px 0;
+  }
+}
+
+@mixin tab-tit-active {
+  p {
+    background: $primary;
+    color: $white;
+    border: none;
+    padding: 22px 0;
+  }
 }

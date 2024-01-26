@@ -19,8 +19,9 @@
     
         &::before {
             display: block;
-            content: '';
-            background: url('../images/loginPage_images/leftArrow_icon.png') $bg-img;
+            content: '\f104';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
             width: 22px;
             height: 22px;
         }
