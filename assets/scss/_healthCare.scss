@@ -22,8 +22,9 @@
   @include Bold-30;
 }
 .more-tit {
-  @include Regular-18;
+  @include Regular-16;
   a {
+    color: $Gray_88;
     &::after {
       content: "\f105";
       font-family: "Line Awesome Free";
@@ -117,7 +118,7 @@
 
 .sec-tit-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -278,8 +279,9 @@
     width: 190px;
     height: 168px;
     background: $white;
-    border: 1px solid $Gray-C7;
+    border: 1px solid rgba($color: $Gray_C7, $alpha: 0.7);
     display: inline-block;
+    border-radius: 2px;
   }
 
   a {
@@ -323,6 +325,7 @@
   background: $primary;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
 
   .sub-tit {
     @include SemiBold-20;
@@ -368,6 +371,7 @@
   height: 450px;
   margin-top: $subhc-margin-top;
   overflow: hidden;
+
   .sec-tit-container {
     display: flex;
     align-items: flex-end;
@@ -391,6 +395,7 @@
     img {
       width: 100%;
       height: 100%;
+      border-radius: 4px;
     }
     span {
       display: block;
@@ -427,6 +432,7 @@
   img {
     width: 100%;
     height: 100%;
+    border-radius: 4px;
   }
 }
 
@@ -436,11 +442,12 @@
   width: 965px;
   height: 480px;
   margin-top: $subhc-margin-top;
+
   //   background: rgba($color: lightblue, $alpha: 0.7);
 }
 
 .slide-coach-wrapper {
-  height: 440px;
+  height: 427px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -452,11 +459,16 @@
     box-sizing: border-box;
     text-align: center;
     margin-right: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+
     span {
       @include SemiBold-22;
+      font-weight: 700;
     }
     p {
       @include Medium-16;
+      font-weight: 400;
       margin-top: 16px;
       color: $Gray_88;
       line-height: 23px;
@@ -464,9 +476,9 @@
     }
   }
   .icon-box {
-    width: 130px;
-    height: 130px;
-    margin: 39px 72px 22px;
+    width: 120px;
+    height: 120px;
+    margin: 45px 78px 22px;
     img {
       width: 100%;
       height: 100%;
@@ -487,7 +499,7 @@
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       font-size: 36px;
-      color: rgba($color: $primary, $alpha: 0.5);
+      color: rgba($color: $primary, $alpha: 0.3);
     }
   }
   .slick-next {
@@ -497,7 +509,7 @@
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       font-size: 36px;
-      color: rgba($color: $primary, $alpha: 0.5);
+      color: rgba($color: $primary, $alpha: 0.3);
     }
   }
 
