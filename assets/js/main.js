@@ -7,11 +7,13 @@ const introswiper = new Swiper('.slide-intro', {
     pagination: {
       el: '.swiper-pagination',
     },
-  
-    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
   
   });
@@ -34,11 +36,11 @@ const introswiper = new Swiper('.slide-intro', {
   
     slidesPerView: 2,
 
-    spaceBetween: 30,
+    spaceBetween: 20,
    
-    pagination: {
-      el: '.swiper-pagination',
-    },
+     pagination: {
+       el: '.swiper-pagination',
+     },
   
     
     navigation: {
@@ -47,4 +49,34 @@ const introswiper = new Swiper('.slide-intro', {
     },
   
   });
+
+  const infoswiper = new Swiper('.slide-info', {
+
+    loop: true,
+  
+    slidesPerView: 2,
+
+    spaceBetween: 20,
+   
+     pagination: {
+       el: '.swiper-pagination',
+     },
+  
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+     autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+  
+  });
+
+
+  // 이미지 클릭 시 슬라이드 넘기기 함수
+  function goToSlide(index) {
+      swiper.slideTo(index); // Swiper API의 slideTo 메서드 사용
+  }
 

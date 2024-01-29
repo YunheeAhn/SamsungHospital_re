@@ -161,3 +161,29 @@
   font-weight: 400;
   line-height: 1.0625rem;
 }
+
+// 건강정보페이지
+@mixin tab-tit {
+  margin-top: 25px;
+  p {
+    border-radius: 4px;
+    width: 480px;
+    height: 55px;
+    text-align: center;
+    display: block;
+    @include Bold-16;
+    background: $Gray_BW;
+    color: $Gray_88;
+    border: 1px solid $Gray-C7;
+    padding: 15px 0;
+  }
+}
+
+@mixin tab-tit-active {
+  p {
+    background: $primary;
+    color: $white;
+    border: none;
+    padding: 22px 0;
+  }
+}

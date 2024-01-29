@@ -1,35 +1,39 @@
 // 가영님 메인페이지 scss
-// section1
 
+// section1(메인베너)
 .sec-g{
     position: relative;
 }
-
 .slide-intro {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.9;
   }
 }
-
+//section2(메인베너 위 서비스 바로가기)
+//박스 공통 속성
 .servicebox_wrapper{
     width: 100%;
-    max-width: 1280px;
+    max-width: 1280px;    //반응형
     position: absolute;
     display: flex;
     top:0;
     left:50%;
-    transform: translate(-50%,-130%);
+    transform: translate(-50%,-130%);     
     z-index: 1;
+    span{
+      @include SemiBold-24; 
+    }
  
     .servicebox{
      width: 25%;
      height: 300px;
-     margin-right: 18px;
+     margin-right: 16px;
      border-radius: 10px;
      color: $white;
      a{
@@ -39,60 +43,289 @@
         border: 1px solid $white;
         text-align: center;
      }
+     a:hover{
+      color: $black;
+      background-color: $white;
+     }
+     .box3-button{
+      padding: 9.5px 60px;
+     }
     }
+  .service-text{
+      margin-bottom: 100px;           
+  }
+
+    //박스 개별 속성
     .servicebox1{
         background-color: $secondary_B4;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .service-text{
-            margin-bottom: 100px;
-            
-        }
+        opacity: 1;
+      }
+    .servicebox1.active{
+      
     }
+
     .servicebox2{
         background-color: $secondary_B3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .servicebox3{
         background-color: $secondary_B2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .servicebox4{
         background-color: $white;
         display: block;
         border-color:$Gray_C7;
-        // border: 1px;
+        color:$black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      .loginbox1 .non-member-text{
+        color: $secondary_B1;
+        @include SemiBold-24; 
+      }
+      .loginbox1 .member-text{
+        color: $black;
+        @include SemiBold-24; 
+      }
+      .loginbox1 a:hover{
+        text-decoration: underline;
+      }
+      .loginbox2 a{
+        color:$black;
+      }
+      .loginbox2 a:hover{
+        text-decoration: underline;
+      }
+      .inputbox{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      input{
+        padding: 12px 0;
+        width: 239px;
+        margin-top: 7px;
+       }  
+      }
+      button{
+        background-color: $secondary_B4;
+        color: $white;
+        padding: 12px 94px;  
+        margin-bottom: 18px;      
+      }
     }
   }
+  
+//박스 개별 속성
 
-section .servicebox_wrapper {
-  max-width: 1280px;
-  .servicebox {
-    width: 304px;
-    height: 300px;
-  }
-  .servicebox1 {
-    background-color: $secondary_B4;
-  }
-  .servicebox2 {
-    background-color: $secondary_B3;
-  }
-  .servicebox3 {
-    background-color: $secondary_B2;
-  }
-  .servicebox4 {
-    background-color: $white;
-    display: block;
-  }
+//section3(공지글)
+.swiper-button-next{
+  position: relative;
+  transform: translateX(0);
 }
-.notice-wrapper {
+.sec3{
   background: $primary;
   width: 100%;
   height: 390px;
+  a{
+    display: block;
+  }
+
+  h2{
+    @include Bold-48;
+    margin-bottom: 20px;
+  }
+
+ .notice-wrapper{
+  display: flex;
+  width: 100%;
+  max-width:1280px;
+  margin: auto;
+  .swiper-slide{
+    border-radius: 5px;
+  }
+  .notice{
+    width: 70px;
+    height: 40px;
+    background-color: $primary;
+    color: $white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .notice-text{
+   width:328px;
+   height:260px;
+   color: $white;
+   margin-top: 6%;
+  }
+.slide-notice{
+  margin-top: 60px;
+  position: absolute;
+  left:calc(50% - 312px);
+  right: 0;
+ }
+ .number{
+  color:$Gray_88;
+  @include Regular-13;
+ }
+}
+
+ 
 
   .slide-notice .swiper-slide {
     background: $white;
     width: 300px;
-    height: 260px;
+    height: 220px;
+  }
+ }
+
+ //section4(주요서비스)
+ .sec4-h2{
+  @include SemiBold-30;
+  width: 100%;
+  text-align: center;
+  margin-top: 70px;
+}
+.sec4{
+  padding: 60px 0;
+  margin:40px auto;
+  background-color: $gray_F8;
+  max-width: 1280px;
+  width: 100%;
+ border-radius: 2px;
+
+  .goto-wrapper{ 
+    margin-top: 20px;
+ 
+    ul{
+      display: flex;
+      justify-content:space-evenly;   
+      li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color:$secondary_B6;
+        img{
+          width: 80px;
+          height:80px;
+          object-fit: cover;
+        }
+        .doc{
+            width: 76px;
+        }
+      }
+    }
   }
 }
+
+//section5(건강tv)
+.sec5{
+  max-width: 1280px;
+  width:100%;
+  margin: auto;
+  h2{  
+    @include SemiBold-30;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 16px;
+  }
+  .slide-wrapper{
+    display: flex;
+    margin-top: 30px;
+    h3{
+      text-align: center;
+      @include SemiBold-24 ;
+    }
+  }
+  .healthstory-txt{
+    text-align: center;
+  }
+  .healthtv-slide{
+    width:calc(50% - 15px);
+    height: 342px;
+    background-color: $gray_F8;
+    margin-right: 15px;
+  }
+  .healthinfo-slide{
+    width:calc(50% - 15px);
+    height: 342px;
+    background-color: $gray_F8;
+    margin-left: 15px;
+  }  
+}
+
+//section(last section,오시는길)
+.sec6{
+  max-width:1280px;
+  width: 100%;
+  height: 900px;
+  margin: auto;
+  h2{  
+    @include SemiBold-30;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 16px;
+  }
+  .mapbox-txt{
+    text-align: center;
+  }
+  .mabbox-goto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+  }
+  ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+  }
+  ul li a{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:100px;
+  }
+  .map-img{
+    width: 70%;
+    background-color:$Gray_C7;
+    height:600px;
+    margin-top:40px;
+  }
+  .map-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+
+  }
+  .map-info{
+    width: 70%;
+    height: 100px;
+    background-color:$primary;
+  }
+}
+
+
