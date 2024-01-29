@@ -7,17 +7,13 @@
   z-index: 10000;
   width: 100%;
   height: $hd-height;
-
   border-bottom: 1px solid $Gray_C7;
-
   position: relative;
 
   .menu-wrap {
     max-width: 1280px;
     height: $hd-height;
-
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,8 +22,7 @@
 
 #logo {
   display: flex;
-  align-items: center;
-    
+  align-items: center;   
   height: $hd-height;
 
   a {
@@ -47,13 +42,10 @@
 .gnb_search {
   width: 250px;
   height: 55px;
-  border-radius: 50px;
-  
+  border-radius: 50px; 
   background-color: $Gray_BW;
-
   display: flex;
   justify-content: space-around;
-
   padding-left: 8px;
   padding-right: 28px;
 
@@ -66,8 +58,7 @@
   }
 
   .search_btn {
-    background: none;
-      
+    background: none;   
     text-indent: -9999px;
     position: relative;
 
@@ -78,7 +69,6 @@
         height: 22px;
         background: url(../images/loginPage_images/search-interface-symbol.png) $bg-img;
         background-size: 100%;
-
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -113,17 +103,12 @@
       #menu4, 
       #menu5 {
         padding: 35px;
-
         color: $Gray_55;
         @include Bold-20;
-
         border-bottom: 3px solid transparent;
-
         &:hover {
           border-bottom: 3px solid $primary;
-
           transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
-
           .menu1-tit {
             color: $primary;
           }
@@ -179,7 +164,6 @@
 
       @include transparent-border-R($Gray_C7, 0.5);
       box-sizing: border-box;
-
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -189,14 +173,12 @@
       .gnb-flex {
         display: flex;
         justify-content: space-around;
-
         width: 100%;
         height: 100%;
 
 
         .gnb_padding {
-          width: 100%;
-          
+          width: 100%;    
           padding: 20px;
           padding-left: 30px;
 
@@ -212,9 +194,7 @@
 
           .gnb_margin {
             margin-bottom: 30px;
-
             color: $black;
-
             @include Medium-18;
 
             &:hover {
@@ -317,7 +297,6 @@
   width: 100%;
   height: $ft-height;
   color: $white;
-
   padding-top: 32px;
 
 
@@ -332,17 +311,13 @@
       ul {
         display: flex;
         color: $white;
-        
         @include SemiBold-18;
-
         padding-bottom: 24px;
-
         border-bottom: 1px solid $white;
 
         li  {
           a {
             color: $white;
-
             margin-right: 23px;
           }
 

@@ -1,9 +1,8 @@
 // 가영님 자바스크립트
+
 const introswiper = new Swiper('.slide-intro', {
 
-    loop: true,
-  
-    
+    loop: true,    
     pagination: {
       el: '.swiper-pagination',
     },
@@ -12,37 +11,19 @@ const introswiper = new Swiper('.slide-intro', {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false,
     },
   
   });
 
-  var noticeswiper = new Swiper(".slide-notice", {
-    slidesPerView: 4,
-    loop: true,
-    centeredSlides: true,
-    spaceBetween: 30,
-    grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
   const tvswiper = new Swiper('.slide-tv', {
-
     loop: true,
-  
     slidesPerView: 2,
-
-    spaceBetween: 20,
-   
+    spaceBetween: 20,  
      pagination: {
        el: '.swiper-pagination',
-     },
-  
-    
+     },  
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -51,18 +32,12 @@ const introswiper = new Swiper('.slide-intro', {
   });
 
   const infoswiper = new Swiper('.slide-info', {
-
     loop: true,
-  
     slidesPerView: 2,
-
     spaceBetween: 20,
-   
      pagination: {
        el: '.swiper-pagination',
-     },
-  
-    
+     },     
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -75,8 +50,47 @@ const introswiper = new Swiper('.slide-intro', {
   });
 
 
-  // 이미지 클릭 시 슬라이드 넘기기 함수
-  function goToSlide(index) {
-      swiper.slideTo(index); // Swiper API의 slideTo 메서드 사용
-  }
+
+//슬릭 슬라이드
+
+$(document).ready(function(){
+  // .slick-slide 클래스를 가진 요소들에 대한 슬라이더 초기화
+  $('.slide-notice').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+  });
+});
+
+//베너 애니메이션
+
+//servicebox1
+document.addEventListener('DOMContentLoaded', function() {
+  var banner = document.querySelector('.servicebox1');
+  banner.classList.add('show');
+});
+
+//servicebox2
+document.addEventListener('DOMContentLoaded', function() {
+  var banner = document.querySelector('.servicebox2');
+  setTimeout(function() {
+    banner.classList.add('show');
+  }, 500);
+});
+//servicebox3
+document.addEventListener('DOMContentLoaded', function() {
+  var banner = document.querySelector('.servicebox3');
+  setTimeout(function() {
+    banner.classList.add('show');
+  }, 1500); 
+});
+//servicebox4
+document.addEventListener('DOMContentLoaded', function() {
+  var banner = document.querySelector('.servicebox4');
+  setTimeout(function() {
+    banner.classList.add('show');
+  }, 2000); 
+});
+
 
