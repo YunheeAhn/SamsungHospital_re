@@ -114,4 +114,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+    // 아무것도 입력 안 한 상태로 버튼 입력시 alert창 생성
+    var clickErrorBtn = [
+        document.querySelector('#reserve-Btn'),
+        document.querySelector('#confirmBtn'),
+        document.querySelector('.phone-certi'),
+    ];
+
+    function showAlert () {
+        alert('내용을 입력해주세요')
+    }
+
+    clickErrorBtn.forEach(function (Btn) {
+        Btn.addEventListener('click', function(){
+            showAlert();
+        })
+    });
+
+    
 })
