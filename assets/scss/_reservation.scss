@@ -98,6 +98,13 @@
 
     .idpw {
         margin-right: 10px;
+
+        .idpwbtn {
+            
+            &:hover {
+                color: $primary;
+            }
+        }
     }
     
     .join {
@@ -111,6 +118,13 @@
             content: '|';
             width: 22px;
             height: 22px;
+        }
+
+        .joinbtn {
+
+            &:hover {
+                color: $primary;
+            }
         }
     }
 }
@@ -140,10 +154,20 @@
     }
     .naver {
         border-color: #00C63B;
+
+        &:hover {
+            color: $white;
+            background: #00C63B;
+        }
     }
     .kakaotalk {
         border-color: #FAE100;
         margin-bottom: 10px;
+
+        &:hover {
+            color: $white;
+            background: #FAE100;
+        }
     }
 }
 .tel-wrap {
@@ -168,9 +192,19 @@
 
         border: 1px solid $Gray_C7;
         text-align: center;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
     }
     .number {
         @include SemiBold-20;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
     }
 }
 
