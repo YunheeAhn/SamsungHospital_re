@@ -20,8 +20,16 @@
   @include Regular-16;
   a {
     color: $Gray_88;
+    position: relative;
+    padding-right: 20px;
+    &:hover {
+      text-decoration: underline;
+    }
     &::after {
       content: "\f105";
+      position: absolute;
+      top: 11%;
+      right: 0;
       font-family: "Line Awesome Free";
       font-weight: 900;
       font-size: 19px;
@@ -57,7 +65,7 @@
   }
 
   .menu-box {
-    width: 235px;
+    width: 234px;
     height: 56px;
     border-top: 1.5px solid $Gray_C7;
 
@@ -75,6 +83,8 @@
 
   .menu-box-bg {
     background: $primary;
+    border-bottom: 1.5px solid $Gray_C7;
+
     a {
       color: $white;
     }
@@ -356,6 +366,7 @@
       }
       span {
         color: $secondary_B4;
+        text-decoration: underline;
       }
     }
     .img-box {
@@ -419,6 +430,7 @@
       width: 480px;
       height: 50px;
       background: $Gray_BW;
+      border-radius: 1px;
       border: none;
       @include Regular-16;
       padding-left: 20px;
@@ -438,6 +450,7 @@
       height: 50px;
       text-align: center;
       background: $secondary_B2;
+      border-radius: 1px;
       @include SemiBold-18;
       line-height: 50px;
       margin-left: 4px;
