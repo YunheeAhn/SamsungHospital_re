@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollY = window.scrollY;
     if (scrollY > 750) {
       console.log(scrollY);
-      sidebar.style.top = scrollY - 650 + "px";
+      sidebar.style.top = scrollY - 580 + "px";
     } else {
       sidebar.style.top = "230px";
     }
