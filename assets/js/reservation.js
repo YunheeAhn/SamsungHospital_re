@@ -212,13 +212,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 뒤로가기 화살표 클릭시 이전(직전) 페이지로 이동
 
-    const backBtn = document.querySelector('.back-btn::before')
+    const backBtn = document.querySelector('.tit.txt')
 
     function backHistory () {
         backBtn.addEventListener('click', function(){
-            document.history.back()
+            window.history.back()
+
         })
     }
-    backHistory()
+    backHistory();
 
 })

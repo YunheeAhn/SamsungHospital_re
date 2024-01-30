@@ -13,22 +13,38 @@
         display: flex;
         align-items: center;
 
+        position: relative;
+
         .back-btn {
             text-indent: -9999px;
         }
     
-        &::before {
-            display: block;
-            content: '\f104';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            width: 22px;
-            height: 22px;
-        }
-    
         .txt {
-            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            margin-right: auto ;
+
+            &::after {
+                display: block;
+                content: '\f104';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                width: 22px;
+                height: 22px;
+
+                cursor: pointer;
+            }
+
+            a {
+                display: flex;
+                
+
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
+
     }
     
 }
