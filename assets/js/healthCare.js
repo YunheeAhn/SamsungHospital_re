@@ -20,6 +20,7 @@ var swiper = new Swiper(".swiper-healthtv", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 질환정보tab
   const tabs = document.querySelectorAll(".sec-tabs");
 
   tabs.forEach(function (tab) {

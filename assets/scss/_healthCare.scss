@@ -28,16 +28,22 @@
     }
   }
 }
-
+.sec-tit-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
 // 사이드메뉴
 .sidemenubar {
   //   background: rgba($color: lightblue, $alpha: 0.3);
   background: $white;
-  width: 237px;
+  width: 254px;
   height: 3248px; //나중에 calc로 계산
   padding-top: 147px;
   border-left: 1px solid $Gray_C7;
   border-right: 1px solid $Gray_C7;
+
   .sec-tit {
     color: $secondary_B5;
     padding-left: 104px;
@@ -45,7 +51,7 @@
   }
 
   .menu-box {
-    width: 237px;
+    width: 235px;
     height: 56px;
     border-top: 1.5px solid $Gray_C7;
 
@@ -77,7 +83,7 @@
     }
   }
   .menu-box-sub {
-    width: 235px;
+    width: 234px;
     height: 319px;
     padding: 28px 0;
     text-align: right;
@@ -92,6 +98,7 @@
       @include SemiBold-16;
       &:hover {
         color: $secondary_B4;
+        text-decoration: underline;
       }
     }
   }
@@ -173,15 +180,14 @@
   .sec-tit {
     padding: 7px 0;
   }
-}
 
-.sec-tit-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 30px;
+  .sec-tit-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
 }
-
 .sec-disease-tab {
   .search-box {
     .search {
@@ -212,89 +218,101 @@
         right: 15px;
         content: "\f002";
         font-family: "Font Awesome 6 Free";
-        font-weight: 900;
+        font-weight: 800;
         font-size: 25px;
         color: $primary;
         transform: translateY(-50%);
-        opacity: 0.9;
+        opacity: 0.7;
       }
     }
   }
-}
 
-// 질환정보 - tab박스
+  // 질환정보 - tab박스
 
-.disease-tab-container {
-  display: flex;
-  position: relative;
-}
-
-.sec-tabs {
-  width: 50%;
-}
-.tab-tit {
-  @include tab-tit;
-  cursor: pointer;
-}
-
-.tab-box {
-  display: none;
-  position: relative;
-  background: $primary;
-  margin-top: -4px;
-  width: 958px;
-  height: 270px;
-  border-radius: 4px;
-
-  ul {
+  .disease-tab-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    padding-top: 37px;
+    position: relative;
   }
-  li {
-    width: 207px;
-    height: 53px;
-    background: $white;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    a {
-      display: block;
-      padding: 16px 0;
-      @include SemiBold-18;
-      color: $Gray_55;
+
+  .sec-tabs {
+    width: 50%;
+  }
+  .tab-tit {
+    @include tab-tit;
+    cursor: pointer;
+    p {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-}
 
-.tab-category {
   .tab-box {
-    transform: translateX(-478px);
-  }
-}
+    display: none;
+    position: relative;
+    background: $primary;
+    margin-top: -4px;
+    width: 958px;
+    height: 270px;
+    border-radius: 4px;
 
-.sec-tabs {
-  &.active {
-    .tab-tit {
-      @include tab-tit-active;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding-top: 37px;
     }
-    .tab-box {
-      display: block;
-    }
-  }
-}
-
-.sec-tabs {
-  .tab-box {
     li {
-      transition: all 0.2s ease-in-out;
-      &.active {
-        background: $secondary_B5;
-        a {
-          color: $white;
+      width: 207px;
+      height: 53px;
+      background: $white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      a {
+        display: block;
+        padding: 16px 0;
+        @include SemiBold-18;
+        color: $Gray_55;
+        &:hover {
+          color: $secondary_B4;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .tab-category {
+    .tab-box {
+      transform: translateX(-478px);
+    }
+  }
+
+  .sec-tabs {
+    &.active {
+      .tab-tit {
+        @include tab-tit-active;
+        p {
+          text-decoration: none;
+        }
+      }
+      .tab-box {
+        display: block;
+      }
+    }
+  }
+
+  .sec-tabs {
+    .tab-box {
+      li {
+        transition: all 0.2s ease-in-out;
+        &.active {
+          background: $secondary_B5;
+          a {
+            color: $white;
+          }
         }
       }
     }
@@ -309,120 +327,119 @@
   .sec-tit {
     color: $secondary_B5;
   }
-}
 
-.disease-card-container {
-  width: 950px;
-  margin-top: 20px;
-  border-top: 2px solid $Gray_55;
-  border-bottom: 1px solid $Gray_55;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 40px 0px;
-  justify-content: center;
-}
+  .disease-card-container {
+    width: 950px;
+    margin-top: 20px;
+    border-top: 2px solid rgba($Gray_55, $alpha: 0.7);
+    border-bottom: 1px solid rgba($Gray_55, $alpha: 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 0px;
+    justify-content: center;
+  }
 
-.disease-card {
-  width: 196px;
-  height: 220px;
+  .disease-card {
+    width: 196px;
+    height: 220px;
 
-  &:hover {
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+      span {
+        color: $secondary_B4;
+      }
+    }
+    .img-box {
+      width: 190px;
+      height: 168px;
+      background: $white;
+      border: 1px solid rgba($color: $Gray_C7, $alpha: 0.7);
+      display: inline-block;
+      border-radius: 2px;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
     img {
-      transform: scale(1.2);
+      display: block;
+      width: 93%;
+      height: 93%;
+      object-fit: cover;
+      margin: 3% auto;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
     }
+
     span {
-      color: $secondary_B4;
+      width: 208px;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include Bold-16;
+      margin-top: 16px;
+      cursor: pointer;
     }
-  }
-  .img-box {
-    width: 190px;
-    height: 168px;
-    background: $white;
-    border: 1px solid rgba($color: $Gray_C7, $alpha: 0.7);
-    display: inline-block;
-    border-radius: 2px;
-  }
-
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  img {
-    display: block;
-    width: 93%;
-    height: 93%;
-    object-fit: cover;
-    margin: 3% auto;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-
-  span {
-    width: 208px;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    @include Bold-16;
-    margin-top: 16px;
-    cursor: pointer;
   }
 }
-
 // 의약품검색
 .sec-search {
   width: 965px;
   height: 290px;
   margin-top: $subhc-margin-top;
-}
-.sec-search-container {
-  width: 967px;
-  height: 215px;
-  margin-top: 26px;
-  display: flex;
-  background: $primary;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
 
-  .sub-tit {
-    @include SemiBold-20;
-    color: $white;
-    margin-right: 20px;
-  }
-  .search {
-    width: 480px;
-    height: 50px;
-    background: $Gray_BW;
-    border: none;
-    @include Regular-16;
-    padding-left: 20px;
-    &::placeholder {
-      color: $Gray-C7;
+  .sec-search-container {
+    width: 967px;
+    height: 215px;
+    margin-top: 26px;
+    display: flex;
+    background: $primary;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    .sub-tit {
+      @include SemiBold-20;
+      color: $white;
+      margin-right: 20px;
     }
-    &:focus {
-      outline: none;
-
+    .search {
+      width: 480px;
+      height: 50px;
+      background: $Gray_BW;
+      border: none;
+      @include Regular-16;
+      padding-left: 20px;
       &::placeholder {
-        color: transparent;
+        color: $Gray-C7;
+      }
+      &:focus {
+        outline: none;
+
+        &::placeholder {
+          color: transparent;
+        }
       }
     }
-  }
-  .search-btn {
-    width: 80px;
-    height: 50px;
-    text-align: center;
-    background: $secondary_B2;
-    @include SemiBold-18;
-    line-height: 50px;
-    margin-left: 4px;
-    color: $white;
-    cursor: pointer;
+    .search-btn {
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      background: $secondary_B2;
+      @include SemiBold-18;
+      line-height: 50px;
+      margin-left: 4px;
+      color: $white;
+      cursor: pointer;
+    }
   }
 }
-
 // 영양정보
 
 .sec-nutritions {
@@ -432,67 +449,59 @@
   margin-top: $subhc-margin-top;
   overflow: hidden;
 
-  .sec-tit-container {
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 30px;
-  }
-}
-
-.swiper-nutritions {
-  padding: 0 5px;
-  width: 967px;
-  height: 440px;
-  .swiper-wrapper {
-    display: flex;
-  }
-  .nutritions-card {
-    .img-box {
-      width: 300px;
-      height: 279px;
+  .swiper-nutritions {
+    padding: 0 5px;
+    width: 967px;
+    height: 440px;
+    .swiper-wrapper {
+      display: flex;
     }
-    a,
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 4px;
-    }
-    span {
-      display: block;
-    }
-    .tit {
-      width: 300px;
-      height: 40px;
-      margin-top: 21px;
-      @include Bold-16;
-    }
-    .date {
-      margin-top: 14px;
-      @include Regular-13;
+    .nutritions-card {
+      .img-box {
+        width: 300px;
+        height: 279px;
+      }
+      a,
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+      }
+      span {
+        display: block;
+      }
+      .tit {
+        width: 300px;
+        height: 40px;
+        margin-top: 21px;
+        @include Bold-16;
+      }
+      .date {
+        margin-top: 14px;
+        @include Regular-13;
+      }
     }
   }
 }
-
 // 건강TV
 .sec-healthtv {
   margin-top: $subhc-margin-top;
   width: 967px;
   height: 370px;
   //   background: rgba($color: lightblue, $alpha: 0.7);
-}
 
-.tv-img-box {
-  margin: 0 auto;
-  //   width: 460px;
-  //   height: 258px;
-  a,
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
+  .tv-img-box {
+    margin: 0 auto;
+    //   width: 460px;
+    //   height: 258px;
+    a,
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
   }
 }
-
 //나만의 건강코치
 
 .sec-coach {
@@ -504,76 +513,76 @@
     justify-content: center;
   }
   //   background: rgba($color: lightblue, $alpha: 0.7);
-}
 
-.slide-coach-wrapper {
-  height: 385px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  .coach-card {
-    width: 276px;
-    height: 362px;
-    background: $coach-card-bg;
-    box-sizing: border-box;
-    text-align: center;
-    margin-right: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-
-    span {
-      @include SemiBold-22;
-      font-weight: 700;
-    }
-    p {
-      @include Medium-16;
-      font-weight: 400;
-      margin-top: 16px;
-      color: $Gray_88;
-      line-height: 23px;
+  .slide-coach-wrapper {
+    height: 385px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .coach-card {
+      width: 276px;
+      height: 362px;
+      background: $coach-card-bg;
+      box-sizing: border-box;
       text-align: center;
-    }
-  }
-  .icon-box {
-    width: 120px;
-    height: 120px;
-    margin: 45px 78px 22px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+      margin-right: 18px;
+      border-radius: 5px;
+      cursor: pointer;
 
-  .slick-prev,
-  .slick-next {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-  }
-  .slick-prev {
-    left: -8px;
-    &::before {
-      content: "\f053";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      font-size: 36px;
-      color: rgba($color: $primary, $alpha: 0.3);
+      span {
+        @include SemiBold-22;
+        font-weight: 700;
+      }
+      p {
+        @include Medium-16;
+        font-weight: 400;
+        margin-top: 16px;
+        color: $Gray_88;
+        line-height: 23px;
+        text-align: center;
+      }
     }
-  }
-  .slick-next {
-    right: -7px;
-    &::before {
-      content: "\f054";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      font-size: 36px;
-      color: rgba($color: $primary, $alpha: 0.3);
+    .icon-box {
+      width: 120px;
+      height: 120px;
+      margin: 45px 78px 22px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-  }
 
-  .slick-list {
-    width: 865px;
+    .slick-prev,
+    .slick-next {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+    }
+    .slick-prev {
+      left: -8px;
+      &::before {
+        content: "\f053";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 36px;
+        color: rgba($color: $primary, $alpha: 0.3);
+      }
+    }
+    .slick-next {
+      right: -7px;
+      &::before {
+        content: "\f054";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 36px;
+        color: rgba($color: $primary, $alpha: 0.3);
+      }
+    }
+
+    .slick-list {
+      width: 865px;
+    }
   }
 }
