@@ -6,11 +6,6 @@
 //   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
 // }
 
-.header-width {
-  height: 100px;
-  background: rgba($color: $Gray_C7, $alpha: 0.5);
-}
-
 .healthcare-wrap {
   display: flex;
   width: 1280px;
@@ -48,68 +43,120 @@
     padding-left: 104px;
     padding-bottom: 22px;
   }
-}
-.menu-box {
-  width: 237px;
-  height: 56px;
-  border-top: 1.5px solid $Gray_C7;
 
-  a {
-    @include Bold-20;
-    padding: 15px 34px 15px 0;
-    text-align: right;
-    display: block;
+  .menu-box {
+    width: 237px;
+    height: 56px;
+    border-top: 1.5px solid $Gray_C7;
+
+    a {
+      @include Bold-20;
+      padding: 15px 34px 15px 0;
+      text-align: right;
+      display: block;
+    }
   }
-}
 
-.menu-box-btm {
-  border-bottom: 1.5px solid $Gray_C7;
-}
-
-.menu-box-bg {
-  background: $primary;
-  a {
-    color: $white;
+  .menu-box-btm {
+    border-bottom: 1.5px solid $Gray_C7;
   }
-}
-.menu-box-md,
-.menu-box-btm {
-  &:hover {
+
+  .menu-box-bg {
     background: $primary;
     a {
       color: $white;
     }
   }
-}
-.menu-box-sub {
-  width: 235px;
-  height: 319px;
-  padding: 28px 0;
-  text-align: right;
-  background: $Gray_BW;
-  li {
-    height: 35px;
-  }
-  a {
-    height: 100%;
-    padding-right: 36px;
-    display: block;
-    @include SemiBold-16;
+  .menu-box-md,
+  .menu-box-btm {
     &:hover {
-      color: $secondary_B4;
+      background: $primary;
+      a {
+        color: $white;
+      }
+    }
+  }
+  .menu-box-sub {
+    width: 235px;
+    height: 319px;
+    padding: 28px 0;
+    text-align: right;
+    background: $Gray_BW;
+    li {
+      height: 35px;
+    }
+    a {
+      height: 100%;
+      padding-right: 36px;
+      display: block;
+      @include SemiBold-16;
+      &:hover {
+        color: $secondary_B4;
+      }
+    }
+  }
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25%,
+    75% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
+  .bnr-container {
+    width: 198px;
+    height: 356px;
+    margin: 20px auto;
+    background: $sidebnr-bg;
+    &:hover {
+      img {
+        &:nth-child(2) {
+          animation: shake 0.3s ease infinite;
+        }
+      }
+    }
+  }
+
+  .bnr-icon {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-left: 20px;
+    img {
+      &:first-child {
+        width: 79px;
+        height: 86px;
+      }
+      &:nth-child(2) {
+        width: 43px;
+        height: 40px;
+        margin-top: 3px;
+        margin-left: -6px;
+      }
+    }
+  }
+
+  .bnr-text {
+    @include Bold-30;
+    line-height: 38px;
+    text-align: center;
+    p {
+      padding-top: 25px;
+      &:first-child {
+        color: $sidebnr-text;
+      }
+      &:nth-child(2) {
+        padding-top: 25px;
+        color: $white;
+      }
     }
   }
 }
-.bnr-container {
-  width: 198px;
-  height: 356px;
-  margin: 20px auto;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
 // 건강정보 내용
 
 .contents-wrap {
