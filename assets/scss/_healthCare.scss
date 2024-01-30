@@ -50,6 +50,12 @@
     padding-bottom: 22px;
   }
 
+  .sidemenubar-container {
+    position: absolute;
+    top: 230px;
+    transition: all 0.5s ease-in-out;
+  }
+
   .menu-box {
     width: 235px;
     height: 56px;

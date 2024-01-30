@@ -41,6 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
       tabBtn.classList.toggle("active");
     });
   });
+
+  // 사이드메뉴
+  window.onscroll = function () {
+    const sidebar = document.querySelector(".sidemenubar-container");
+    const scrollY = window.scrollY;
+    if (scrollY > 750) {
+      console.log(scrollY);
+      sidebar.style.top = scrollY - 650 + "px";
+    } else {
+      sidebar.style.top = "230px";
+    }
+  };
 });
 
 $(document).ready(function () {
