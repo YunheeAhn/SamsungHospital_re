@@ -72,6 +72,15 @@
     color: $white;
   }
 }
+.menu-box-md,
+.menu-box-btm {
+  &:hover {
+    background: $primary;
+    a {
+      color: $white;
+    }
+  }
+}
 .menu-box-sub {
   width: 235px;
   height: 319px;
@@ -86,6 +95,9 @@
     padding-right: 36px;
     display: block;
     @include SemiBold-16;
+    &:hover {
+      color: $secondary_B4;
+    }
   }
 }
 .bnr-container {
@@ -120,6 +132,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .sec-disease-tab {
@@ -419,9 +432,6 @@
   width: 967px;
   height: 370px;
   //   background: rgba($color: lightblue, $alpha: 0.7);
-  .sec-tit {
-    padding-bottom: 30px;
-  }
 }
 
 .tv-img-box {
@@ -443,11 +453,14 @@
   height: 480px;
   margin-top: $subhc-margin-top;
 
+  .sec-tit-container {
+    justify-content: center;
+  }
   //   background: rgba($color: lightblue, $alpha: 0.7);
 }
 
 .slide-coach-wrapper {
-  height: 427px;
+  height: 385px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,7 +506,7 @@
     position: absolute;
   }
   .slick-prev {
-    left: -10px;
+    left: -8px;
     &::before {
       content: "\f053";
       font-family: "Font Awesome 6 Free";
@@ -503,7 +516,7 @@
     }
   }
   .slick-next {
-    right: 5px;
+    right: -7px;
     &::before {
       content: "\f054";
       font-family: "Font Awesome 6 Free";
@@ -514,6 +527,6 @@
   }
 
   .slick-list {
-    width: 882px;
+    width: 865px;
   }
 }
