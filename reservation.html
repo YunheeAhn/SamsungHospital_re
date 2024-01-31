@@ -417,38 +417,40 @@
               <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 시작 -->
               <div class="member idpw-wrap">
                 <!-- 아이디 입력하기 -->
-                <div class="idpw id">
-                  <label>
-                    <input
-                      name="idlog"
-                      id="idlog"
-                      placeholder="아이디/진찰 번호(환자번호)"
-                      type="text"
-                      class="inputText"
-                    />
-                  </label>
-                </div>
-                <!-- 비밀번호 입력하기 -->
-                <div class="idpw pw">
-                  <label>
-                    <input
-                      name="pwlog"
-                      id="pwlog"
-                      onkeydown="check()"
-                      placeholder="비밀번호"
-                      type="password"
-                      maxlength="13"
-                      class="inputText"
-                    />
-                  </label>
-                </div>
-                <!-- 회원 예약하기 입력 버튼 -->
-                <!-- 아이디, 비밀번호 입력 하면 버튼 활성화 -->
-                <div class="idpw reserve-box">
-                  <button class="reserve-Btn" type="button" id="reserve-Btn">
-                    회원 예약하기
-                  </button>
-                </div>
+                <form action="#" id="loginForm">
+                  <div class="idpw id">
+                    <label>
+                      <input
+                        name="idlog"
+                        id="idlog"
+                        placeholder="아이디/진찰 번호(환자번호)"
+                        type="text"
+                        class="inputText"
+                      />
+                    </label>
+                  </div>
+                  <!-- 비밀번호 입력하기 -->
+                  <div class="idpw pw">
+                    <label>
+                      <input
+                        name="pwlog"
+                        id="pwlog"
+                        onkeydown="check()"
+                        placeholder="비밀번호"
+                        type="password"
+                        maxlength="13"
+                        class="inputText"
+                      />
+                    </label>
+                  </div>
+                  <!-- 회원 예약하기 입력 버튼 -->
+                  <!-- 아이디, 비밀번호 입력 하면 버튼 활성화 -->
+                  <div class="idpw reserve-box">
+                    <button class="reserve-Btn" type="submit" id="reserve-Btn">
+                      회원 예약하기
+                    </button>
+                  </div>
+                </form>
               </div>
               <!-- 회원 아이디, 비밀번호, 예약하기 버튼 구역 끝 -->
 

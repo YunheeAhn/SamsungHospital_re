@@ -11,7 +11,7 @@
   position: relative;
 
   .menu-wrap {
-    max-width: 1280px;
+    max-width: $breakpoint-xl;
     height: $hd-height;
     margin: 0 auto;
     display: flex;
@@ -32,7 +32,7 @@
   &::before {
     content: '';
     display: block;
-    width: 200px;
+    width: 160px;
     height: 80px;
     background: url(../images/loginPage_images/logoImages.png) $bg-img;
     background-size: 100%;
@@ -52,15 +52,32 @@
   .search_bar {
     border: none;
     background: none;
-    width: 147px;
+
+    padding: 10px;
+    width: 100%;
 
     @include Regular-16;
+
+    &::placeholder {
+      color: $Gray_C7;
+    }
+
+    &:focus {
+      outline: none;
+      
+      &::placeholder {
+        color : transparent
+      }
+    }
   }
 
   .search_btn {
     background: none;   
     text-indent: -9999px;
     position: relative;
+
+   
+    
 
     &::after {
       content: '';
@@ -102,10 +119,18 @@
       #menu3, 
       #menu4, 
       #menu5 {
-        padding: 35px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 40px 10px 40px 10px;
+
+        height: 100%;
+
         color: $Gray_55;
         @include Bold-20;
+
         border-bottom: 3px solid transparent;
+
         &:hover {
           border-bottom: 3px solid $primary;
           transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
@@ -135,12 +160,11 @@
   .section {
     
     display: flex;
-    max-width: 1280px;
+    max-width: $breakpoint-xl;
     min-height: 310px;
     margin: 0 auto;
     text-align: left;
 
-    padding: 10px;
 
     .gnb_cont {
       width: 20%;
@@ -188,10 +212,6 @@
           flex-direction: column;
           align-items: flex-start;
 
-          &:nth-of-type(3) {
-            border: none;
-          }
-
           .gnb_margin {
             margin-bottom: 30px;
             color: $black;
@@ -222,9 +242,6 @@
   }
 }
 
-// .menu1-tit-clickable {
-//   cursor: pointer;
-// }
 
 // Footer
 .sns {
@@ -291,8 +308,8 @@
 .ft-wrap {
   background: $secondary_B5;
   color: $white;
-
 }
+
 #footer {
   width: 100%;
   height: $ft-height;
@@ -301,7 +318,7 @@
 
 
   .inner {
-    max-width: 1280px;
+    max-width: $breakpoint-xl;
     display: flex;
     flex-direction: column;
 
@@ -326,6 +343,45 @@
     }
    
   }
+}
+
+// 미디어쿼리
+// 태블릿 max
+
+@media screen and (max-width:$breakpoint-xl) {
+  // 헤더
+  #menu_navi {
+    .menu_area {
+      .wsize {
+        #menu1, 
+        #menu2, 
+        #menu3, 
+        #menu4, 
+        #menu5 {
+          margin-left: 10px;
+          margin-right: 10px;
+
+          @include Bold-16
+        }
+      }
+    }
+  }
+
+  .gnb_search {
+    width: 230px;
+  }
+
+  // 풋터
+  .ft-wrap {
+    #footer {
+      .inner {
+        ul {
+          @include SemiBold-16;
+        }
+      }
+    }
+  }
+  
 }
 
 @import "_main", "_healthCare", "_reservation";
