@@ -63,10 +63,12 @@
         justify-content: center;
         align-items: center;
         opacity: 1;
+        transform: translateY(0);
       }
     .servicebox1{
-      opacity: 0; /* 초기에는 투명하게 설정 */
-      transition: opacity 3s, transform 1s; /* 트랜지션 속성 추가 */
+      opacity: 0;     
+      transform: translateY(60px);
+      transition: opacity 3s ease-out, transform 2s ease-out;
     }
 
     .servicebox2.show{
@@ -76,10 +78,12 @@
         align-items: center;
         flex-direction: column;
         opacity: 1;
+        transform: translateY(0);
     }
     .servicebox2{
-      opacity: 0; /* 초기에는 투명하게 설정 */
-      transition: opacity 3s, transform 1s; /* 트랜지션 속성 추가 */
+      opacity: 0;
+      transform: translateY(60px);
+      transition: opacity 3s ease-out, transform 2s ease-out;
     }
 
     .servicebox3.show{
@@ -89,10 +93,12 @@
         align-items: center;
         flex-direction: column;
         opacity: 1;
+        transform: translateY(0);
     }
     .servicebox3{
-      opacity: 0; /* 초기에는 투명하게 설정 */
-      transition: opacity 3s, transform 1s; /* 트랜지션 속성 추가 */
+      opacity: 0; 
+      transform: translateY(60px);
+      transition: opacity 3s ease-out, transform 2s ease-out;
     }
 
     .servicebox4.show{
@@ -105,6 +111,7 @@
         justify-content: center;
         align-items: center;
         opacity: 1;
+        transform: translateY(0);
 
       .loginbox1 .non-member-text{
         color: $secondary_B1;
@@ -142,8 +149,9 @@
       }
     }
     .servicebox4{
-      opacity: 0; /* 초기에는 투명하게 설정 */
-      transition: opacity 3s, transform 1s; /* 트랜지션 속성 추가 */
+      opacity: 0; 
+      transform: translateY(60px);
+      transition: opacity 3s ease-out, transform 2s ease-out;
     }
 
   }
@@ -159,6 +167,7 @@
   background: $primary;
   width: 100%;
   height: 390px;
+
   a{
     display: block;
     text-align: center;
@@ -254,16 +263,20 @@
   padding: 60px 0;
   margin:40px auto;
   background-color: $gray_F8;
-  max-width: 1280px;
-  width: 100%;
+  max-width: 100%;
  border-radius: 2px;
 
   .goto-wrapper{ 
     margin-top: 20px;
+    width: 1280px;
+    max-width: 100%;
+    margin: calc(100% - 1280px) 0px;
+
  
-    ul{
+    ul {
       display: flex;
-      justify-content:space-evenly;   
+      justify-content:center;
+      align-items: center; 
       li a{
         display: flex;
         justify-content: center;
@@ -272,11 +285,28 @@
         width: 180px;
         height: 180px;
         border-radius: 50%;
-        background-color:$secondary_B6;
+        background-color:$secondary_B6;        
+        }
+        li a:hover{
+          background-color: #D8E9FF;
+
+        }
         img{
           width: 80px;
           height:80px;
           object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+        img:hover {
+          animation: rotateAnimation 0.5s 1 linear;
+        }       
+        @keyframes rotateAnimation {
+          from {
+            transform: rotateY(0deg);
+          }
+          to {
+            transform: rotateY(360deg);
+          }
         }
         .doc{
             width: 76px;
@@ -284,7 +314,6 @@
       }
     }
   }
-}
 
 //section5(건강tv)
 .sec5{

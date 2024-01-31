@@ -47,6 +47,7 @@
   />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" type="text/css" href="./assets/css/comm.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -56,9 +57,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script defer type="text/javascript" src="./assets/js/comm.js"></script>
+
     <script defer src="./assets/js/main.js"></script>
     <script defer src="./assets/js/comm.js"></script>
 </head>
@@ -447,9 +450,9 @@
         <section class="sec-g sec3">
             <div class="notice-wrapper">
                 <div class="notice-text">
-                    <h2>NOTICE</h2>
-                    <div>고객여러분께 가장 빠른 소식을<br>
-                        제공해드리겠습니다</div>
+                    <h2 data-aos="fade-up" data-aos-delay="100">NOTICE</h2>
+                    <div data-aos="fade-up" data-aos-delay="500" class="notice-text-1">고객여러분께 가장 빠른 소식을<br>
+                제공해드리겠습니다</div>
                 </div>
                 <div class="slide-notice">                  
                         <div class="slick-slide"> 
@@ -493,8 +496,8 @@
         </section>
 
         <!--section4(서비스 바로가기)-->
-        <h1 class="sec4-h2">주요 서비스</h1> 
-        <section class="sec-g sec4">
+        <h1 data-aos="fade-up" data-aos-delay="40"class="sec4-h2">주요 서비스</h1> 
+        <section data-aos="fade-up" data-aos-delay="20" class="sec-g sec4">
                <div class="goto-wrapper">
             <ul>
                 <li>
@@ -699,6 +702,11 @@
 
     <!-- 안윤희 - 풋터 -->
     
-
+    <script>
+        AOS.init({
+            duration: 1000, 
+             easing: 'ease-in-out', 
+        });
+      </script>
 </body>
 </html>

@@ -93,4 +93,27 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 2000); 
 });
 
+// //gsap 
+//  gsap.registerPlugin(ScrollTrigger);
 
+//  tl.from(".notice-text", {
+//   opacity: 0,
+//   y: 100,
+//   duration: 1,
+//   stagger: 0.5
+// });
+// ​
+// // tl.to(
+// //   ".notice-text",
+// //   {
+// //     opacity: 1,
+// //     y: -100,
+// //     duration: 1,
+// //     stagger: {
+// //       each: 0.5,
+// //       from: "end"
+// //     }
+// //   },
+// //   "+=2"
+// // );
+ 
