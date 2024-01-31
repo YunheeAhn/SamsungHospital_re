@@ -10,10 +10,9 @@ $secondary_B4: #0054d1;
 $secondary_B5: #003d7d;
 $secondary_B6: #eff6ff;
 
-
 // 그레이스케일
 $Gray_BW: #f9fafb;
-$gray_F8: #F8f8f8;
+$gray_F8: #f8f8f8;
 $Gray_E3: #e3e3e3;
 $Gray_D9: #d9d9d9;
 $Gray_C7: #c7c7c7;
@@ -30,7 +29,10 @@ $font-family: "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
 $font-size: 16px;
 
 // 서브페이지- 건강정보
-$subhc-margin-top: 80px;
+$subhc-margin-top: 90px;
+$coach-card-bg: #efeff3;
+$sidebnr-bg: #40b16a;
+$sidebnr-text: #fef4a0;
 
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;
