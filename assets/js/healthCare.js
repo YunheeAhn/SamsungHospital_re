@@ -38,10 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tabBtns.forEach(function (tabBtn) {
     tabBtn.addEventListener("click", function () {
+      const isActive = tabBtn.classList.contains("active");
+
       tabBtns.forEach(function (tabBtn) {
         tabBtn.classList.remove("active");
       });
-      tabBtn.classList.add("active");
+      if (!isActive) tabBtn.classList.add("active");
     });
   });
 
