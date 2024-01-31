@@ -1,286 +1,343 @@
 // 윤희님 예약 페이지 scss
 
 .inner-tit {
-  background: $Gray_BW;
-  @include SemiBold-20;
+    background: $Gray_BW;
+    @include SemiBold-20;
 
-  .inner-wrap {
-    max-width: 1280px;
-    height: 50px;
+    .inner-wrap {
+        max-width: 1280px;
+        height: 50px;
 
-    margin: 0 auto;
+        margin: 0 auto;
 
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
 
-    .back-btn {
-      text-indent: -9999px;
+        position: relative;
+
+        .back-btn {
+            text-indent: -9999px;
+        }
+    
+        .txt {
+            display: flex;
+            align-items: center;
+            margin-right: auto ;
+
+            &::after {
+                display: block;
+                content: '\f104';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                width: 22px;
+                height: 22px;
+
+                cursor: pointer;
+            }
+
+            a {
+                display: flex;
+                
+
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
     }
-
-    &::before {
-      display: block;
-      content: "\f104";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      width: 22px;
-      height: 22px;
-    }
-
-    .txt {
-      margin: 0 auto;
-    }
-  }
+    
 }
 
 .contents {
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    position: relative;
+    
 }
 
 #sec01,
 #sec02 {
-  padding-top: 60px;
-  padding-bottom: 120px;
 
-  background-color: $Gray_BW;
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    background-color: $Gray_BW;
 }
 
 #sec01 {
-  display: block;
+    display: block;
 
-  width: 49%;
+    width: 49%;
 }
 .idpw {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
-  .inputText {
-    width: 470px;
-    height: 50px;
+    .inputText {
+        width: 470px;
+        height: 50px;
+    
+        margin-bottom: 10px;
+        padding-left: 18px;
+    
+        border: 0.8px solid $Gray_C7;
+    }
 
-    margin-bottom: 10px;
-    padding-left: 18px;
+    .reserve-Btn {
+        width: 470px;
+        height: 50px;
 
-    border: 0.8px solid $Gray_C7;
-  }
+        margin-bottom: 30px;
 
-  .reserve-Btn {
-    width: 470px;
-    height: 50px;
+        background: $Gray_C7;
 
-    margin-bottom: 30px;
+        color: $white;
+        @include Medium-16;
 
-    background: $Gray_C7;
-
-    color: $white;
-    @include Medium-16;
-
-    text-align: center;
-  }
+        text-align: center;
+    
+    }
 }
 
 .find-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 30px;
-  margin-bottom: 40px;
-
-  @include SemiBold-16;
-
-  .idpw {
-    margin-right: 10px;
-  }
-
-  .join {
-    margin-left: 10px;
-
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 
-    &::after {
-      display: block;
-      content: "|";
-      width: 22px;
-      height: 22px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    @include SemiBold-16;
+
+    .idpw {
+        margin-right: 10px;
+
+        .idpwbtn {
+            
+            &:hover {
+                color: $primary;
+            }
+        }
     }
-  }
+    
+    .join {
+        margin-left: 10px;
+
+        display: flex;
+        flex-direction: row-reverse;
+
+        &::after {
+            display: block;
+            content: '|';
+            width: 22px;
+            height: 22px;
+        }
+
+        .joinbtn {
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
 }
 
 .quick-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-  .naver,
-  .kakaotalk {
-    width: 470px;
-    height: 50px;
+    .naver,
+    .kakaotalk {
+        width: 470px;
+        height: 50px;
 
-    margin-bottom: 10px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+        margin-bottom: 10px;
+        padding-top: 14px;
+        padding-bottom: 14px;
 
-    text-align: center;
-    @include SemiBold-18;
-    line-height: 22px;
+        text-align: center;
+        @include SemiBold-18;
+        line-height: 22px;
 
-    color: $Gray_55;
+        color: $Gray_55;
 
-    border: 1px solid;
-  }
-  .naver {
-    border-color: #00c63b;
-  }
-  .kakaotalk {
-    border-color: #fae100;
-    margin-bottom: 10px;
-  }
+        border: 1px solid;
+    }
+    .naver {
+        border-color: #00C63B;
+
+        &:hover {
+            color: $white;
+            background: #00C63B;
+        }
+    }
+    .kakaotalk {
+        border-color: #FAE100;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: $white;
+            background: #FAE100;
+        }
+    }
 }
 .tel-wrap {
-  width: 470px;
-  height: 80px;
+    width: 470px;
+    height: 80px;
 
-  margin: 0 auto;
-  margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  @include Regular-16;
-  color: $Gray_55;
-  text-align: center;
-
-  p {
-    width: 50%;
-    height: 100%;
-
-    padding: 28px;
-
-    border: 1px solid $Gray_C7;
+    @include Regular-16;
+    color: $Gray_55;
     text-align: center;
-  }
-  .number {
-    @include SemiBold-20;
-  }
+
+    p {
+        width: 50%;
+        height: 100%;
+
+        padding: 28px;
+
+        border: 1px solid $Gray_C7;
+        text-align: center;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+    .number {
+        @include SemiBold-20;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
 }
 
 #sec02 {
-  width: 49%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  .head-wrap {
-    margin-bottom: 54px;
-  }
-  .certification-wrap {
-    margin: 0 auto;
-    margin-bottom: 20px;
+    width: 49%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .head-wrap {
+        margin-bottom: 54px;
+    }
+    .certification-wrap {
+        margin: 0 auto;
+        margin-bottom: 20px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    .phone {
-      position: relative;
+        .phone {
+            position: relative;
 
-      .phone-certi {
-        position: absolute;
-        top: 0;
-        right: 0;
+            .phone-certi {
+                position: absolute;
+                top: 0;
+                right: 0;
 
-        width: 80px;
+                width: 80px;
+                height: 50px;
+
+                background: $Gray_C7;
+                color: $white;
+                @include Medium-16;
+            }
+        }
+        .inputText {
+            width: 470px;
+            height: 50px;
+
+            margin-bottom: 10px;
+            padding-left: 18px;
+    
+            border: 0.8px solid $Gray_C7;
+        }
+    }
+    .scrollBox {
+        width: 470px;
+        margin: 0 auto;
+        
+        margin-bottom: 55px;
+
+        .inner {
+            height: 135px;
+            padding: 20px;
+
+            border: 1px solid $Gray_C7;
+            
+            overflow: scroll;
+            
+            margin-bottom: 20px;
+            strong {
+                @include Bold-16;
+            }
+            p {
+                @include Regular-16;
+            }
+        }
+        .usercheck {
+            .txtform {
+                @include Regular-16;
+
+                padding: 10px;
+            }
+        }
+    }
+    .rev-btn {
+        width: 470px;
         height: 50px;
 
+        text-align: center;
+
+        margin: 0 auto;
+        padding: 12px;
+
         background: $Gray_C7;
-        color: $white;
-        @include Medium-16;
-      }
+
+        .confirmBtn {
+            color: $white;
+            @include Medium-16;
+            width: 100%;
+            height: 100%;
+        }
     }
-    .inputText {
-      width: 470px;
-      height: 50px;
-
-      margin-bottom: 10px;
-      padding-left: 18px;
-
-      border: 0.8px solid $Gray_C7;
-    }
-  }
-  .scrollBox {
-    width: 470px;
-    margin: 0 auto;
-
-    margin-bottom: 55px;
-
-    .inner {
-      height: 135px;
-      padding: 20px;
-
-      border: 1px solid $Gray_C7;
-
-      overflow: scroll;
-
-      margin-bottom: 20px;
-      strong {
-        @include Bold-16;
-      }
-      p {
-        @include Regular-16;
-      }
-    }
-    .usercheck {
-      .txtform {
-        @include Regular-16;
-
-        padding: 10px;
-      }
-    }
-  }
-  .rev-btn {
-    width: 470px;
-    height: 50px;
-
-    text-align: center;
-
-    margin: 0 auto;
-    padding: 12px;
-
-    background: $Gray_C7;
-
-    .confirmBtn {
-      color: $white;
-      @include Medium-16;
-    }
-  }
 }
 
+
 .rev {
-  @include SemiBold-30;
-  text-align: center;
+    @include SemiBold-30;
+    text-align: center;
 
-  &::before {
-    display: block;
-    content: "";
-    background: url("../images/loginPage_images/user_icon.png") $bg-img;
-    width: 30px;
-    height: 35px;
+    &::before {
+        display: block;
+        content: '';
+        background: url('../images/loginPage_images/user_icon.png') $bg-img;
+        width: 30px;
+        height: 35px;
 
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
 }
 
 .rev-desc {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+    margin-top : 20px;
+    margin-bottom: 20px;
+    text-align: center;
 
-  @include Regular-16;
-  color: $Gray_55;
+    @include Regular-16;
+    color: $Gray_55;
 }

@@ -22,12 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
     clickNavMenus.forEach(function(menu, index) {
         var dropdownMenu = dropDownMenus[index];
         addClickEvent(menu, dropdownMenu);
+        addMouseLeaveEvent(menu, dropdownMenu);
+        addMouseEnterEvent(menu, dropdownMenu)
     });
     
     dropDownMenus.forEach(function(menu) {
         addClickEvent(menu, menu); 
+        addMouseLeaveEvent(menu, menu); 
+        addMouseEnterEvent(menu, menu); 
     });
 
+    // 클릭 이벤트 발생
     function addClickEvent(menu, dropdownMenu) {
         if (menu && dropdownMenu) {
             menu.addEventListener('click', function() {
@@ -36,8 +41,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     
+    // 마우스리브 이벤트 발생
+    function addMouseLeaveEvent(menu, dropdownMenu) {
+        if (menu && dropdownMenu) {
+            menu.addEventListener('mouseleave', function() {
+                hideDropDownMenu(dropdownMenu);
+            });
+        }
+    }
 
-    // toggleDropDownMenu 함수 구현
+    // 마우스엔터 이벤트 발생
+    function addMouseEnterEvent(menu, dropdownMenu) {
+        if (menu && dropdownMenu) {
+            menu.addEventListener('mouseenter', function() {
+                showDropDownMenu(dropdownMenu);
+            });
+        }
+    }
+
+    // toggleDropDownMenu block or none 함수 구현
     function toggleDropDownMenu(menu) {
         if (menu.style.display === 'none' || menu.style.display === '') {
             menu.style.display = 'block';
@@ -45,5 +67,16 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.style.display = 'none';
         }
     }
+
+    // 마우스 떠나면 사라지기
+    function hideDropDownMenu(menu) {
+        menu.style.display = 'none';
+    }
+    // 마우스올리면 보여주기
+    function showDropDownMenu(menu) {
+        menu.style.display = 'block';
+    }
+
+    
 });
   
