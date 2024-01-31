@@ -38,7 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tabBtns.forEach(function (tabBtn) {
     tabBtn.addEventListener("click", function () {
-      tabBtn.classList.toggle("active");
+      tabBtns.forEach(function (tabBtn) {
+        tabBtn.classList.remove("active");
+      });
+      tabBtn.classList.add("active");
     });
   });
 
