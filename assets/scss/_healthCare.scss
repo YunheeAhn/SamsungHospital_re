@@ -6,6 +6,8 @@
 //   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
 // }
 
+// 레이아웃 - Pc
+
 .healthcare-wrap {
   display: flex;
   max-width: 1280px;
@@ -51,6 +53,7 @@
   padding-top: 147px;
   border-left: 1px solid $Gray_C7;
   border-right: 1px solid $Gray_C7;
+  margin-right: 77px;
 
   .sec-tit {
     color: $secondary_B5;
@@ -180,18 +183,20 @@
     }
   }
 }
+
 // 건강정보 내용
 
 .contents-wrap {
-  width: 1043px;
-  margin-left: 77px;
+  max-width: 1043px;
+  margin: 0 auto;
 }
 
-// 질환정보 - 제목과 검색창
+// 질환정보 - PC - 제목과 검색창
 
 .sec-disease-tab {
   margin-top: 182px;
-  width: 955px;
+  max-width: 955px;
+  position: relative;
   height: 395px;
   .sec-tit {
     padding: 7px 0;
@@ -244,11 +249,10 @@
     }
   }
 
-  // 질환정보 - tab박스
+  // 질환정보 - PC - tab박스
 
   .disease-tab-container {
     display: flex;
-    position: relative;
   }
 
   .sec-tabs {
@@ -266,10 +270,11 @@
 
   .tab-box {
     display: none;
-    position: relative;
+    position: absolute;
+    top: 40%;
+    left: 0;
     background: $primary;
     margin-top: -4px;
-    width: 958px;
     height: 270px;
     border-radius: 4px;
 
@@ -298,12 +303,6 @@
           text-decoration: underline;
         }
       }
-    }
-  }
-
-  .tab-category {
-    .tab-box {
-      transform: translateX(-478px);
     }
   }
 
@@ -338,7 +337,7 @@
 
 // 많이찾는 질환정보
 .sec-disease {
-  width: 965px;
+  max-width: 965px;
   height: 638px;
   margin-top: $subhc-margin-top;
   .sec-tit {
@@ -346,20 +345,19 @@
   }
 
   .disease-card-container {
-    width: 950px;
     margin-top: 20px;
     border-top: 2px solid rgba($Gray_55, $alpha: 0.7);
     border-bottom: 1px solid rgba($Gray_55, $alpha: 0.7);
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    padding: 40px 0px;
-    justify-content: center;
+    padding: 40px 0 0;
+    justify-content: space-between;
   }
 
   .disease-card {
     width: 196px;
     height: 220px;
+    margin-bottom: 40px;
 
     &:hover {
       img {
@@ -372,7 +370,6 @@
     }
     .img-box {
       width: 190px;
-      height: 168px;
       background: $white;
       border: 1px solid rgba($color: $Gray_C7, $alpha: 0.7);
       display: inline-block;
@@ -406,14 +403,14 @@
     }
   }
 }
+
 // 의약품검색
 .sec-search {
-  width: 965px;
+  max-width: 965px;
   height: 290px;
   margin-top: $subhc-margin-top;
 
   .sec-search-container {
-    width: 967px;
     height: 215px;
     margin-top: 26px;
     display: flex;
@@ -464,25 +461,23 @@
 
 .sec-nutritions {
   display: block;
-  width: 967px;
-  height: 450px;
+  max-width: 967px;
   margin-top: $subhc-margin-top;
   overflow: hidden;
 
   .swiper-nutritions {
     padding: 0 5px;
-    width: 967px;
-    height: 440px;
+    max-width: 967px;
     .swiper-wrapper {
       display: flex;
     }
     .nutritions-card {
       .img-box {
         width: 300px;
-        height: 279px;
       }
-      a,
+
       img {
+        display: block;
         width: 100%;
         height: 100%;
         border-radius: 4px;
@@ -491,7 +486,6 @@
         display: block;
       }
       .tit {
-        width: 300px;
         height: 40px;
         margin-top: 21px;
         @include Bold-16;
@@ -506,7 +500,7 @@
 // 건강TV
 .sec-healthtv {
   margin-top: $subhc-margin-top;
-  width: 967px;
+  max-width: 967px;
   height: 370px;
   //   background: rgba($color: lightblue, $alpha: 0.7);
 
@@ -525,7 +519,7 @@
 //나만의 건강코치
 
 .sec-coach {
-  width: 965px;
+  max-width: 965px;
   height: 480px;
   margin-top: $subhc-margin-top;
 
@@ -603,6 +597,48 @@
 
     .slick-list {
       width: 865px;
+    }
+  }
+}
+
+// 사이드메뉴바 - tablet(1280)
+@media screen and (max-width: $breakpoint-xl) {
+  .sidemenubar {
+    display: none;
+  }
+}
+
+// 사이드메뉴바 - tablet(992)
+@media screen and (max-width: $breakpoint-lg) {
+  .sidemenubar {
+    display: none;
+  }
+  .contents-wrap {
+    max-width: 800px;
+  }
+  .sec-disease-tab {
+    .tab-box {
+      li {
+        width: 170px;
+      }
+    }
+  }
+  .sec-disease {
+    max-width: 800px;
+    .disease-card {
+      .img-box {
+        width: 180px;
+      }
+    }
+  }
+  .sec-nutritions {
+    max-width: 800px;
+    .swiper-nutritions {
+      .nutritions-card {
+        .img-box {
+          width: 250px;
+        }
+      }
     }
   }
 }

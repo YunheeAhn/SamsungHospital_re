@@ -4,7 +4,7 @@ var swiper = new Swiper(".swiper-nutritions", {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 2300,
+    delay: 10000000,
     disableOnInteraction: false,
   },
 });
