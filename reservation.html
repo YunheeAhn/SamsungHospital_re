@@ -419,7 +419,7 @@
                 <!-- 아이디 입력하기 -->
                 <form action="#" id="loginForm">
                   <div class="idpw id">
-                    <label>
+                    <label class="idpw label100">
                       <input
                         name="idlog"
                         id="idlog"
@@ -431,7 +431,7 @@
                   </div>
                   <!-- 비밀번호 입력하기 -->
                   <div class="idpw pw">
-                    <label>
+                    <label class="idpw label100">
                       <input
                         name="pwlog"
                         id="pwlog"
@@ -506,99 +506,102 @@
               <!-- 비회원 예약 이너 타이틀 구역 끝 -->
 
               <!-- 이름,핸드폰 입력 후 인증하기 구역 시작 -->
-              <div class="N-member certification-wrap">
-                <!-- 이름 입력하기 -->
-                <div class="certification name">
-                  <label>
-                    <input
-                      type="text"
-                      name="ptnm"
-                      id="ptnm"
-                      class="inputText"
-                      placeholder="이름"
-                    />
-                  </label>
-                </div>
-                <!-- 핸드폰 번호 입력하기 -->
-                <div class="certification phone">
-                  <div class="certification phone-num">
+              <form action="#" id="N-memberForm">
+                <div class="N-member certification-wrap">
+                  <!-- 이름 입력하기 -->
+                  <div class="certification name">
                     <label>
                       <input
-                        type="tel"
-                        name="hpno"
-                        id="hpno"
+                        type="text"
+                        name="ptnm"
+                        id="ptnm"
                         class="inputText"
-                        placeholder="휴대전화번호"
-                        maxlength="11"
+                        placeholder="이름"
                       />
                     </label>
-                    <!-- 이름/핸드폰 번호 입력 후 인증 버튼 활성화 -->
-                    <button
-                      type="button"
-                      class="certification phone-certi"
-                    >인증
-                    </button>
+                  </div>
+                  <!-- 핸드폰 번호 입력하기 -->
+                  <div class="certification phone">
+                    <div class="certification phone-num">
+                      <label>
+                        <input
+                          type="tel"
+                          name="hpno"
+                          id="hpno"
+                          class="inputText"
+                          placeholder="휴대전화번호"
+                          maxlength="11"
+                        />
+                      </label>
+                      <!-- 이름/핸드폰 번호 입력 후 인증 버튼 활성화 -->
+                      <button
+                        type="button"
+                        class="certification phone-certi"
+                      >인증
+                      </button>
+                    </div>
+                  </div>
+                  <!-- 인증번호 입력하기 -->
+                  <div class="certification certi-num">
+                    <label>
+                      <input
+                        type="text"
+                        pattern="\d*"
+                        id="certi-num"
+                        name="certi-num"
+                        class="inputText "
+                        maxlength="4"
+                        placeholder="인증번호입력하기"
+                      />
+                    </label>
                   </div>
                 </div>
-                <!-- 인증번호 입력하기 -->
-                <div class="certification certi-num">
-                  <label>
-                    <input
-                      type="number"
-                      id="certi-num"
-                      name="certi-num"
-                      class="inputText"
-                      maxlength="4"
-                      placeholder="인증번호입력하기"
-                    />
-                  </label>
-                </div>
-              </div>
-              <!-- 이름,핸드폰 입력 후 인증하기 구역 끝 -->
+                <!-- 이름,핸드폰 입력 후 인증하기 구역 끝 -->
 
-              <!-- 동의 스크롤박스 구역 시작 -->
-              <div class="N-member scrollBox">
-                <div class="scrollBox inner">
-                  <strong>※ 개인정보 수집 및 이용에 대한 안내</strong>
-                  <p>
-                    1. 수집/이용 목적 : 비회원 환자의 진료예약 신청, 확인 및
-                    취소에 대한 이용 기록 보관.
-                  </p>
-                  <p>
-                    2. 수집하는 항목 : 이름, 환자등록번호(진찰권 번호),
-                    휴대전화번호
-                  </p>
-                  <p>3. 개인정보의 보유 및 이용 기간 : 2년</p>
-                  <p>
-                    4. 동의를 거부할 권리가 있으며, 대표전화(전화 : 1599-3114)로
-                    이용하실 수 있습니다.
-                  </p>
+                <!-- 동의 스크롤박스 구역 시작 -->
+                <div class="N-member scrollBox">
+                  <div class="scrollBox inner">
+                    <strong>※ 개인정보 수집 및 이용에 대한 안내</strong>
+                    <p>
+                      1. 수집/이용 목적 : 비회원 환자의 진료예약 신청, 확인 및
+                      취소에 대한 이용 기록 보관.
+                    </p>
+                    <p>
+                      2. 수집하는 항목 : 이름, 환자등록번호(진찰권 번호),
+                      휴대전화번호
+                    </p>
+                    <p>3. 개인정보의 보유 및 이용 기간 : 2년</p>
+                    <p>
+                      4. 동의를 거부할 권리가 있으며, 대표전화(전화 : 1599-3114)로
+                      이용하실 수 있습니다.
+                    </p>
+                  </div>
+                  <!-- 수집동의 체크하기 -->
+                  <div class="scrollBox usercheck">
+                    
+                      <input
+                        type="checkbox"
+                        name="userchk"
+                        id="userchk"
+                        title="개인정보 이용 동의"
+                      />
+                    
+                    <!-- 텍스트 눌러도 체크 딤 -->
+                    <label for="userchk" class="txtform">
+                      "환자 및 법적 대리인만 서비스 이용이 가능하며 개인정보
+                      이용에 동의 합니다."
+                    </label>
+                  </div>
                 </div>
-                <!-- 수집동의 체크하기 -->
-                <div class="scrollBox usercheck">
-                  
-                    <input
-                      type="checkbox"
-                      name="userchk"
-                      id="userchk"
-                      title="개인정보 이용 동의"
-                    />
-                  
-                  <!-- 텍스트 눌러도 체크 딤 -->
-                  <label for="userchk" class="txtform">
-                    "환자 및 법적 대리인만 서비스 이용이 가능하며 개인정보
-                    이용에 동의 합니다."
-                  </label>
-                </div>
-              </div>
-              <!-- 동의 스크롤박스 구역 끝 -->
+                <!-- 동의 스크롤박스 구역 끝 -->
 
-              <!-- 수집동의까지 완료 되면 버튼 활성화 -->
-              <div class="N-member rev-btn">
-                <button class="confirmBtn" type="button" id="confirmBtn">
-                  비회원 예약하기
-                </button>
-              </div>
+                <!-- 수집동의까지 완료 되면 버튼 활성화 -->
+                <div class="N-member rev-btn">
+                  <button class="confirmBtn" type="submit" id="confirmBtn">
+                    비회원 예약하기
+                  </button>
+                </div>
+              </form>
             </div>
             <!-- 비회원 예약 이너 전체 구역 끝 -->
           </section>

@@ -80,16 +80,20 @@
     display: block;
 
 
-    #loginForm {
+    .idpw-wrap {
         margin: 0 auto;
 
         width: 100%;
 
-        .idpw-wrap {
+        #loginForm {
             width: 100%;
             .id,
             .pw {
                 width: 100%;
+
+                .label100 {
+                    width: 100%;
+                }
             }
         }
         
@@ -100,6 +104,8 @@
 .idpw {
     display: flex;
     justify-content: center;
+
+    
 
     .inputText {
         width: 100%;
@@ -260,12 +266,20 @@
         margin: 0 auto;
         margin-bottom: 20px;
 
+        width: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        .name {
+            width: 100%;
+            
+        }
         .phone {
             position: relative;
+
+            width: 100%;
 
             .phone-certi {
                 position: absolute;
@@ -280,8 +294,11 @@
                 @include Medium-16;
             }
         }
+        .certi-num {
+            width: 100%;
+        }
         .inputText {
-            width: 470px;
+            width: 100%;
             height: 50px;
 
             margin-bottom: 10px;
@@ -291,7 +308,7 @@
         }
     }
     .scrollBox {
-        width: 470px;
+        width: 100%;
         margin: 0 auto;
         
         margin-bottom: 55px;
@@ -321,7 +338,7 @@
         }
     }
     .rev-btn {
-        width: 470px;
+        width: 100%;
         height: 50px;
 
         text-align: center;

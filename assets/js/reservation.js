@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 비회원 예약 버튼 상태 업데이트 함수
     function updateMemberButtonState() {
-       idCheckNot = idFormNot.value.trim().length > 0
-       pwCheckNot = pwFormNot.value.trim().length > 0
-       activeReserveBtn.disabled = !(idCheckNot && pwCheckNot)
-       activeReserveBtn.style.backgroundColor = idCheckNot && pwCheckNot ? '#0B50A1' : '#C7C7C7'
+        idCheckNot = idFormNot.value.trim().length > 0
+        pwCheckNot = pwFormNot.value.trim().length > 0
+        activeReserveBtn.disabled = !(idCheckNot && pwCheckNot)
+        activeReserveBtn.style.backgroundColor = idCheckNot && pwCheckNot ? '#0B50A1' : '#C7C7C7'
     }
 
     // 인증 버튼 상태 업데이트 함수
@@ -94,6 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
     certiNumFormNot.addEventListener('input', updateActiveNonMemberButtonState) // 인증번호 입력 시 비회원 예약 버튼 상태 업데이트
     checkBoxNot.addEventListener('change', updateActiveNonMemberButtonState) // 체크박스 변경 시 비회원 예약 버튼 상태 업데이트
 
+
+
+    // 인증번호 입력하기 숫자4개까지 입력 할 수 있게 지정 하기
 
     // 값 없는경우 클릭시 알림창 활성화
 

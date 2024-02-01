@@ -76,8 +76,7 @@
     text-indent: -9999px;
     position: relative;
 
-   
-    
+
 
     &::after {
       content: '';
@@ -341,13 +340,11 @@
         }
       }
     }
-   
   }
 }
 
 // 미디어쿼리
-// 태블릿 max
-
+// 1280px까지 pc화면인데 약간의 사이즈 조정
 @media screen and (max-width:$breakpoint-xl) {
   // 헤더
   #menu_navi {
@@ -361,14 +358,42 @@
           margin-left: 10px;
           margin-right: 10px;
 
-          @include Bold-16
+          @include Bold-18;
         }
       }
     }
   }
-
+  // 검색창
   .gnb_search {
     width: 230px;
+  }
+  // 네비게이션 하위메뉴
+  .smenu_area {
+    
+    .section {
+      .gnb_cont {
+        .gnb_cont-tit {
+          @include Bold-18;
+        }
+      }
+      .gnb {
+        .gnb-flex {
+          .gnb_padding {
+            .gnb_margin {
+              @include Medium-16;
+            }
+            .gnb_depth {
+              li {
+                a {
+                  @include Regular-16;
+                }
+              }
+              
+            }
+          }
+        }
+      }
+    }
   }
 
   // 풋터
@@ -376,12 +401,168 @@
     #footer {
       .inner {
         ul {
+          line-height: 20px;
+
           @include SemiBold-16;
         }
       }
     }
   }
-  
+}
+
+// 992px까지 큰 태블릿 화면
+@media screen and (max-width:$breakpoint-lg) {
+   // 헤더
+  #menu_navi {
+    .menu_area {
+      .wsize {
+        #menu1, 
+        #menu2, 
+        #menu3, 
+        #menu4, 
+        #menu5 {
+          margin-left: 10px;
+          margin-right: 10px;
+
+          // padding: 40px 10px 40px 10px;
+
+          line-height: 20px;
+          @include Bold-16
+        }
+      }
+    }
+  }
+  // 검색창
+  .gnb_search {
+    width: 210px;
+  }
+  // 네비게이션 하위메뉴
+  .smenu_area {
+    
+    .section {
+      .gnb_cont {
+        .gnb_cont-tit {
+          @include Bold-18;
+        }
+      }
+      .gnb {
+        .gnb-flex {
+          .gnb_padding {
+            .gnb_margin {
+              @include Medium-16;
+            }
+            .gnb_depth {
+              li {
+                a {
+                  @include Regular-16;
+                }
+              }
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 768px까지 작은 태블릿 화면
+@media screen and (max-width:$breakpoint-md) {
+  // 헤더
+  #menu_navi {
+    .menu_area {
+      .wsize {
+        #menu1, 
+        #menu2, 
+        #menu3, 
+        #menu4, 
+        #menu5 {
+          margin-left: 5px;
+          margin-right: 5px;
+
+          padding: 40px 5px 40px 5px;
+
+          @include Bold-13;
+        }
+      }
+    }
+  }
+
+  // 풋터
+  .sns {
+    margin: 0 auto;
+  }
+  .copyright {
+    p {
+      @include Regular-13;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  #footer {
+    height: 100%;
+
+    padding-top: 0;
+
+
+    .inner {
+      margin: 0 auto;
+
+      padding: 5px;
+
+      .footer-nav {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+          padding: 0;
+
+          li {
+            width: 50%;
+            height: 45px;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            border: 0.8px solid $Gray_BW;
+
+            &:nth-of-type(1),
+            &:nth-of-type(3),
+            &:nth-of-type(5),
+            &:nth-of-type(7) {
+              border-left: none;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(4),
+            &:nth-of-type(6),
+            &:nth-of-type(8) {
+              border-right: none;
+            }
+
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+              border-top: none;
+            }
+
+            a {
+              margin: 0;
+
+              @include Regular-13;
+            }
+
+
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @import "_main", "_healthCare", "_reservation";
