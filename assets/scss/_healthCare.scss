@@ -560,7 +560,7 @@
     .icon-box {
       width: 120px;
       height: 120px;
-      margin: 45px 78px 22px;
+      margin: 45px auto 27px;
       img {
         width: 100%;
         height: 100%;
@@ -596,12 +596,12 @@
     }
 
     .slick-list {
-      width: 865px;
+      max-width: 865px;
     }
   }
 }
 
-// 사이드메뉴바 - tablet(1280)
+// 사이드메뉴바 - pc(1280)
 @media screen and (max-width: $breakpoint-xl) {
   .sidemenubar {
     display: none;
@@ -638,6 +638,19 @@
         .img-box {
           width: 250px;
         }
+      }
+    }
+  }
+  .sec-coach {
+    .slide-coach-wrapper {
+      .coach-card {
+        width: 256px;
+      }
+      .slick-next {
+        right: -47px;
+      }
+      .slick-prev {
+        left: -46px;
       }
     }
   }
