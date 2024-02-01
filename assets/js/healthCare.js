@@ -7,15 +7,50 @@ var swiper = new Swiper(".swiper-nutritions", {
     delay: 10000000,
     disableOnInteraction: false,
   },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 });
-
 var swiper = new Swiper(".swiper-healthtv", {
   slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 2700,
+    delay: 200000,
     disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
   },
 });
 
@@ -60,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
+// 나만의 건강코치 - 슬릭슬라이드
 $(document).ready(function () {
   $(".slide-coach-wrapper").slick({
     infinite: true,
@@ -69,6 +105,6 @@ $(document).ready(function () {
     nextArrow: '<button class="slick-next" aria-label=""></button>',
     variableWidth: true,
     autoplay: true,
-    autoplaySpeed: 2900,
+    autoplaySpeed: 290000,
   });
 });
