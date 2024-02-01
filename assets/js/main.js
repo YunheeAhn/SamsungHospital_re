@@ -23,7 +23,11 @@ const introswiper = new Swiper('.slide-intro', {
     spaceBetween: 20,  
      pagination: {
        el: '.swiper-pagination',
-     },  
+     },
+     scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },  
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
