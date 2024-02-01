@@ -202,6 +202,10 @@
   margin: auto;
   .slick-slide{
     border-radius: 5px;
+    border: 2px solid $black;
+  }
+  .slick-slide:hover{
+    border:4px solid $secondary_B5;
   }
   .notice{
     width: 70px;
@@ -211,7 +215,6 @@
     display:flex;
     justify-content: center;
     align-items: center;
-
   }
   .notice-text{
    width:328px;
@@ -258,7 +261,7 @@
 }
 .sec4{
   padding: 100px 0;
-  margin:80px auto;
+  margin:120px auto;
   background-color: $gray_F8;
   max-width: 100%;
   border-radius: 2px;
@@ -344,32 +347,53 @@
   .slide-tv{
     width: 100%;
     height: 500px;
+    text-align: center;
     img{
-     width: 600px;
-     margin: 0px 20px 0px 20px;     
+     width: 550px;
     }
     p{
       @include SemiBold-24;
       margin-left:20px;
     }
-  }
+    a:hover{
+      text-decoration:underline;
+    }
 
-
-  //
-  .swiper-pagination-bullet{
-    width: 120px;
+  .swiper-button-next, .swiper-button-prev{
+    position: absolute;
+    transform: translate(35%, -195%);
   }
+  .swiper-button-prev{
+    position: absolute;
+    transform: translate(-45%, -195%);
+  }
+}
+
   .healthinfo-slide{
   max-width: 1280px;
   margin: auto;
-  padding-top: 80px;
+  padding-top: 50px;
+  text-align: center;
   .slide-info{
     width: 100%;
     height: 500px;
       img{
-        width: 600px;
+        width: 550px;
         margin: 0px 20px 0px 20px; 
     }
+    p{
+      @include SemiBold-24;
+      margin-left:20px;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+  .swiper-button-next{
+    transform: translate(40%, -195%);
+  }
+  .swiper-button-prev{
+    transform: translate(-45%, -195%);
+  }
    }
   }
 }
@@ -411,23 +435,35 @@
     width:100px;
     height:100px;
   }
-  .map-img{
+  #map{
     width: 70%;
     background-color:$Gray_C7;
     height:600px;
     margin-top:40px;
   }
+
   .map-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center ;
+  .map-img{
+    overflow: hidden;
 
+  }
   }
   .map-info{
     width: 70%;
     height: 100px;
     background-color:$primary;
+    a{
+      padding: 9px 0;
+      text-align: center;
+      background-color:$secondary_B3;
+      display: block;
+      width: 140px;
+      margin-bottom: 15px;
+    }
   }
 }
 
