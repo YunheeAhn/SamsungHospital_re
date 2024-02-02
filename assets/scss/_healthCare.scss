@@ -6,6 +6,10 @@
 //   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
 // }
 
+// 헤더 display:none
+.hd-wrap {
+  display: none;
+}
 // 레이아웃 - Pc
 
 .healthcare-wrap {
@@ -58,7 +62,7 @@
 .sidemenubar {
   //   background: rgba($color: lightblue, $alpha: 0.3);
   background: $white;
-  width: 254px;
+  width: 235px;
   height: 3248px; //나중에 calc로 계산
   padding-top: 147px;
   border-left: 1px solid $Gray_C7;
@@ -197,7 +201,7 @@
 // 건강정보 내용
 
 .contents-wrap {
-  max-width: 1043px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -222,7 +226,7 @@
 .sec-disease-tab {
   .search-box {
     .search {
-      max-width: 235px;
+      width: 205px;
       height: 40px;
       background: $Gray_BW;
       border: 2px solid rgba($primary, 0.1);
@@ -402,7 +406,6 @@
     }
 
     span {
-      width: 208px;
       display: block;
       white-space: nowrap;
       overflow: hidden;
@@ -511,7 +514,6 @@
 .sec-healthtv {
   margin-top: $subhc-margin-top;
   max-width: 967px;
-  height: 370px;
   //   background: rgba($color: lightblue, $alpha: 0.7);
 
   .tv-img-box {
@@ -567,9 +569,13 @@
         text-align: center;
       }
     }
+    .coach-text-container {
+      .text-mb {
+        display: none;
+      }
+    }
     .icon-box {
       width: 120px;
-      height: 120px;
       margin: 45px auto 27px;
       img {
         width: 100%;
@@ -621,43 +627,56 @@
 // 반응형 - tablet(992)
 @media screen and (max-width: $breakpoint-lg) {
   .contents-wrap {
-    max-width: 800px;
+    max-width: 750px;
   }
   .sec-disease-tab {
     .tab-box {
       li {
-        width: 170px;
+        width: 155px;
       }
     }
   }
   .sec-disease {
-    max-width: 800px;
+    .disease-card-container {
+      justify-content: flex-start;
+    }
     .disease-card {
+      width: 187px;
       .img-box {
         width: 180px;
       }
     }
   }
   .sec-nutritions {
-    max-width: 800px;
     .swiper-nutritions {
       .nutritions-card {
         .img-box {
-          width: 250px;
+          width: 240px;
         }
       }
     }
   }
   .sec-coach {
     .slide-coach-wrapper {
-      .coach-card {
-        width: 256px;
+      .slick-list {
+        max-width: 670px;
       }
+      .coach-card {
+        width: 255px;
+        height: 312px;
+        span {
+          @include Bold-20;
+        }
+        p {
+          @include Regular-13;
+        }
+      }
+
       .slick-next {
-        right: -47px;
+        right: 0;
       }
       .slick-prev {
-        left: -46px;
+        left: -6px;
       }
     }
   }
@@ -672,9 +691,10 @@
     .tab-box {
       top: 36%;
       li {
-        max-width: 128px;
-        height: 52px;
+        max-width: 125px;
+        height: 48px;
         a {
+          padding: 14px 0;
           @include SemiBold-16;
         }
       }
@@ -704,6 +724,7 @@
       }
       .search-btn {
         height: 46px;
+        line-height: 45px;
       }
     }
   }
@@ -721,6 +742,7 @@
   .sec-healthtv {
     max-width: 630px;
     height: 400px;
+
     .tv-img-box {
       width: 580px;
     }
@@ -728,17 +750,39 @@
   .sec-coach {
     max-width: 630px;
     .slide-coach-wrapper {
+      height: 255px;
       .slick-list {
-        max-width: 530px;
+        max-width: 570px;
+      }
+      .slick-next,
+      .slick-prev {
+        right: 16px;
+        opacity: 0;
       }
       .coach-card {
-        width: 256px;
+        width: 580px;
+        height: 220px;
+        display: flex;
+        align-items: center;
       }
-      .slick-next {
-        right: 9px;
+      .icon-box {
+        width: 120px;
       }
-      .slick-prev {
-        left: 8px;
+      .coach-text-container {
+        width: 400px;
+        text-align: left;
+        margin-top: 10px;
+        span {
+          @include SemiBold-26;
+        }
+        .text-pc {
+          display: none;
+        }
+        .text-mb {
+          display: block;
+          @include Medium-16;
+          text-align: left;
+        }
       }
     }
   }
