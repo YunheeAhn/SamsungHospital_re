@@ -73,27 +73,27 @@
 
   .search_btn {
     background: none;   
-    text-indent: -9999px;
     position: relative;
 
-
-
     &::after {
-      content: '';
+      content: '\f002';
         display: block;
+        box-sizing: border-box;
+        font-family: "Font Awesome 6 Free";
+        color : $Gray-C7;
+        font-weight: 900;
         width: 22px;
         height: 22px;
-        background: url(../images/loginPage_images/search-interface-symbol.png) $bg-img;
-        background-size: 100%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-
     }
   }
 }
 
 // 메뉴바들
+
+
 #menu_navi {
   height: $hd-height;
 
@@ -106,35 +106,103 @@
     margin: 0 auto;
     display: flex;
 
-    .wsize {
+    .mobile {
+
+      display: none; 
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: auto;
+        
+        gap: 8px;
+
+        li {
+          text-align: center;
+          width: 27px;
+
+          padding-left: 2px;
+
+          color: $white;
+
+          &:nth-of-type(1)::before {
+            display: block;
+            content: '\f007';
+            box-sizing: border-box;
+            font-family: "Font Awesome 6 Free";
+            width: 25px;
+            height: 25px;
+          }
+
+          &:nth-of-type(2)::before {
+            display: block;
+            content: '\f0f3';
+            box-sizing: border-box;
+            font-family: "Font Awesome 6 Free";
+            width: 25px;
+            height: 25px;
+          }
+
+          &:nth-of-type(3)::before {
+            display: block;
+            content: '\f0c9';
+            box-sizing: border-box;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            width: 25px;
+            height: 25px;
+          }
+
+          .blind {
+            text-indent: -9999px;
+          }
+        }
+      }
+      
+    }
+    .wsizewrap {
       display: flex;
       align-items: center;
 
       flex-wrap: nowrap;
       justify-content: right;
 
-      #menu1, 
-      #menu2, 
-      #menu3, 
-      #menu4, 
-      #menu5 {
-        margin-left: 20px;
-        margin-right: 20px;
+      height: 100px;
+      
+      .wsize.mobile {
+        display: none;
+      }
+      
+      .wsize.desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        padding: 40px 10px 40px 10px;
-
-        height: 100%;
-
-        color: $Gray_55;
-        @include Bold-20;
-
-        border-bottom: 3px solid transparent;
-
-        &:hover {
-          border-bottom: 3px solid $primary;
-          transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
-          .menu1-tit {
-            color: $primary;
+        #menu1, 
+        #menu2, 
+        #menu3, 
+        #menu4, 
+        #menu5 {
+          margin-left: 20px;
+          margin-right: 20px;
+  
+          padding: 40px 10px 40px 10px;
+  
+          height: 100%;
+  
+          color: $Gray_55;
+          @include Bold-20;
+  
+          border-bottom: 3px solid transparent;
+  
+          &:hover {
+            border-bottom: 3px solid $primary;
+            transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+              .menu1-tit {
+              color: $primary;
+              }
           }
         }
       }
@@ -263,7 +331,6 @@
           content: '\e61b';
           box-sizing: border-box;
           font-family: "Font Awesome 6 Brands";
-          line-height: 1;
           font-weight: 400;
           width: 22px;
           height: 22px;
@@ -276,7 +343,6 @@
           content: '\f09a';
           box-sizing: border-box;
           font-family: "Font Awesome 6 Brands";
-          line-height: 1;
           font-weight: 900;
           width: 22px;
           height: 22px;
@@ -289,7 +355,6 @@
           content: '\f167';
           box-sizing: border-box;
           font-family: "Font Awesome 6 Brands";
-          line-height: 1;
           font-weight: 400;
           width: 22px;
           height: 22px;
@@ -349,7 +414,9 @@
   // 헤더
   #menu_navi {
     .menu_area {
-      .wsize {
+      .wsizewrap {
+        
+        .wsize.desktop {
         #menu1, 
         #menu2, 
         #menu3, 
@@ -359,6 +426,7 @@
           margin-right: 10px;
 
           @include Bold-18;
+          }
         }
       }
     }
@@ -415,23 +483,26 @@
    // 헤더
   #menu_navi {
     .menu_area {
-      .wsize {
-        #menu1, 
-        #menu2, 
-        #menu3, 
-        #menu4, 
-        #menu5 {
-          margin-left: 10px;
-          margin-right: 10px;
-
-          // padding: 40px 10px 40px 10px;
-
-          line-height: 20px;
-          @include Bold-16
+      .wsizewrap {
+          .wsize.desktop {
+            #menu1, 
+            #menu2, 
+            #menu3, 
+            #menu4, 
+            #menu5 {
+              margin-left: 5px;
+              margin-right: 5px;
+    
+              padding: 40px 5px;
+    
+              line-height: 20px;
+              @include Bold-16
+            }
+          }
         }
       }
     }
-  }
+  
   // 검색창
   .gnb_search {
     width: 210px;
@@ -469,22 +540,55 @@
 // 768px까지 작은 태블릿 화면
 @media screen and (max-width:$breakpoint-md) {
   // 헤더
+  // 로고크기변경
+  #logo {
+    &::before {
+      width: 140px;
+    }
+  }
+  // 검색창
+  .gnb_search {
+    width: 190px;
+    .search_bar {
+
+      @include Regular-13;
+
+      &::placeholder {
+        color: $Gray_C7;
+        width: 100%;
+      }
+    }
+    .search_btn {
+      &::after {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
   #menu_navi {
     .menu_area {
-      .wsize {
-        #menu1, 
-        #menu2, 
-        #menu3, 
-        #menu4, 
-        #menu5 {
-          margin-left: 5px;
-          margin-right: 5px;
-
-          padding: 40px 5px 40px 5px;
-
-          @include Bold-13;
-        }
+      .mobile {
+        display: none;
       }
+      .wsizewrap {        
+        .wsize.desktop {
+          #menu1, 
+          #menu2, 
+          #menu3, 
+          #menu4, 
+          #menu5 {
+            margin-left: 0px;
+            margin-right: 0px;
+    
+            padding: 40px 5px 40px 5px;
+    
+            @include Bold-13;
+          }
+        }
+        
+        
+      }
+      
     }
   }
 
@@ -503,7 +607,6 @@
     height: 100%;
 
     padding-top: 0;
-
 
     .inner {
       margin: 0 auto;
@@ -555,14 +658,91 @@
 
               @include Regular-13;
             }
-
-
           }
         }
       }
     }
   }
+}
 
+// 576px까지 모바일 화면
+@media screen and (max-width:$breakpoint-sm) {
+  #header {
+    background: $primary;
+
+    position: relative;
+
+
+  }
+  #logo {
+    filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
+  }
+  .gnb_search {
+    display: none;
+  }
+  #menu_navi {
+    z-index: 10000;
+    .menu_area {
+
+
+      .menu_area.mobile {
+        display: flex;
+
+        button {
+          &:nth-last-of-type(1):focus-visible {
+            & .wsize {
+              display: flex;
+            }
+          }
+        }
+      }
+
+      .wsizewrap {
+        background: #888;
+        width: calc(100% - 10px);
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: center;
+
+        .wsize.mobile {
+          background: #666;
+
+          display: block;
+          width: 100%;
+        }
+
+        .wsize.desktop {
+          background: #333;
+          width: 100%;
+  
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          align-content: flex-start;
+  
+          #menu1, 
+          #menu2, 
+          #menu3, 
+          #menu4, 
+          #menu5 {
+            width: 100%;
+            height: 100%;
+          }
+          }        
+      }
+    }
+  }
+
+  .smenu_area {
+    display: none;
+  }
 }
 
 @import "_main", "_healthCare", "_reservation";
