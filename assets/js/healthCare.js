@@ -101,10 +101,31 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    // centerPadding: "20px",
     prevArrow: '<button class="slick-prev" aria-label=""></button>',
     nextArrow: '<button class="slick-next" aria-label=""></button>',
-    variableWidth: true,
+    // variableWidth: true,
     autoplay: true,
     autoplaySpeed: 290000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 });

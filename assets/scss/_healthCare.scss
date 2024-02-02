@@ -201,7 +201,9 @@
 // 건강정보 내용
 
 .contents-wrap {
-  max-width: 950px;
+  //   max-width: 950px;
+  //   flex-grow: 1;
+  width: calc(100% - 235px - 77px);
   margin: 0 auto;
 }
 
@@ -209,7 +211,7 @@
 
 .sec-disease-tab {
   margin-top: 182px;
-  max-width: 955px;
+  //   max-width: 955px;
   position: relative;
   height: 395px;
   .sec-tit {
@@ -351,7 +353,7 @@
 
 // 많이찾는 질환정보
 .sec-disease {
-  max-width: 965px;
+  //   max-width: 965px;
   height: 638px;
   margin-top: $subhc-margin-top;
   .sec-tit {
@@ -419,7 +421,7 @@
 
 // 의약품검색
 .sec-search {
-  max-width: 965px;
+  //   max-width: 965px;
   height: 290px;
   margin-top: $subhc-margin-top;
 
@@ -474,19 +476,19 @@
 
 .sec-nutritions {
   display: block;
-  max-width: 967px;
+  //   max-width: 967px;
   margin-top: $subhc-margin-top;
   overflow: hidden;
 
   .swiper-nutritions {
     padding: 0 5px;
-    max-width: 967px;
+    // max-width: 967px;
     .swiper-wrapper {
       display: flex;
     }
     .nutritions-card {
       .img-box {
-        width: 300px;
+        // width: 300px;
       }
 
       img {
@@ -513,7 +515,7 @@
 // 건강TV
 .sec-healthtv {
   margin-top: $subhc-margin-top;
-  max-width: 967px;
+  //   max-width: 967px;
   //   background: rgba($color: lightblue, $alpha: 0.7);
 
   .tv-img-box {
@@ -531,7 +533,7 @@
 //나만의 건강코치
 
 .sec-coach {
-  max-width: 965px;
+  //   max-width: 965px;
   height: 480px;
   margin-top: $subhc-margin-top;
 
@@ -546,13 +548,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    .slide-item {
+      padding: 10px;
+      box-sizing: border-box;
+    }
     .coach-card {
-      width: 276px;
+      //   width: 276px;
       height: 362px;
       background: $coach-card-bg;
       box-sizing: border-box;
       text-align: center;
-      margin-right: 18px;
+      //   margin-right: 18px;
       border-radius: 5px;
       cursor: pointer;
 
@@ -612,7 +618,7 @@
     }
 
     .slick-list {
-      max-width: 865px;
+      //   max-width: 865px;
     }
   }
 }
@@ -626,8 +632,11 @@
 
 // 반응형 - tablet(992)
 @media screen and (max-width: $breakpoint-lg) {
+  .healthcare-wrap {
+    padding: 0 30px;
+  }
   .contents-wrap {
-    max-width: 750px;
+    // max-width: 750px;
   }
   .sec-disease-tab {
     .tab-box {
@@ -659,7 +668,7 @@
   .sec-coach {
     .slide-coach-wrapper {
       .slick-list {
-        max-width: 670px;
+        // max-width: 670px;
       }
       .coach-card {
         width: 255px;
@@ -684,14 +693,14 @@
 // 반응형 - tablet(768)
 @media screen and (max-width: $breakpoint-md) {
   .contents-wrap {
-    max-width: 630px;
+    // max-width: 630px;
   }
   .sec-disease-tab {
     height: 443px;
     .tab-box {
       top: 36%;
       li {
-        max-width: 125px;
+        // max-width: 125px;
         height: 48px;
         a {
           padding: 14px 0;
@@ -701,7 +710,7 @@
     }
   }
   .sec-disease {
-    max-width: 630px;
+    // max-width: 630px;
     height: 800px;
     .disease-card-container {
       justify-content: flex-start;
@@ -730,7 +739,7 @@
   }
 
   .sec-nutritions {
-    max-width: 630px;
+    // max-width: 630px;
     .swiper-nutritions {
       .nutritions-card {
         .img-box {
@@ -740,7 +749,7 @@
     }
   }
   .sec-healthtv {
-    max-width: 630px;
+    // max-width: 630px;
     height: 400px;
 
     .tv-img-box {
@@ -748,11 +757,11 @@
     }
   }
   .sec-coach {
-    max-width: 630px;
+    // max-width: 630px;
     .slide-coach-wrapper {
       height: 255px;
       .slick-list {
-        max-width: 570px;
+        // max-width: 570px;
       }
       .slick-next,
       .slick-prev {
@@ -799,9 +808,10 @@
   // 모바일 공통항목
 
   .contents-wrap {
-    max-width: 550px;
+    // max-width: 550px;
     padding: 0 20px;
     margin: 0 auto;
+    width: 100%;
   }
   .sec-tit-mb {
     display: block;
@@ -814,7 +824,7 @@
   // 컨텐츠내용
   .titbox-mb {
     display: block;
-    max-width: 546px;
+    // max-width: 546px;
     height: 50px;
     background: $Gray_E3;
     text-align: center;
@@ -823,7 +833,7 @@
   }
 
   .sec-disease-tab {
-    max-width: 576px;
+    // max-width: 576px;
     margin-top: 20px;
     .sec-tit-container {
       position: relative;
@@ -844,7 +854,7 @@
 
   // 이하-
   .sec-disease {
-    max-width: 630px;
+    // max-width: 630px;
     height: 800px;
     .disease-card-container {
       justify-content: flex-start;
@@ -872,7 +882,7 @@
   }
 
   .sec-nutritions {
-    max-width: 630px;
+    // max-width: 630px;
     .swiper-nutritions {
       .nutritions-card {
         .img-box {
@@ -882,20 +892,20 @@
     }
   }
   .sec-healthtv {
-    max-width: 630px;
+    // max-width: 630px;
     height: 400px;
     .tv-img-box {
-      width: 580px;
+      max-width: 580px;
     }
   }
   .sec-coach {
-    max-width: 630px;
+    // max-width: 630px;
     .slide-coach-wrapper {
       .slick-list {
-        max-width: 530px;
+        // max-width: 530px;
       }
       .coach-card {
-        width: 256px;
+        // width: 256px;
       }
       .slick-next {
         right: 9px;
