@@ -291,8 +291,9 @@
     left: 0;
     background: $primary;
     margin-top: -4px;
-    height: 270px;
+    height: 280px;
     border-radius: 4px;
+    overflow: auto;
 
     ul {
       display: flex;
@@ -354,7 +355,7 @@
 // 많이찾는 질환정보
 .sec-disease {
   //   max-width: 965px;
-  height: 638px;
+  //   height: 638px;
   margin-top: $subhc-margin-top;
   .sec-tit {
     color: $secondary_B5;
@@ -430,9 +431,10 @@
     margin-top: 26px;
     display: flex;
     background: $primary;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 4px;
+    padding: 0px 140px;
 
     .sub-tit {
       @include SemiBold-20;
@@ -440,7 +442,9 @@
       margin-right: 20px;
     }
     .search {
-      width: 480px;
+      //   width: 480px;
+      width: 182%;
+      margin-left: -40%;
       height: 50px;
       background: $Gray_BW;
       border-radius: 1px;
