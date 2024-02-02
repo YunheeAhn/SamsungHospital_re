@@ -792,14 +792,14 @@
   .healthCare-body {
     background: url(../images/healthCarePage_images/healthcare_img_mb.png) 50% 0
       no-repeat;
-    margin-top: 45px;
+    margin-top: 150px;
     background-size: 480px;
   }
 
   // 모바일 공통항목
 
   .contents-wrap {
-    max-width: 546px;
+    max-width: 550px;
     padding: 0 20px;
     margin: 0 auto;
   }
@@ -823,6 +823,7 @@
   }
 
   .sec-disease-tab {
+    max-width: 576px;
     margin-top: 20px;
     .sec-tit-container {
       position: relative;
