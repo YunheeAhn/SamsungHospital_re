@@ -2,9 +2,10 @@
 
 //이현정 - main
 
-// .healthCare-body {
-//   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat;
-// }
+.healthCare-body {
+  //   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat
+  // center;
+}
 
 // 헤더 display:none
 .hd-wrap {
@@ -210,10 +211,10 @@
 // 질환정보 - PC - 제목과 검색창
 
 .sec-disease-tab {
-  margin-top: 182px;
-  //   max-width: 955px;
+  margin-top: 30%;
   position: relative;
   height: 395px;
+  margin-bottom: 13%;
   .sec-tit {
     padding: 7px 0;
   }
@@ -291,9 +292,7 @@
     left: 0;
     background: $primary;
     margin-top: -4px;
-    height: 280px;
     border-radius: 4px;
-    overflow: auto;
 
     ul {
       display: flex;
@@ -301,18 +300,17 @@
       justify-content: center;
       align-items: center;
       gap: 24px;
-      padding-top: 37px;
+      margin: 4% 0;
     }
     li {
-      width: 207px;
-      height: 53px;
+      width: 21%;
       background: $white;
       text-align: center;
       border-radius: 10px;
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
       a {
         display: block;
-        padding: 16px 0;
+        padding: 8% 0;
         @include SemiBold-18;
         color: $Gray_55;
         &:hover {
@@ -354,8 +352,6 @@
 
 // 많이찾는 질환정보
 .sec-disease {
-  //   max-width: 965px;
-  //   height: 638px;
   margin-top: $subhc-margin-top;
   .sec-tit {
     color: $secondary_B5;
@@ -367,14 +363,15 @@
     border-bottom: 1px solid rgba($Gray_55, $alpha: 0.7);
     display: flex;
     flex-wrap: wrap;
-    padding: 40px 0 0;
+    padding: 4% 0 0;
     justify-content: space-between;
   }
 
   .disease-card {
-    width: 196px;
-    height: 220px;
-    margin-bottom: 40px;
+    width: 22%;
+    margin-bottom: 6%;
+    // height: 220px;
+    // margin-bottom: 40px;
 
     &:hover {
       img {
@@ -386,7 +383,6 @@
       }
     }
     .img-box {
-      width: 190px;
       background: $white;
       border: 1px solid rgba($color: $Gray_C7, $alpha: 0.7);
       display: inline-block;
@@ -396,12 +392,10 @@
     a {
       display: block;
       width: 100%;
-      height: 100%;
     }
     img {
       display: block;
       width: 93%;
-      height: 93%;
       object-fit: cover;
       margin: 3% auto;
       transition: all 0.3s ease-in-out;
@@ -431,26 +425,29 @@
     margin-top: 26px;
     display: flex;
     background: $primary;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-radius: 4px;
-    padding: 0px 140px;
+    padding: 0px 15%;
 
     .sub-tit {
+      width: 130px;
       @include SemiBold-20;
       color: $white;
-      margin-right: 20px;
+      margin-right: 7px;
     }
+    .search-box {
+      width: 70%;
+    }
+
     .search {
-      //   width: 480px;
-      width: 182%;
-      margin-left: -40%;
+      width: 100%;
       height: 50px;
       background: $Gray_BW;
       border-radius: 1px;
       border: none;
       @include Regular-16;
-      padding-left: 20px;
+      padding-left: 3%;
       &::placeholder {
         color: $Gray-C7;
       }
@@ -476,99 +473,71 @@
     }
   }
 }
-// 영양정보
 
+// 영양정보
 .sec-nutritions {
   display: block;
-  //   max-width: 967px;
   margin-top: $subhc-margin-top;
-  overflow: hidden;
-
-  .swiper-nutritions {
-    padding: 0 5px;
-    // max-width: 967px;
-    .swiper-wrapper {
-      display: flex;
+  .nutritions-card {
+    img {
+      width: 100%;
+      border-radius: 4px;
     }
-    .nutritions-card {
-      .img-box {
-        // width: 300px;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 4px;
-      }
-      span {
-        display: block;
-      }
-      .tit {
-        height: 40px;
-        margin-top: 21px;
-        @include Bold-16;
-      }
-      .date {
-        margin-top: 14px;
-        @include Regular-13;
-      }
+    span {
+      display: block;
+    }
+    .tit {
+      height: 40px;
+      margin-top: 21px;
+      @include Bold-16;
+    }
+    .date {
+      margin-top: 14px;
+      @include Regular-13;
     }
   }
 }
 // 건강TV
 .sec-healthtv {
   margin-top: $subhc-margin-top;
-  //   max-width: 967px;
-  //   background: rgba($color: lightblue, $alpha: 0.7);
-
-  .tv-img-box {
-    margin: 0 auto;
-    //   width: 460px;
-    //   height: 258px;
-
+  .swiper-slide {
     img {
       width: 100%;
-      height: 100%;
       border-radius: 4px;
     }
   }
 }
+
 //나만의 건강코치
 
 .sec-coach {
-  //   max-width: 965px;
-  height: 480px;
   margin-top: $subhc-margin-top;
 
   .sec-tit-container {
     justify-content: center;
   }
-  //   background: rgba($color: lightblue, $alpha: 0.7);
-
+  .slick-slide {
+    margin: 0 0.25%;
+  }
   .slide-coach-wrapper {
-    height: 385px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    .slide-item {
-      padding: 10px;
-      box-sizing: border-box;
-    }
+    width: 94%;
+    margin: 2% auto 0;
     .coach-card {
-      //   width: 276px;
       height: 362px;
       background: $coach-card-bg;
-      box-sizing: border-box;
+      //   box-sizing: border-box;
       text-align: center;
-      //   margin-right: 18px;
       border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       cursor: pointer;
 
       span {
         @include SemiBold-22;
         font-weight: 700;
+        margin-top: 8%;
+        display: block;
       }
       p {
         @include Medium-16;
@@ -586,7 +555,7 @@
     }
     .icon-box {
       width: 120px;
-      margin: 45px auto 27px;
+      margin: 0 auto;
       img {
         width: 100%;
         height: 100%;
@@ -594,14 +563,7 @@
       }
     }
 
-    .slick-prev,
-    .slick-next {
-      width: 40px;
-      height: 40px;
-      position: absolute;
-    }
     .slick-prev {
-      left: -8px;
       &::before {
         content: "\f053";
         font-family: "Font Awesome 6 Free";
@@ -611,7 +573,6 @@
       }
     }
     .slick-next {
-      right: -7px;
       &::before {
         content: "\f054";
         font-family: "Font Awesome 6 Free";
@@ -620,11 +581,10 @@
         color: rgba($color: $primary, $alpha: 0.3);
       }
     }
-
-    .slick-list {
-      //   max-width: 865px;
-    }
   }
+
+  //
+  //
 }
 
 // 반응형 - pc(1280)
@@ -773,18 +733,18 @@
         opacity: 0;
       }
       .coach-card {
-        width: 580px;
-        height: 220px;
+        // width: 580px;
+        // height: 220px;
         display: flex;
         align-items: center;
       }
       .icon-box {
-        width: 120px;
+        // width: 120px;
       }
       .coach-text-container {
-        width: 400px;
+        // width: 400px;
         text-align: left;
-        margin-top: 10px;
+        // margin-top: 10px;
         span {
           @include SemiBold-26;
         }

@@ -1,7 +1,7 @@
 // 현정님 자바스크립트
 var swiper = new Swiper(".swiper-nutritions", {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
   loop: true,
   autoplay: {
     delay: 10000000,
@@ -22,13 +22,13 @@ var swiper = new Swiper(".swiper-nutritions", {
     },
     1280: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
   },
 });
 var swiper = new Swiper(".swiper-healthtv", {
   slidesPerView: 2,
-  spaceBetween: 30,
+  spaceBetween: 20,
   loop: true,
   autoplay: {
     delay: 200000,
@@ -49,7 +49,7 @@ var swiper = new Swiper(".swiper-healthtv", {
     },
     1280: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
   },
 });
@@ -61,19 +61,18 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     // centerPadding: "20px",
+    arrows: true,
     prevArrow: '<button class="slick-prev" aria-label=""></button>',
     nextArrow: '<button class="slick-next" aria-label=""></button>',
-    // variableWidth: true,
     autoplay: true,
     autoplaySpeed: 290000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 992,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
@@ -81,7 +80,6 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
           slidesToShow: 1,
         },
       },
