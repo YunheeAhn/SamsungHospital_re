@@ -18,9 +18,21 @@ var swiper = new Swiper(".swiper-healthtv", {
     disableOnInteraction: false,
   },
 });
+$(document).ready(function () {
+  $(".slide-coach-wrapper").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev" aria-label=""></button>',
+    nextArrow: '<button class="slick-next" aria-label=""></button>',
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2900,
+  });
+});
 
-document.addEventListener("DOMContentLoaded", function () {
-  // 질환정보tab
+// 질환정보tab
+function tabs() {
   const tabs = document.querySelectorAll(".sec-tabs");
 
   tabs.forEach(function (tab) {
@@ -41,8 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
       tabBtn.classList.toggle("active");
     });
   });
-
-  // 사이드메뉴
+}
+// 사이드메뉴
+function sidebar() {
   window.onscroll = function () {
     const sidebar = document.querySelector(".sidemenubar-container");
     const scrollY = window.scrollY;
@@ -53,17 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       sidebar.style.top = "230px";
     }
   };
-});
-
-$(document).ready(function () {
-  $(".slide-coach-wrapper").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    prevArrow: '<button class="slick-prev" aria-label=""></button>',
-    nextArrow: '<button class="slick-next" aria-label=""></button>',
-    variableWidth: true,
-    autoplay: true,
-    autoplaySpeed: 2900,
-  });
-});
+}
+tabs();
+sidebar();
