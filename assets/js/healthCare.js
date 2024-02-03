@@ -54,47 +54,6 @@ var swiper = new Swiper(".swiper-healthtv", {
   },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // 질환정보tab
-  const tabs = document.querySelectorAll(".sec-tabs");
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      tab.classList.add("active");
-      tabs.forEach(function (otherTab) {
-        if (otherTab !== tab) {
-          otherTab.classList.remove("active");
-        }
-      });
-    });
-  });
-
-  const tabBtns = document.querySelectorAll(".sec-tabs .tab-box li");
-
-  tabBtns.forEach(function (tabBtn) {
-    tabBtn.addEventListener("click", function () {
-      const isActive = tabBtn.classList.contains("active");
-
-      tabBtns.forEach(function (tabBtn) {
-        tabBtn.classList.remove("active");
-      });
-      if (!isActive) tabBtn.classList.add("active");
-    });
-  });
-
-  // 사이드메뉴
-  window.onscroll = function () {
-    const sidebar = document.querySelector(".sidemenubar-container");
-    const scrollY = window.scrollY;
-    if (scrollY > 750) {
-      console.log(scrollY);
-      sidebar.style.top = scrollY - 580 + "px";
-    } else {
-      sidebar.style.top = "230px";
-    }
-  };
-});
-
 // 나만의 건강코치 - 슬릭슬라이드
 $(document).ready(function () {
   $(".slide-coach-wrapper").slick({
@@ -129,3 +88,50 @@ $(document).ready(function () {
     ],
   });
 });
+
+// 질환정보tab
+// document.addEventListener("DOMContentLoaded", function
+function tabs() {
+  const tabs = document.querySelectorAll(".sec-tabs");
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tab.classList.add("active");
+      tabs.forEach(function (otherTab) {
+        if (otherTab !== tab) {
+          otherTab.classList.remove("active");
+        }
+      });
+    });
+  });
+
+  const tabBtns = document.querySelectorAll(".sec-tabs .tab-box li");
+
+  tabBtns.forEach(function (tabBtn) {
+    tabBtn.addEventListener("click", function () {
+      const isActive = tabBtn.classList.contains("active");
+
+      tabBtns.forEach(function (tabBtn) {
+        tabBtn.classList.remove("active");
+      });
+      if (!isActive) tabBtn.classList.add("active");
+    });
+  });
+}
+
+// 사이드메뉴
+function sidemenubar() {
+  window.onscroll = function () {
+    const sidebar = document.querySelector(".sidemenubar-container");
+    const scrollY = window.scrollY;
+    if (scrollY > 750) {
+      console.log(scrollY);
+      sidebar.style.top = scrollY - 580 + "px";
+    } else {
+      sidebar.style.top = "230px";
+    }
+  };
+}
+
+tabs();
+sidemenubar();
