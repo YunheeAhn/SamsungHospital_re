@@ -8,6 +8,11 @@ var swiper = new Swiper(".swiper-nutritions", {
     disableOnInteraction: false,
   },
   breakpoints: {
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      centeredSlides: true,
+    },
     576: {
       slidesPerView: 2,
       spaceBetween: 10,
@@ -35,6 +40,7 @@ var swiper = new Swiper(".swiper-healthtv", {
     disableOnInteraction: false,
   },
   breakpoints: {
+    300: { slidesPerView: 1, spaceBetween: 10 },
     576: {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -67,6 +73,14 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 290000,
     responsive: [
+      {
+        breakpoint: 300,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
       {
         breakpoint: 576,
         settings: {

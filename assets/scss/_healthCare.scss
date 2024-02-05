@@ -213,7 +213,7 @@
 .sec-disease-tab {
   margin-top: 30%;
   position: relative;
-  height: 395px;
+  height: 402px;
   margin-bottom: 13%;
   .sec-tit {
     padding: 7px 0;
@@ -228,8 +228,10 @@
 }
 .sec-disease-tab {
   .search-box {
+    width: 205px;
+
     .search {
-      width: 205px;
+      width: 100%;
       height: 40px;
       background: $Gray_BW;
       border: 2px solid rgba($primary, 0.1);
@@ -604,57 +606,6 @@
 
 // 반응형 - tablet(992)
 @media screen and (max-width: $breakpoint-lg) {
-  //   .sec-disease-tab {
-  //     .tab-box {
-  //       li {
-  //         width: 155px;
-  //       }
-  //     }
-  //   }
-  //   .sec-disease {
-  //     .disease-card-container {
-  //       justify-content: flex-start;
-  //     }
-  //     .disease-card {
-  //       width: 187px;
-  //       .img-box {
-  //         width: 180px;
-  //       }
-  //     }
-  //   }
-  //   .sec-nutritions {
-  //     .swiper-nutritions {
-  //       .nutritions-card {
-  //         .img-box {
-  //           width: 240px;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .sec-coach {
-  //     .slide-coach-wrapper {
-  //       .slick-list {
-  //         // max-width: 670px;
-  //       }
-  //       .coach-card {
-  //         width: 255px;
-  //         height: 312px;
-  //         span {
-  //           @include Bold-20;
-  //         }
-  //         p {
-  //           @include Regular-13;
-  //         }
-  //       }
-
-  //       .slick-next {
-  //         right: 0;
-  //       }
-  //       .slick-prev {
-  //         left: -6px;
-  //       }
-  //     }
-  //   }
 }
 // 반응형 - tablet(768)
 @media screen and (max-width: $breakpoint-md) {
@@ -672,149 +623,44 @@
       padding: 0 9%;
     }
   }
-  //   .contents-wrap {
-  //     // max-width: 630px;
-  //   }
-  //   .sec-disease-tab {
-  //     height: 443px;
-  //     .tab-box {
-  //       top: 36%;
-  //       li {
-  //         // max-width: 125px;
-  //         height: 48px;
-  //         a {
-  //           padding: 14px 0;
-  //           @include SemiBold-16;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .sec-disease {
-  //     // max-width: 630px;
-  //     height: 800px;
-  //     .disease-card-container {
-  //       justify-content: flex-start;
-  //     }
-  //     .disease-card {
-  //       margin: 5px 4px 10px 10px;
-  //       .img-box {
-  //         width: 180px;
-  //       }
-  //     }
-  //   }
-  //   .sec-search {
-  //     .sec-search-container {
-  //       .sub-tit {
-  //         margin-right: 10px;
-  //       }
-  //       .search {
-  //         width: 325px;
-  //         height: 46px;
-  //       }
-  //       .search-btn {
-  //         height: 46px;
-  //         line-height: 45px;
-  //       }
-  //     }
-  //   }
-
-  //   .sec-nutritions {
-  //     // max-width: 630px;
-  //     .swiper-nutritions {
-  //       .nutritions-card {
-  //         .img-box {
-  //           width: 300px;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .sec-healthtv {
-  //     // max-width: 630px;
-  //     height: 400px;
-
-  //     .tv-img-box {
-  //       width: 580px;
-  //     }
-  //   }
-  //   .sec-coach {
-  //     // max-width: 630px;
-  //     .slide-coach-wrapper {
-  //       height: 255px;
-  //       .slick-list {
-  //         // max-width: 570px;
-  //       }
-  //       .slick-next,
-  //       .slick-prev {
-  //         right: 16px;
-  //         opacity: 0;
-  //       }
-  //       .coach-card {
-  //         // width: 580px;
-  //         // height: 220px;
-  //         display: flex;
-  //         align-items: center;
-  //       }
-  //       .icon-box {
-  //         // width: 120px;
-  //       }
-  //       .coach-text-container {
-  //         // width: 400px;
-  //         text-align: left;
-  //         // margin-top: 10px;
-  //         span {
-  //           @include SemiBold-26;
-  //         }
-  //         .text-pc {
-  //           display: none;
-  //         }
-  //         .text-mb {
-  //           display: block;
-  //           @include Medium-16;
-  //           text-align: left;
-  //         }
-  //       }
-  //     }
-  //   }
 }
 // 반응형 - 모바일(576)
 @media screen and (max-width: $breakpoint-sm) {
   .healthCare-body {
-    background: url(../images/healthCarePage_images/healthcare_img_mb.png) 50% 0
-      no-repeat;
-    margin-top: 150px;
-    background-size: 480px;
+    // background: url(../images/healthCarePage_images/healthcare_img_mb.png) 50% 0
+    //   no-repeat;
+    // margin-top: 110px;
   }
 
-  // 모바일 공통항목
-
-  .contents-wrap {
-    // max-width: 550px;
-    padding: 0 20px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  .sec-tit-mb {
-    display: block;
-    @include Bold-18;
-  }
-  .more-tit-mb {
-    display: block;
-    @include Regular-13;
-  }
-  // 컨텐츠내용
   .titbox-mb {
     display: block;
-    // max-width: 546px;
-    height: 50px;
+    height: 45px;
     background: $Gray_E3;
     text-align: center;
     padding: 10px 0;
     @include Bold-18;
   }
 
+  // 모바일 공통항목
+  .sec-tit-mb,
+  .sec-tit {
+    display: block;
+    @include Bold-20;
+  }
+  .sec-tit-container {
+    padding-bottom: 0;
+    margin-bottom: 5%;
+  }
+  .more-tit-mb {
+    display: block;
+    @include Regular-13;
+  }
+
+  //컨텐츠
+
   .sec-disease-tab {
-    // max-width: 576px;
-    margin-top: 20px;
+    margin-top: 8%;
+    height: 4.5%;
     .sec-tit-container {
       position: relative;
       display: block;
@@ -830,69 +676,108 @@
     .disease-tab-container {
       display: none;
     }
-  }
+    .search-box {
+      width: 84%;
+      margin-top: 5%;
+      display: flex;
+      position: relative;
 
-  // 이하-
-  .sec-disease {
-    // max-width: 630px;
-    height: 800px;
-    .disease-card-container {
-      justify-content: flex-start;
-    }
-    .disease-card {
-      margin: 5px 4px 10px 10px;
-      .img-box {
-        width: 180px;
-      }
-    }
-  }
-  .sec-search {
-    .sec-search-container {
-      .sub-tit {
-        margin-right: 10px;
-      }
       .search {
-        width: 325px;
-        height: 46px;
+        border-radius: 2px;
       }
-      .search-btn {
-        height: 46px;
-      }
-    }
-  }
-
-  .sec-nutritions {
-    // max-width: 630px;
-    .swiper-nutritions {
-      .nutritions-card {
-        .img-box {
-          width: 300px;
+      form {
+        position: static;
+        width: 100%;
+        &::after {
+          background: $primary;
+          width: 40px;
+          height: 40px;
+          top: 50%;
+          left: 101%;
+          color: $white;
+          text-align: center;
         }
       }
     }
   }
+  .sec-disease {
+    height: 445px;
+    overflow: hidden;
+    .disease-card-container {
+      border: none;
+      gap: 5.5%;
+      padding: 0;
+      justify-content: center;
+    }
+    .disease-card {
+      width: 45%;
+    }
+  }
+  .sec-search {
+    background: $primary;
+    height: 190px;
+    .sec-tit {
+      padding: 28px 0 0 5%;
+      color: $white;
+    }
+    .sec-search-container {
+      height: auto;
+      padding: 0 5%;
+      .sub-tit {
+        display: none;
+      }
+      .search-box {
+        width: 110%;
+      }
+      .text-pc {
+        display: none;
+      }
+      .text-mb {
+        display: block;
+      }
+    }
+  }
+  .sec-nutritions {
+    .nutritions-card {
+      width: 100%;
+      margin: 0 auto;
+      a {
+        display: block;
+        height: 212px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   .sec-healthtv {
-    // max-width: 630px;
-    height: 400px;
     .tv-img-box {
-      max-width: 580px;
+      a {
+        display: block;
+        height: 212px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
   .sec-coach {
-    // max-width: 630px;
     .slide-coach-wrapper {
-      .slick-list {
-        // max-width: 530px;
-      }
+      width: 100%;
       .coach-card {
-        // width: 256px;
+        padding: 0;
+        flex-direction: row;
+        span {
+          @include Bold-18;
+        }
       }
-      .slick-next {
-        right: 9px;
-      }
-      .slick-prev {
-        left: 8px;
-      }
+    }
+    .sec-tit-container {
+      //   justify-content: flex-start;
     }
   }
 }
