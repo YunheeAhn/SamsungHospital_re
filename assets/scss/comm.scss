@@ -64,7 +64,7 @@
 
     &:focus {
       outline: none;
-      
+
       &::placeholder {
         color : transparent
       }
@@ -107,7 +107,6 @@
     display: flex;
 
     .mobile {
-
       display: none; 
 
       ul {
@@ -136,7 +135,8 @@
           width: 25px;
           height: 25px;
         }
-        .menusee {
+
+        .menusee::before {
           display: block;
           content: '\f0c9';
           box-sizing: border-box;
@@ -169,11 +169,11 @@
       justify-content: right;
 
       height: 100px;
-      
+
       .wsize.mobile {
         display: none;
       }
-      
+
       .wsize.desktop {
         display: flex;
         justify-content: center;
@@ -199,9 +199,9 @@
           &:hover {
             border-bottom: 3px solid $primary;
             transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
-              .menu1-tit {
+            .menu1-tit {
               color: $primary;
-              }
+            }
           }
         }
       }
@@ -222,15 +222,12 @@
 
   box-shadow: 0 3px 10px -8px $Gray_E3;
 
-
   .section {
-    
     display: flex;
     max-width: $breakpoint-xl;
     min-height: 310px;
     margin: 0 auto;
     text-align: left;
-
 
     .gnb_cont {
       width: 20%;
@@ -248,9 +245,9 @@
         color: $primary;
       }
     }
+
     .gnb {
       width: 80%;
-      
 
       @include transparent-border-R($Gray_C7, 0.5);
       box-sizing: border-box;
@@ -258,14 +255,11 @@
       flex-direction: row;
       align-items: flex-start;
 
-      
-
       .gnb-flex {
         display: flex;
         justify-content: space-around;
         width: 100%;
         height: 100%;
-
 
         .gnb_padding {
           width: 100%;    
@@ -287,6 +281,7 @@
               color : $primary
             }
           }
+
           .gnb_depth {
             @include Regular-18;
 
@@ -323,7 +318,6 @@
       display: flex;
       margin-right: 15px;
 
-      
       &:first-of-type {
         &::before {
           display: block;
@@ -379,7 +373,6 @@
   color: $white;
   padding-top: 32px;
 
-
   .inner {
     max-width: $breakpoint-xl;
     display: flex;
@@ -414,7 +407,7 @@
   #menu_navi {
     .menu_area {
       .wsizewrap {
-        
+
         .wsize.desktop {
         #menu1, 
         #menu2, 
@@ -436,26 +429,27 @@
   }
   // 네비게이션 하위메뉴
   .smenu_area {
-    
+
     .section {
       .gnb_cont {
         .gnb_cont-tit {
           @include Bold-18;
         }
       }
+
       .gnb {
         .gnb-flex {
           .gnb_padding {
             .gnb_margin {
               @include Medium-16;
             }
+
             .gnb_depth {
               li {
                 a {
                   @include Regular-16;
                 }
               }
-              
             }
           }
         }
@@ -508,7 +502,6 @@
   }
   // 네비게이션 하위메뉴
   .smenu_area {
-    
     .section {
       .gnb_cont {
         .gnb_cont-tit {
@@ -527,7 +520,6 @@
                   @include Regular-16;
                 }
               }
-              
             }
           }
         }
@@ -557,6 +549,7 @@
         width: 100%;
       }
     }
+
     .search_btn {
       &::after {
         width: 20px;
@@ -564,11 +557,14 @@
       }
     }
   }
+
   #menu_navi {
     .menu_area {
+
       .mobile {
         display: none;
       }
+
       .wsizewrap {        
         .wsize.desktop {
           #menu1, 
@@ -584,10 +580,7 @@
             @include Bold-13;
           }
         }
-        
-        
       }
-      
     }
   }
 
@@ -607,28 +600,28 @@
 
     padding-top: 0;
 
+    .copyright {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
     .inner {
       margin: 0 auto;
-
-      padding: 5px;
 
       .footer-nav {
         ul {
           display: flex;
           flex-wrap: wrap;
           width: 100%;
-          height: 45px;
-
 
           padding: 0;
 
           li {
-            width: 100%;
+            width: 50%;
             text-align: center;
 
             display: flex;
             justify-content: center;
-            
 
             padding-top: 10px;
             padding-bottom: 10px;
@@ -688,17 +681,10 @@
       .mobile {
         display: flex;
       }
-      
+
       .menu_area.mobile {
         display: flex;
 
-        button {
-          &:nth-last-of-type(1):focus-visible {
-            & .wsize {
-              display: flex;
-            }
-          }
-        }
       }
 
       .wsizewrap {
@@ -717,11 +703,12 @@
         .wsize.mobile {
           background: $white;
 
-          display: flex;
+          display: none;
+          // display: flex;
           flex-direction: column;
 
           width: 100%;
-          
+
           .head {
             display: flex;
             flex-direction: row;
@@ -743,7 +730,6 @@
                 width: 25px;
                 height: 25px;
               }
-
             }
             .noti {
               margin-right: 10px;
@@ -782,7 +768,6 @@
 
               background: $primary;
 
-              
               li {
                 width: 100%;
 
@@ -791,7 +776,7 @@
                   display: flex;
                   align-items: center;
                 }
-                
+
                 .doctor{
                   border-right: 1px solid $Gray_BW;
 
@@ -806,7 +791,7 @@
                     height: 22px;
                   }
                 }
-                
+
                 .subject::before {
                   display: block;
                   content: '\f0f1';
@@ -819,7 +804,6 @@
                   height: 22px;
                 }
               }
-
             }
           }
         }
@@ -829,26 +813,41 @@
           background: $white;
           width: 100%;
 
-          display: flex;
+          // display: flex;
+          display: none;
           flex-direction: column;
           align-items: flex-start;
           align-content: flex-start;
 
-          padding-top: 10px;
+          padding-top: 15px;
   
           #menu1, 
           #menu2, 
           #menu3, 
           #menu4, 
           #menu5 {
-
             width: 100%;
             height: 100%;
 
             background : $gray_F8;
 
+            display: flex;
+            justify-content: space-between;
+
             margin-bottom: 10px;
             padding: 20px 10px 20px 10px;
+
+            @include SemiBold-20;
+
+            &::after {
+              display: block;
+              content: '\f078';
+              box-sizing: border-box;
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              width: 25px;
+              height: 25px;
+            }
 
             .smenu_area {
               box-shadow: none;
@@ -862,8 +861,6 @@
 
                   .gnb_cont-tit {
                     display: flex;
-
-                    
                   }
                 }
 
@@ -881,8 +878,6 @@
 
                     .gnb_padding {
                       @include transparent-border-B($Gray_C7, 0.5);
-
-                      
                     }
                   }
                 }
