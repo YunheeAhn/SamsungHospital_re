@@ -68,19 +68,35 @@ $(document).ready(function () {
     autoplaySpeed: 290000,
     responsive: [
       {
-        breakpoint: 992,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           arrows: false,
           centerMode: true,
           slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: false,
+          centerMode: false,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          arrows: true,
+          centerMode: false,
+          slidesToShow: 3,
         },
       },
     ],

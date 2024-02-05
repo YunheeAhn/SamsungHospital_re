@@ -68,7 +68,7 @@
   padding-top: 147px;
   border-left: 1px solid $Gray_C7;
   border-right: 1px solid $Gray_C7;
-  margin-right: 77px;
+  margin-right: 6%;
 
   .sec-tit {
     color: $secondary_B5;
@@ -204,7 +204,7 @@
 .contents-wrap {
   //   max-width: 950px;
   //   flex-grow: 1;
-  width: calc(100% - 235px - 77px);
+  width: calc(100% - 235px - 81px);
   margin: 0 auto;
 }
 
@@ -290,6 +290,7 @@
     position: absolute;
     top: 40%;
     left: 0;
+    right: 0;
     background: $primary;
     margin-top: -4px;
     border-radius: 4px;
@@ -523,7 +524,7 @@
     width: 94%;
     margin: 2% auto 0;
     .coach-card {
-      height: 362px;
+      padding: 20% 0;
       background: $coach-card-bg;
       //   box-sizing: border-box;
       text-align: center;
@@ -592,173 +593,188 @@
   .sidemenubar {
     display: none;
   }
+  .healthcare-wrap {
+    margin: 0 5%;
+    .contents-wrap {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
 }
 
 // 반응형 - tablet(992)
 @media screen and (max-width: $breakpoint-lg) {
-  .healthcare-wrap {
-    padding: 0 30px;
-  }
-  .contents-wrap {
-    // max-width: 750px;
-  }
-  .sec-disease-tab {
-    .tab-box {
-      li {
-        width: 155px;
-      }
-    }
-  }
-  .sec-disease {
-    .disease-card-container {
-      justify-content: flex-start;
-    }
-    .disease-card {
-      width: 187px;
-      .img-box {
-        width: 180px;
-      }
-    }
-  }
-  .sec-nutritions {
-    .swiper-nutritions {
-      .nutritions-card {
-        .img-box {
-          width: 240px;
-        }
-      }
-    }
-  }
-  .sec-coach {
-    .slide-coach-wrapper {
-      .slick-list {
-        // max-width: 670px;
-      }
-      .coach-card {
-        width: 255px;
-        height: 312px;
-        span {
-          @include Bold-20;
-        }
-        p {
-          @include Regular-13;
-        }
-      }
+  //   .sec-disease-tab {
+  //     .tab-box {
+  //       li {
+  //         width: 155px;
+  //       }
+  //     }
+  //   }
+  //   .sec-disease {
+  //     .disease-card-container {
+  //       justify-content: flex-start;
+  //     }
+  //     .disease-card {
+  //       width: 187px;
+  //       .img-box {
+  //         width: 180px;
+  //       }
+  //     }
+  //   }
+  //   .sec-nutritions {
+  //     .swiper-nutritions {
+  //       .nutritions-card {
+  //         .img-box {
+  //           width: 240px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .sec-coach {
+  //     .slide-coach-wrapper {
+  //       .slick-list {
+  //         // max-width: 670px;
+  //       }
+  //       .coach-card {
+  //         width: 255px;
+  //         height: 312px;
+  //         span {
+  //           @include Bold-20;
+  //         }
+  //         p {
+  //           @include Regular-13;
+  //         }
+  //       }
 
-      .slick-next {
-        right: 0;
-      }
-      .slick-prev {
-        left: -6px;
-      }
-    }
-  }
+  //       .slick-next {
+  //         right: 0;
+  //       }
+  //       .slick-prev {
+  //         left: -6px;
+  //       }
+  //     }
+  //   }
 }
 // 반응형 - tablet(768)
 @media screen and (max-width: $breakpoint-md) {
-  .contents-wrap {
-    // max-width: 630px;
-  }
-  .sec-disease-tab {
-    height: 443px;
-    .tab-box {
-      top: 36%;
-      li {
-        // max-width: 125px;
-        height: 48px;
-        a {
-          padding: 14px 0;
-          @include SemiBold-16;
-        }
-      }
-    }
-  }
   .sec-disease {
-    // max-width: 630px;
-    height: 800px;
     .disease-card-container {
       justify-content: flex-start;
+      gap: 3.5%;
     }
     .disease-card {
-      margin: 5px 4px 10px 10px;
-      .img-box {
-        width: 180px;
-      }
+      width: 31%;
     }
   }
   .sec-search {
     .sec-search-container {
-      .sub-tit {
-        margin-right: 10px;
-      }
-      .search {
-        width: 325px;
-        height: 46px;
-      }
-      .search-btn {
-        height: 46px;
-        line-height: 45px;
-      }
+      padding: 0 9%;
     }
   }
+  //   .contents-wrap {
+  //     // max-width: 630px;
+  //   }
+  //   .sec-disease-tab {
+  //     height: 443px;
+  //     .tab-box {
+  //       top: 36%;
+  //       li {
+  //         // max-width: 125px;
+  //         height: 48px;
+  //         a {
+  //           padding: 14px 0;
+  //           @include SemiBold-16;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .sec-disease {
+  //     // max-width: 630px;
+  //     height: 800px;
+  //     .disease-card-container {
+  //       justify-content: flex-start;
+  //     }
+  //     .disease-card {
+  //       margin: 5px 4px 10px 10px;
+  //       .img-box {
+  //         width: 180px;
+  //       }
+  //     }
+  //   }
+  //   .sec-search {
+  //     .sec-search-container {
+  //       .sub-tit {
+  //         margin-right: 10px;
+  //       }
+  //       .search {
+  //         width: 325px;
+  //         height: 46px;
+  //       }
+  //       .search-btn {
+  //         height: 46px;
+  //         line-height: 45px;
+  //       }
+  //     }
+  //   }
 
-  .sec-nutritions {
-    // max-width: 630px;
-    .swiper-nutritions {
-      .nutritions-card {
-        .img-box {
-          width: 300px;
-        }
-      }
-    }
-  }
-  .sec-healthtv {
-    // max-width: 630px;
-    height: 400px;
+  //   .sec-nutritions {
+  //     // max-width: 630px;
+  //     .swiper-nutritions {
+  //       .nutritions-card {
+  //         .img-box {
+  //           width: 300px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .sec-healthtv {
+  //     // max-width: 630px;
+  //     height: 400px;
 
-    .tv-img-box {
-      width: 580px;
-    }
-  }
-  .sec-coach {
-    // max-width: 630px;
-    .slide-coach-wrapper {
-      height: 255px;
-      .slick-list {
-        // max-width: 570px;
-      }
-      .slick-next,
-      .slick-prev {
-        right: 16px;
-        opacity: 0;
-      }
-      .coach-card {
-        // width: 580px;
-        // height: 220px;
-        display: flex;
-        align-items: center;
-      }
-      .icon-box {
-        // width: 120px;
-      }
-      .coach-text-container {
-        // width: 400px;
-        text-align: left;
-        // margin-top: 10px;
-        span {
-          @include SemiBold-26;
-        }
-        .text-pc {
-          display: none;
-        }
-        .text-mb {
-          display: block;
-          @include Medium-16;
-          text-align: left;
-        }
-      }
-    }
-  }
+  //     .tv-img-box {
+  //       width: 580px;
+  //     }
+  //   }
+  //   .sec-coach {
+  //     // max-width: 630px;
+  //     .slide-coach-wrapper {
+  //       height: 255px;
+  //       .slick-list {
+  //         // max-width: 570px;
+  //       }
+  //       .slick-next,
+  //       .slick-prev {
+  //         right: 16px;
+  //         opacity: 0;
+  //       }
+  //       .coach-card {
+  //         // width: 580px;
+  //         // height: 220px;
+  //         display: flex;
+  //         align-items: center;
+  //       }
+  //       .icon-box {
+  //         // width: 120px;
+  //       }
+  //       .coach-text-container {
+  //         // width: 400px;
+  //         text-align: left;
+  //         // margin-top: 10px;
+  //         span {
+  //           @include SemiBold-26;
+  //         }
+  //         .text-pc {
+  //           display: none;
+  //         }
+  //         .text-mb {
+  //           display: block;
+  //           @include Medium-16;
+  //           text-align: left;
+  //         }
+  //       }
+  //     }
+  //   }
 }
 // 반응형 - 모바일(576)
 @media screen and (max-width: $breakpoint-sm) {
