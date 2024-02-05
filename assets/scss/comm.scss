@@ -119,6 +119,33 @@
         
         gap: 8px;
 
+        .mypgM::before {
+          display: block;
+          content: '\f007';
+          box-sizing: border-box;
+          font-family: "Font Awesome 6 Free";
+          width: 25px;
+          height: 25px;
+        }
+
+        .notice::before {
+          display: block;
+          content: '\f0f3';
+          box-sizing: border-box;
+          font-family: "Font Awesome 6 Free";
+          width: 25px;
+          height: 25px;
+        }
+        .menusee {
+          display: block;
+          content: '\f0c9';
+          box-sizing: border-box;
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          width: 25px;
+          height: 25px;
+        }
+
         li {
           text-align: center;
           width: 27px;
@@ -126,34 +153,6 @@
           padding-left: 2px;
 
           color: $white;
-
-          &:nth-of-type(1)::before {
-            display: block;
-            content: '\f007';
-            box-sizing: border-box;
-            font-family: "Font Awesome 6 Free";
-            width: 25px;
-            height: 25px;
-          }
-
-          &:nth-of-type(2)::before {
-            display: block;
-            content: '\f0f3';
-            box-sizing: border-box;
-            font-family: "Font Awesome 6 Free";
-            width: 25px;
-            height: 25px;
-          }
-
-          &:nth-of-type(3)::before {
-            display: block;
-            content: '\f0c9';
-            box-sizing: border-box;
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            width: 25px;
-            height: 25px;
-          }
 
           .blind {
             text-indent: -9999px;
@@ -618,16 +617,18 @@
           display: flex;
           flex-wrap: wrap;
           width: 100%;
+          height: 45px;
+
 
           padding: 0;
 
           li {
-            width: 50%;
-            height: 45px;
+            width: 100%;
             text-align: center;
 
             display: flex;
             justify-content: center;
+            
 
             padding-top: 10px;
             padding-bottom: 10px;
@@ -671,20 +672,23 @@
     background: $primary;
 
     position: relative;
-
-
   }
+
   #logo {
     filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
   }
+
   .gnb_search {
     display: none;
   }
+
   #menu_navi {
     z-index: 10000;
     .menu_area {
-
-
+      .mobile {
+        display: flex;
+      }
+      
       .menu_area.mobile {
         display: flex;
 
@@ -698,7 +702,6 @@
       }
 
       .wsizewrap {
-        background: #888;
         width: calc(100% - 10px);
         height: 100%;
 
@@ -712,37 +715,185 @@
         align-items: center;
 
         .wsize.mobile {
-          background: #666;
+          background: $white;
 
-          display: block;
+          display: flex;
+          flex-direction: column;
+
           width: 100%;
+          
+          .head {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+
+            height: 70px;
+
+            .go-back {
+              margin-right: auto;
+              margin-left: 10px;
+
+              &::after {
+                display: block;
+                content: '\f104';
+                box-sizing: border-box;
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                width: 25px;
+                height: 25px;
+              }
+
+            }
+            .noti {
+              margin-right: 10px;
+
+              &::after {
+                display: block;
+                content: '\f0f3';
+                box-sizing: border-box;
+                font-family: "Font Awesome 6 Free";
+                width: 25px;
+                height: 25px;
+              }
+            }
+            .setset {
+              &::after {
+                display: block;
+                content: '\f013';
+                box-sizing: border-box;
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                width: 25px;
+                height: 25px;
+              }
+
+            }
+          }
+          .search {
+            .finding {
+              display: flex;
+              justify-content: center;
+
+              margin-left: 0;
+              gap: 0;
+
+              height: 50px;
+
+              background: $primary;
+
+              
+              li {
+                width: 100%;
+
+                a {
+                  color: $white;
+                  display: flex;
+                  align-items: center;
+                }
+                
+                .doctor{
+                  border-right: 1px solid $Gray_BW;
+
+                  &::before {
+                    display: block;
+                    content: '\f0f0';
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 600;
+  
+                    padding-right: 5px;
+                    width: 22px;
+                    height: 22px;
+                  }
+                }
+                
+                .subject::before {
+                  display: block;
+                  content: '\f0f1';
+                  font-family: "Font Awesome 6 Free";
+                  font-weight: 600;
+
+                  padding-right: 5px;
+
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+
+            }
+          }
         }
 
         .wsize.desktop {
-          background: #333;
+
+          background: $white;
           width: 100%;
-  
+
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           align-content: flex-start;
+
+          padding-top: 10px;
   
           #menu1, 
           #menu2, 
           #menu3, 
           #menu4, 
           #menu5 {
+
             width: 100%;
             height: 100%;
+
+            background : $gray_F8;
+
+            margin-bottom: 10px;
+            padding: 20px 10px 20px 10px;
+
+            .smenu_area {
+              box-shadow: none;
+
+              .section {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .gnb_cont {
+                  display: none;
+
+                  .gnb_cont-tit {
+                    display: flex;
+
+                    
+                  }
+                }
+
+                .gnb {
+                  width: 100%;
+                  border: none;
+
+                  flex-direction: column;
+                  align-items: flex-start;
+
+                  .gnb-flex {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    .gnb_padding {
+                      @include transparent-border-B($Gray_C7, 0.5);
+
+                      
+                    }
+                  }
+                }
+              }
+            }
           }
-          }        
+        }        
       }
     }
   }
-
-  .smenu_area {
-    display: none;
-  }
+  
 }
 
 @import "_main", "_healthCare", "_reservation";

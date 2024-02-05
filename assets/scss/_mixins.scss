@@ -52,6 +52,11 @@
   border-left: 1px solid rgba($color, $alpha);
 }
 
+// 보더 아래쪽만(투명도포함)
+@mixin transparent-border-B($color, $alpha) {
+  border-bottom: 1px solid rgba($color, $alpha);
+}
+
 // 폰트 설정
 
 @mixin Bold-48 {
