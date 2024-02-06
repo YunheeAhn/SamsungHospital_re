@@ -17,7 +17,15 @@
         position: relative;
 
         .back-btn {
-            text-indent: -9999px;
+            
+            &::after {
+                display: none;
+                content: '\f104';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                width: 22px;
+                height: 22px;
+            }
         }
     
         .txt {
@@ -32,6 +40,7 @@
                 font-weight: 900;
                 width: 22px;
                 height: 22px;
+                
 
                 cursor: pointer;
             }
@@ -48,6 +57,35 @@
 
     }
     
+}
+
+.main-mobile {
+    display: none;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    .mobile-tab {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 50px;
+
+        .member,
+        .nonMember {
+            width: 50%;
+            @include SemiBold-20;
+
+            border-bottom: 2px solid transparent;
+            transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+
+            &:hover {
+                border-bottom: 2px solid $primary;
+
+            }
+        }
+    }
 }
 
 .contents {
@@ -67,18 +105,17 @@
     background-color: $Gray_BW;
 
     max-width: 49%;
+    
 
     .inner {
         padding: 0 65px 0 65px;
 
         width: 100%;
     }
-    
 }
 
 #sec01 {
     display: block;
-
 
     .idpw-wrap {
         margin: 0 auto;
@@ -104,8 +141,6 @@
 .idpw {
     display: flex;
     justify-content: center;
-
-    
 
     .inputText {
         width: 100%;
@@ -200,10 +235,14 @@
     }
     .naver {
         border-color: #00C63B;
-
+        
         &:hover {
             color: $white;
             background: #00C63B;
+        }
+
+        .naverLog {
+            color: $Gray_55;
         }
     }
     .kakaotalk {
@@ -213,6 +252,10 @@
         &:hover {
             color: $white;
             background: #FAE100;
+        }
+
+        .kakakoLog {
+            color: $Gray_55;
         }
     }
 }
@@ -226,6 +269,8 @@
     display: flex;
     align-items: center;
 
+    place-items: center;
+
     @include Regular-16;
     color: $Gray_55;
     text-align: center;
@@ -234,7 +279,9 @@
         width: 50%;
         height: 100%;
 
-        padding: 28px;
+        margin: 0;
+        
+        padding-top: 25px;
 
         border: 1px solid $Gray_C7;
         text-align: center;
@@ -363,8 +410,10 @@
 
     &::before {
         display: block;
-        content: '';
-        background: url('../images/loginPage_images/user_icon.png') $bg-img;
+        content: '\f007';
+        box-sizing: border-box;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 400;
         width: 30px;
         height: 35px;
 
@@ -383,8 +432,144 @@
 }
 
 // 미디어쿼리
-// 태블릿 max
+// 768px까지 작은 태블릿 화면
+@media screen and (max-width:$breakpoint-md) {
+    // 이너 상단 타이틀
+    .inner-tit {
+        .inner-wrap {
+            .back-btn {
+                &::after {
+                    display: block;
+                    padding-left: 20px;
+                }
+                
+                
+            }
+            .txt {
+                @include Regular-18;
+            }
+        }
+    }
+    // 섹션 1,2
+    .main-mobile,
+    .contents {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0;
+    }
+    .contents {
+        margin-bottom: 10px
+    }
+    .main-mobile {
+        display: block;
 
+        margin-top: 15px;
+    }
+
+    #sec01,
+    #sec02 {
+        max-width: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+
+
+        background-color: $white;
+    }
+    .rev {
+        @include Regular-18;
+
+        margin-bottom: 20px;
+
+        &::before {
+            width: 24px;
+            height: 30px;
+            color: $primary;
+
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    .rev-desc {
+        display: none;
+    }
+
+    #sec01 {
+        // display: none;
+
+        .member.inner {
+            .idpw-wrap {
+                .idpw {
+                    .reserve-Btn {
+                        margin-bottom: 10px;
+
+                        @include SemiBold-16;
+                    }
+                }
+            }
+
+            .find-wrap {
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            .quick-wrap {
+                .naver,
+                .kakaotalk {
+                    // @include SemiBo
+                }
+            }
+
+            .tel-wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+
+                width: 100%;
+                height: 120px;
+
+                p {
+
+                    width: 100%;
+
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+
+    #sec02 {
+        width: 100%;
+        // display: none;
+        .N-member.inner {
+            .scrollBox {
+                
+                .usercheck {
+                    margin-bottom: 50px;
+                }
+                
+            }
+            .head-wrap {
+                margin-bottom: 0;
+
+                @include SemiBold-16;
+
+                .rev {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .certification-wrap {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// 1280px까지 pc화면인데 약간의 사이즈 조정
 @media screen and (max-width:$breakpoint-xl) {
-    
+    #sec02 {
+        .head-wrap {
+            padding-bottom: 20px;
+        }
+    }
 }
