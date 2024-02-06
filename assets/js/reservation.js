@@ -94,60 +94,45 @@ document.addEventListener('DOMContentLoaded', function () {
     certiNumFormNot.addEventListener('input', updateActiveNonMemberButtonState) // 인증번호 입력 시 비회원 예약 버튼 상태 업데이트
     checkBoxNot.addEventListener('change', updateActiveNonMemberButtonState) // 체크박스 변경 시 비회원 예약 버튼 상태 업데이트
 
+    // breakpoint-md : 768px 미디어쿼리 자바 스크립트 적용
 
+    // 예약, 비회원예약 클릭시 섹션 전환
+    var clickReserveMenus = [
+        document.querySelector('.mobile-tab.member'),
+        document.querySelector('.mobile-tab.nonMember')
+    ];
 
-    // 인증번호 입력하기 숫자4개까지 입력 할 수 있게 지정 하기
+    var openSections = [
+        document.querySelector('#sec01'),
+        document.querySelector('#sec02')
+    ];
 
-    // 값 없는경우 클릭시 알림창 활성화
+    clickReserveMenus.forEach(function(menu, index) {
+        var openSection = openSections[index];
+        addClickEvent(menu, openSection);
+    });
 
-    // // 회원 alert
-    // const idlogElement = document.querySelector('#idlog');
-    // const pwlogElement = document.querySelector('#pwlog');
-    // const clickReserveBtn = document.querySelector('#reserve-Btn');
-    
-    // function handleMemberReservation() {
-    //     if (idlogElement.value.trim() === '' || pwlogElement.value.trim() === '') {
-    //         alert('내용을 확인해주세요')
-    //     }
+    openSections.forEach(function(menu) {
+        addClickEvent(menu, menu); 
         
-    // }
+    })
+
+    function addClickEvent(menu, openSection) {
+        if (menu && openSection) {
+            menu.addEventListener('click', function(){
+                openDropMenu(openSection)
+            })
+        }
+    }
+
+    function openDropMenu(menu) {
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    }
+
     
-    // clickReserveBtn.addEventListener('click', handleMemberReservation);
     
-    // // 비회원 alert
-    // const ptnmValue = document.querySelector('#ptnm');
-    // const hpnoValue = document.querySelector('#hpno');
-    // const certiNumValue = document.querySelector('#certi-num');
-    // const checkAgreeBox = document.querySelector('#userchk');
-    // const clickConfirmBtn = document.querySelector('#confirmBtn');
-    
-    // function handleNonMemberReservation() {
-    //     // 값이 비어있는 경우
-    //     if (
-    //         ptnmValue.value.trim() === '' ||
-    //         hpnoValue.value.trim() === '' ||
-    //         certiNumValue.value.trim() === '' ||
-    //         !checkAgreeBox.checked
-    //     ) {
-    //         alert('내용을 입력해주세요')
-    //     } 
-    //     return false
-    // }
-    
-    // clickConfirmBtn.addEventListener('click', handleNonMemberReservation);
-
-    // 뒤로가기 화살표 클릭시 이전(직전) 페이지로 이동
-
-
-    // 이전페이지로 돌아가기
-    // const backBtn = document.querySelector('.tit.txt')
-
-    // function backHistory () {
-    //     backBtn.addEventListener('click', function(){
-    //         window.history.back()
-
-    //     })
-    // }
-    // backHistory();
-
 })
