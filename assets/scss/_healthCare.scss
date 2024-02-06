@@ -290,7 +290,7 @@
   .tab-box {
     display: none;
     position: absolute;
-    top: 40%;
+    top: 39%;
     left: 0;
     right: 0;
     background: $primary;
@@ -518,6 +518,12 @@
 
   .sec-tit-container {
     justify-content: center;
+    .more-tit {
+      display: none;
+    }
+  }
+  .slick-list {
+    // padding: 0;
   }
   .slick-slide {
     margin: 0 0.25%;
@@ -609,6 +615,11 @@
 }
 // 반응형 - tablet(768)
 @media screen and (max-width: $breakpoint-md) {
+  .sec-disease-tab {
+    .tab-box li {
+      width: 27%;
+    }
+  }
   .sec-disease {
     .disease-card-container {
       justify-content: flex-start;
@@ -629,7 +640,7 @@
   .healthCare-body {
     // background: url(../images/healthCarePage_images/healthcare_img_mb.png) 50% 0
     //   no-repeat;
-    // margin-top: 110px;
+    margin-top: 110px;
   }
 
   .titbox-mb {
@@ -639,6 +650,15 @@
     text-align: center;
     padding: 10px 0;
     @include Bold-18;
+    &::before {
+      content: "\f104";
+      position: absolute;
+      top: 13.5%;
+      left: 8%;
+      font-family: "Font Awesome 6 Free";
+      font-size: 22px;
+      color: $Gray_55;
+    }
   }
 
   // 모바일 공통항목
@@ -653,17 +673,19 @@
   }
   .more-tit-mb {
     display: block;
-    @include Regular-13;
+    @include Regular-16;
   }
 
   //컨텐츠
 
   .sec-disease-tab {
-    margin-top: 8%;
-    height: 4.5%;
+    margin-top: 15%;
+    margin-bottom: 0;
+    height: 4%;
     .sec-tit-container {
       position: relative;
       display: block;
+      padding-bottom: 0;
     }
     .sec-tit {
       display: none;
@@ -672,17 +694,19 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
+      margin-bottom: 5%;
     }
     .disease-tab-container {
       display: none;
     }
     .search-box {
-      width: 84%;
+      width: 87%;
       margin-top: 5%;
       display: flex;
       position: relative;
 
       .search {
+        border: 2px solid $primary;
         border-radius: 2px;
       }
       form {
@@ -695,6 +719,7 @@
           top: 50%;
           left: 101%;
           color: $white;
+          opacity: 1;
           text-align: center;
         }
       }
@@ -702,12 +727,22 @@
   }
   .sec-disease {
     height: 445px;
-    overflow: hidden;
     .disease-card-container {
       border: none;
       gap: 5.5%;
       padding: 0;
       justify-content: center;
+      height: 90%;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $Gray_E3;
+      }
     }
     .disease-card {
       width: 45%;
@@ -741,14 +776,18 @@
     .nutritions-card {
       width: 100%;
       margin: 0 auto;
+
       a {
         display: block;
-        height: 212px;
+        height: 272px;
       }
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+      .tit {
+        height: 40px;
       }
     }
   }
@@ -756,28 +795,59 @@
     .tv-img-box {
       a {
         display: block;
-        height: 212px;
+        height: 272px;
       }
       img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
   }
   .sec-coach {
-    .slide-coach-wrapper {
-      width: 100%;
-      .coach-card {
-        padding: 0;
-        flex-direction: row;
-        span {
-          @include Bold-18;
-        }
+    .sec-tit-container {
+      justify-content: space-between;
+      .more-tit {
+        display: block;
       }
     }
-    .sec-tit-container {
-      //   justify-content: flex-start;
+    .slick-slide {
+      margin: 0 0.1% 0;
+    }
+
+    .slide-coach-wrapper {
+      width: 100%;
+
+      .icon-box {
+        width: 23%;
+        height: 23%;
+      }
+
+      .coach-card {
+        padding: 5% 5%;
+        flex-direction: row;
+        align-items: center;
+
+        .coach-text-container {
+          width: 70%;
+          text-align: left;
+          margin-left: 20px;
+          padding: 4% 0;
+          span {
+            @include Bold-20;
+            margin: 0;
+          }
+          .text-pc {
+            display: none;
+          }
+          .text-mb {
+            display: block;
+            text-align: left;
+            @include Regular-13;
+            margin-top: 10px;
+            // letter-spacing: -0.6px;
+          }
+        }
+      }
     }
   }
 }

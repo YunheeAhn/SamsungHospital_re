@@ -3,15 +3,15 @@ var swiper = new Swiper(".swiper-nutritions", {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
+  //   centeredSlides: true,
   autoplay: {
-    delay: 10000000,
+    delay: 2000,
     disableOnInteraction: false,
   },
   breakpoints: {
     300: {
       slidesPerView: 1,
       spaceBetween: 10,
-      centeredSlides: true,
     },
     576: {
       slidesPerView: 2,
@@ -36,7 +36,7 @@ var swiper = new Swiper(".swiper-healthtv", {
   spaceBetween: 20,
   loop: true,
   autoplay: {
-    delay: 200000,
+    delay: 2900,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -66,12 +66,11 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // centerPadding: "20px",
     arrows: true,
     prevArrow: '<button class="slick-prev" aria-label=""></button>',
     nextArrow: '<button class="slick-next" aria-label=""></button>',
     autoplay: true,
-    autoplaySpeed: 290000,
+    autoplaySpeed: 2500,
     responsive: [
       {
         breakpoint: 300,
@@ -87,6 +86,7 @@ $(document).ready(function () {
           arrows: false,
           centerMode: true,
           slidesToShow: 1,
+          centerPadding: "1px",
         },
       },
       {
