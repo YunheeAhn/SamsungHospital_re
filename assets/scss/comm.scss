@@ -395,7 +395,7 @@
         border-bottom: 1px solid $white;
 
         li  {
-          a {
+          .line {
             color: $white;
             margin-right: 23px;
           }
@@ -468,7 +468,7 @@
     #footer {
       .inner {
         ul {
-          line-height: 20px;
+          // line-height: 20px;
 
           @include SemiBold-16;
         }
@@ -657,21 +657,28 @@
 
           li {
             width: 50%;
+            height: 45px;
             text-align: center;
+
+            padding-top: 10px;
+            padding-bottom: 15px;
 
             display: flex;
             justify-content: center;
 
-            padding-top: 10px;
-            padding-bottom: 10px;
-
             border: 0.8px solid $Gray_BW;
+
+            &:hover {
+              background: $Gray_BW;
+            }
 
             &:nth-of-type(1),
             &:nth-of-type(3),
             &:nth-of-type(5),
             &:nth-of-type(7) {
               border-left: none;
+              border-bottom: none;
+              border-right: none;
             }
 
             &:nth-of-type(2),
@@ -679,6 +686,7 @@
             &:nth-of-type(6),
             &:nth-of-type(8) {
               border-right: none;
+              border-bottom: none;
             }
 
             &:nth-of-type(1),
@@ -686,10 +694,18 @@
               border-top: none;
             }
 
-            a {
+            .line {
               margin: 0;
+              width: 100%;
+              height: 45px;
+
+              line-height: 40px;
 
               @include Regular-13;
+
+              &:hover {
+                color: $primary;
+              }
             }
           }
         }
