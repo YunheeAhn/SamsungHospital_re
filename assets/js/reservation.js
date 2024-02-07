@@ -94,45 +94,76 @@ document.addEventListener('DOMContentLoaded', function () {
     certiNumFormNot.addEventListener('input', updateActiveNonMemberButtonState) // 인증번호 입력 시 비회원 예약 버튼 상태 업데이트
     checkBoxNot.addEventListener('change', updateActiveNonMemberButtonState) // 체크박스 변경 시 비회원 예약 버튼 상태 업데이트
 
+
+
     // breakpoint-md : 768px 미디어쿼리 자바 스크립트 적용
-
     // 예약, 비회원예약 클릭시 섹션 전환
-    var clickReserveMenus = [
-        document.querySelector('.mobile-tab.member'),
-        document.querySelector('.mobile-tab.nonMember')
-    ];
+    // var clickReserveMenus = [
+    //     document.querySelector('.mobile-tab.member'),
+    //     document.querySelector('.mobile-tab.nonMember')
+    // ];
 
-    var openSections = [
-        document.querySelector('#sec01'),
-        document.querySelector('#sec02')
-    ];
+    // var openSections = [
+    //     document.querySelector('#sec01'),
+    //     document.querySelector('#sec02')
+    // ];
 
-    clickReserveMenus.forEach(function(menu, index) {
-        var openSection = openSections[index];
-        addClickEvent(menu, openSection);
+    // clickReserveMenus.forEach(function(menu, index) {
+    //     var openSection = openSections[index];
+    //     addClickEvent(menu, openSection);
+    // });
+
+    // openSections.forEach(function(menu) {
+    //     addClickEvent(menu, menu); 
+        
+    // })
+
+    // function addClickEvent(menu, openSection) {
+    //     if (menu && openSection) {
+    //         menu.addEventListener('click', function(){
+    //             openDropMenu(openSection)
+    //         })
+    //     }
+    // }
+
+    // function openDropMenu(menu) {
+    //     if (menu.style.opacity === '0' || menu.style.display === '') {
+    //         menu.style.opacity = '1';
+    //     } else {
+    //         menu.style.opacity = '0';
+    //     }
+    // }
+
+    // 모바일용 선택 탭 선언
+    const memberTab = document.querySelector('.mobile-tab.member');
+    const nonMemberTab = document.querySelector('.mobile-tab.nonMember');
+    // 클릭시 반응하는 섹션 선언
+    const sec01 = document.querySelector('#sec01');
+    const sec02 = document.querySelector('#sec02');
+
+
+    // 회원예약 - 섹션, 보더값 이벤트 리스너 등록
+    memberTab.addEventListener('click', function() {
+        showSection(sec01);
+        hideSection(sec02);
+        memberTab.classList.add('activeTab');
+        nonMemberTab.classList.remove('activeTab');
+    });
+    // 비회원예약 - 섹션, 보더값 이벤트 리스너 등록
+    nonMemberTab.addEventListener('click', function() {
+        showSection(sec02);
+        hideSection(sec01);
+        nonMemberTab.classList.add('activeTab');
+        memberTab.classList.remove('activeTab');
     });
 
-    openSections.forEach(function(menu) {
-        addClickEvent(menu, menu); 
-        
-    })
-
-    function addClickEvent(menu, openSection) {
-        if (menu && openSection) {
-            menu.addEventListener('click', function(){
-                openDropMenu(openSection)
-            })
-        }
+    // 보더값 보이게 하는 함수
+    function showSection(section) {
+        section.classList.add('active');
     }
 
-    function openDropMenu(menu) {
-        if (menu.style.display === 'none' || menu.style.display === '') {
-            menu.style.display = 'block';
-        } else {
-            menu.style.display = 'none';
-        }
+    // 보더값 안보이게 하는 함수
+    function hideSection(section) {
+        section.classList.remove('active');
     }
-
-    
-    
 })
