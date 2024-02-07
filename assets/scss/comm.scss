@@ -721,9 +721,27 @@
 
     position: relative;
   }
-
   #logo {
-    filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
+    display: none;
+  }
+  #logoMobile {
+    display: flex;
+    align-items: center;   
+    height: $hd-height;
+
+    a {
+      text-indent: -9999px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 160px;
+      height: 80px;
+      background: url(../images/loginPage_images/logoImages.png) $bg-img;
+      background-size: 100%;
+      filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
+    }
   }
 
   .gnb_search {

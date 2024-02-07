@@ -95,33 +95,123 @@
             <div id="menu_navi">
                 <!-- 네비게이션 메뉴 구역 시작 -->
                 <div class="menu_area">
-                  <!-- 모바일용 아이콘1 시작 -->
-                  <div class="menu_area mobile">
-                    <ul>
-                      <li class="mypgM"><a type="button" href="#" class="blind">마이페이지</a></li>
-                      <li class="notice"><a type="button" href="#" class="blind">알림</a></li>
-                      <li class="menusee"><a href="#" class="blind">메뉴보기</a></li>
-                    </ul>
-                  </div>
-                  <!-- 모바일용 아이콘1 끝 -->
-
                   <!-- 각 메뉴 탭 시작 -->
                   <div class="wsizewrap">
+
                     <!-- 모바일에서만 보이는 부분 시작 -->
                     <div class="wsize mobile">
-                      <div class="wsize mobile head">
-                        <p class="go-back "><a href="#" class="blind">뒤로가기</a></p>
-                        <p class="noti "><a href="#" class="blind">알림</a></p>
-                        <p class="setset "><a href="#" class="blind">설정</a></p>
+                      <!-- 모바일 wrap -->
+                      <div class="wsize mobile-wrap">
+                        <!-- 모바일헤더 -->
+                        <div class="mobile-wrap_header">
+                          <!-- 모바일 로고 -->
+                          <h1 id="logoMobile"><a href="#" class="blank">삼성서울병원</a></h1>
+                          <!-- 모바일 메뉴 -->
+                          <div class="mobile-wrap_header__menu">
+                            <ul>
+                              <li class="mypgM"><a type="button" href="#" class="blind">마이페이지</a></li>
+                              <li class="notice"><a type="button" href="#" class="blind">알림</a></li>
+                              <!-- 메뉴보기 버튼 누르면 colRight 오른쪽-> 왼쪽으로 슬라이드  -->
+                              <li class="menusee"><a href="#" class="blind">메뉴보기</a></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- 메뉴보기 버튼 클릭시 나오는 구역 -->
+                        <div class="mobile-wrap_colRight">
+                          <!-- 구역의 최상단 -->
+                          <div class="mobile-wrap_colRight__top">
+                            <ul class="top_list">
+                              <li class="go-back "><a href="#" class="blind">뒤로가기</a></li>
+                              <li class="noti "><a href="#" class="blind">알림</a></li>
+                              <li class="setset "><a href="#" class="blind">설정</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- 의료진, 진료과 찾기 -->
+                          <div class="mobile-wrap_colRight__find">
+                            <ul class="find_list">
+                              <li class="finding-doctor"><a href="#">의료진 찾기</a></li>
+                              <li class="finding-subject"><a href="#">진료과 찾기</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- 여기에 모바일에서만 보이는 뎁스 메뉴 추가 -->
+                          <div class="mobile-wrap_colRight__mobileMenu" style="display: none;">
+                            <ul class="mobileMenu_list">
+
+                              <!-- 모바일메뉴1 -->
+                              <li class="mobileMenu1">
+                                <a href="#">예약/증명</a>
+                                <div class="mobileMenu1_depth1">
+                                  <ul>
+                                    <li>
+                                      <a href="#">예약하기</a>
+                                      <div class="mobileMenu1_depth2"></div>
+                                    </li>
+                                    <li>
+                                      <a href="#">진료예약하기</a>
+                                      <div class="mobileMenu1_depth2"></div>
+                                    </li>
+                                    <li>
+                                      <a href="#">온라인발급서비스</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <!-- 모바일메뉴2 -->
+                              <li class="mobileMenu2">
+                                <a href="#">진료과/의료진</a>
+                                <div class="mobileMenu2_depth1">
+                                  <ul>
+                                    <li><a href="#">예약하기</a></li>
+                                    <li><a href="#">진료예약하기</a></li>
+                                    <li><a href="#">온라인발급서비스</a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <!-- 모바일메뉴3 -->
+                              <li class="mobileMenu3">
+                                <a href="#">이용안내</a>
+                                <div class="mobileMenu3_depth1">
+                                  <ul>
+                                    <li><a href="#">예약하기</a></li>
+                                    <li><a href="#">진료예약하기</a></li>
+                                    <li><a href="#">온라인발급서비스</a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <!-- 모바일메뉴4 -->
+                              <li class="mobileMenu4">
+                                <a href="#">건강정보</a>
+                                <div class="mobileMenu4_depth1">
+                                  <ul>
+                                    <li><a href="#">예약하기</a></li>
+                                    <li><a href="#">진료예약하기</a></li>
+                                    <li><a href="#">온라인발급서비스</a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <!-- 모바일메뉴5 -->
+                              <li class="mobileMenu5">
+                                <a href="#">병원소개</a>
+                                <div class="mobileMenu5_depth1">
+                                  <ul>
+                                    <li><a href="#">예약하기</a></li>
+                                    <li><a href="#">진료예약하기</a></li>
+                                    <li><a href="#">온라인발급서비스</a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                        </div>
+
                       </div>
-                      <div class="wsize mobile search">
-                        <ul class="finding">
-                          <li><a href="#" class="finding doctor">의료진 찾기</a></li>
-                          <li><a href="#" class="finding subject">진료과 찾기</a></li>
-                        </ul>
-                      </div>
+                      
                     </div>
-                    <!-- 모바일에서만 보이는 부분 시작 -->
+                    <!-- 모바일에서만 보이는 부분 끝 -->
 
                     <!-- 데스크탑에서만 보이는 부분 시작  -->
                       <ul class="wsize desktop">
@@ -385,7 +475,6 @@
                         </li>
                         <!-- 다섯번째 탭 병원소개 끝 -->
                       </ul>
-                    
                     <!-- 데스크탑에서만 보이는 부분 끝  -->
                   </div>
                   <!-- 각 메뉴 탭 끝 -->
