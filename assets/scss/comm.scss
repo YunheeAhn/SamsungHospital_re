@@ -105,6 +105,10 @@
     margin: 0 auto;
     display: flex;
 
+    .wsize.mobile {
+      display: none;
+    }
+
     .wsizewrap {
       display: flex;
       align-items: center;
@@ -114,9 +118,7 @@
 
       height: 100px;
 
-      .wsize.mobile {
-        display: none;
-      }
+      
 
       .wsize.desktop {
         display: flex;
@@ -500,78 +502,99 @@
   
   // 헤더
   // 모바일용 헤더 보이게
-
   #menu_navi {
+    // position: relative;
     .menu_area {
-      .wsizewrap {
-        .wsize.mobile {
-          display: block;
-          .mobile-wrap {
-            .mobile-wrap__header {
+
+      // background: rgba(3,3,3,.7);
+
+      .wsize.mobile {
+        display: block;
+
+        width: 100%;
+        // width: calc(100% - 10px);
+        height: 100vh;
+        
+        // background: rgba(3,3,3,.7);
+
+        margin-left: auto;
+
+        // position: fixed;
+        // top: 0;
+        // right: 0;
+
+        .mobile-wrap {
+          width: 100%;
+          .mobile-wrap_header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            height: $hd-height;
+            width: 100%;
+
+            background: $primary;
+
+            #logoMobile {
               display: flex;
+              align-items: center;
+              
 
-              #logoMbile {
-                display: flex;
-                align-items: center;   
-                height: $hd-height;
-                
-                a {
-                  text-indent: -9999px;
-                }
+              // margin-right: auto;
 
-                &::before {
-                  content: '';
-                  display: block;
-                  width: 160px;
-                  height: 80px;
-                  background: url(../images/loginPage_images/logoImages.png) $bg-img;
-                  background-size: 100%;
-                  filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
-                }
-
+              .blank {
+                text-indent: -9999px;
               }
+              &::before {
+                content: '';
+                display: block;
+                width: 160px;
+                height: 80px;
+                background: url(../images/loginPage_images/logoImages.png) $bg-img;
+                background-size: 100%;
+                filter: drop-shadow(1.5px 0.5px .5px $Gray_C7);
+              }
+            }
+            .mobile-wrap_header__menu {
+              display: flex;
+              
+              ul {
+                display: flex;
+                color: $white;
+
+                .mypgM::before {
+                  display: block;
+                  content: '\f007';
+                  box-sizing: border-box;
+                  font-family: "Font Awesome 6 Free";
+                  width: 25px;
+                  height: 25px;
+                }
+  
+                .notice::before {
+                  display: block;
+                  content: '\f0f3';
+                  box-sizing: border-box;
+                  font-family: "Font Awesome 6 Free";
+                  width: 25px;
+                  height: 25px;
+                }
+  
+                .menusee::before {
+                  display: block;
+                  content: '\f0c9';
+                  box-sizing: border-box;
+                  font-family: "Font Awesome 6 Free";
+                  font-weight: 900;
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+
+              
             }
           }
         }
-      }
-    }
-  }
-
-  #menu_navi {
-    .menu_area {
-
-      .wsizewrap {
-
-        
-    
-            .mypgM::before {
-              display: block;
-              content: '\f007';
-              box-sizing: border-box;
-              font-family: "Font Awesome 6 Free";
-              width: 25px;
-              height: 25px;
-            }
-    
-            .notice::before {
-              display: block;
-              content: '\f0f3';
-              box-sizing: border-box;
-              font-family: "Font Awesome 6 Free";
-              width: 25px;
-              height: 25px;
-            }
-    
-            .menusee::before {
-              display: block;
-              content: '\f0c9';
-              box-sizing: border-box;
-              font-family: "Font Awesome 6 Free";
-              font-weight: 900;
-              width: 25px;
-              height: 25px;
-            }
-
       }
     }
   }
@@ -702,251 +725,8 @@
 
 // 576px까지 모바일 화면
 @media screen and (max-width:$breakpoint-sm) {
-  #header {
-    background: $primary;
-
-    position: relative;
-  }
-  #logo {
-    display: none;
-  }
-  #logoMobile {
-    display: flex;
-    align-items: center;   
-    height: $hd-height;
-
-    a {
-      text-indent: -9999px;
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      width: 160px;
-      height: 80px;
-      background: url(../images/loginPage_images/logoImages.png) $bg-img;
-      background-size: 100%;
-      filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
-    }
-  }
-
-  .gnb_search {
-    display: none;
-  }
-
-  #menu_navi {
-    z-index: 10000;
-    .menu_area {
-      .mobile {
-        display: flex;
-      }
-
-      .menu_area.mobile {
-        display: flex;
-
-      }
-
-      .wsizewrap {
-        width: calc(100% - 10px);
-        height: 100%;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-content: flex-start;
-        align-items: center;
-
-        .wsize.mobile {
-          background: $white;
-
-          display: none;
-          // display: flex;
-          flex-direction: column;
-
-          width: 100%;
-
-          .head {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-
-            height: 70px;
-
-            .go-back {
-              margin-right: auto;
-              margin-left: 10px;
-
-              &::after {
-                display: block;
-                content: '\f104';
-                box-sizing: border-box;
-                font-family: "Font Awesome 6 Free";
-                font-weight: 900;
-                width: 25px;
-                height: 25px;
-              }
-            }
-            .noti {
-              margin-right: 10px;
-
-              &::after {
-                display: block;
-                content: '\f0f3';
-                box-sizing: border-box;
-                font-family: "Font Awesome 6 Free";
-                width: 25px;
-                height: 25px;
-              }
-            }
-            .setset {
-              &::after {
-                display: block;
-                content: '\f013';
-                box-sizing: border-box;
-                font-family: "Font Awesome 6 Free";
-                font-weight: 900;
-                width: 25px;
-                height: 25px;
-              }
-
-            }
-          }
-          .search {
-            .finding {
-              display: flex;
-              justify-content: center;
-
-              margin-left: 0;
-              gap: 0;
-
-              height: 50px;
-
-              background: $primary;
-
-              li {
-                width: 100%;
-
-                a {
-                  color: $white;
-                  display: flex;
-                  align-items: center;
-                }
-
-                .doctor{
-                  border-right: 1px solid $Gray_BW;
-
-                  &::before {
-                    display: block;
-                    content: '\f0f0';
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 600;
   
-                    padding-right: 5px;
-                    width: 22px;
-                    height: 22px;
-                  }
-                }
 
-                .subject::before {
-                  display: block;
-                  content: '\f0f1';
-                  font-family: "Font Awesome 6 Free";
-                  font-weight: 600;
-
-                  padding-right: 5px;
-
-                  width: 22px;
-                  height: 22px;
-                }
-              }
-            }
-          }
-        }
-
-        .wsize.desktop {
-
-          background: $white;
-          width: 100%;
-
-          // display: flex;
-          display: none;
-          flex-direction: column;
-          align-items: flex-start;
-          align-content: flex-start;
-
-          padding-top: 15px;
-  
-          #menu1, 
-          #menu2, 
-          #menu3, 
-          #menu4, 
-          #menu5 {
-            width: 100%;
-            height: 100%;
-
-            background : $gray_F8;
-
-            display: flex;
-            justify-content: space-between;
-
-            margin-bottom: 10px;
-            padding: 20px 10px 20px 10px;
-
-            @include SemiBold-20;
-
-            &::after {
-              display: block;
-              content: '\f078';
-              box-sizing: border-box;
-              font-family: "Font Awesome 6 Free";
-              font-weight: 900;
-              width: 25px;
-              height: 25px;
-            }
-
-            .smenu_area {
-              box-shadow: none;
-
-              .section {
-                flex-direction: column;
-                align-items: flex-start;
-
-                .gnb_cont {
-                  display: none;
-
-                  .gnb_cont-tit {
-                    display: flex;
-                  }
-                }
-
-                .gnb {
-                  width: 100%;
-                  border: none;
-
-                  flex-direction: column;
-                  align-items: flex-start;
-
-                  .gnb-flex {
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-
-                    .gnb_padding {
-                      @include transparent-border-B($Gray_C7, 0.5);
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }        
-      }
-    }
-  }
   
 }
 
