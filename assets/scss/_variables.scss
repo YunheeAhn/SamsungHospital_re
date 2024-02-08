@@ -35,11 +35,11 @@ $sidebnr-bg: #40b16a;
 $sidebnr-text: #fef4a0;
 
 // 반응형 미디어 쿼리
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1280px;
-$breakpoint-xxl: 1440px;
+$breakpoint-sm: 576px; //까지 모바일
+$breakpoint-md: 768px; //까지 태블릿
+$breakpoint-lg: 992px; //까지 큰태블릿
+$breakpoint-xl: 1280px; //까지 PC
+$breakpoint-xxl: 1440px; //까지 전체 화면
 
 $hd-height: 100px;
 $ft-height: 230px;

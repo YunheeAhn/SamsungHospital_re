@@ -116,6 +116,18 @@ $(document).ready(function () {
     ],
   });
 });
+$(document).ready(function () {
+  $(".slide-coach-wrapper").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev" aria-label=""></button>',
+    nextArrow: '<button class="slick-next" aria-label=""></button>',
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2900,
+  });
+});
 
 // 질환정보tab
 // document.addEventListener("DOMContentLoaded", function
@@ -147,6 +159,7 @@ function tabs() {
   });
 }
 
+
 // 사이드메뉴
 function sidemenubar() {
   window.onscroll = function () {
@@ -163,3 +176,4 @@ function sidemenubar() {
 
 tabs();
 sidemenubar();
+

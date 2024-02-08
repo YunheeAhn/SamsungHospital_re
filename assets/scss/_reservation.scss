@@ -1,11 +1,16 @@
+// 모바일 헤더 작업용 지울 예정
+// #main_r {
+//      display: none;
+// }
 // 윤희님 예약 페이지 scss
 
+// 데스크탑
 .inner-tit {
     background: $Gray_BW;
     @include SemiBold-20;
 
     .inner-wrap {
-        max-width: 1280px;
+        max-width: $breakpoint-xl;
         height: 50px;
 
         margin: 0 auto;
@@ -16,7 +21,15 @@
         position: relative;
 
         .back-btn {
-            text-indent: -9999px;
+            
+            &::after {
+                display: none;
+                content: '\f104';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                width: 22px;
+                height: 22px;
+            }
         }
     
         .txt {
@@ -25,12 +38,13 @@
             margin-right: auto ;
 
             &::after {
-                display: block;
+                display: none;
                 content: '\f104';
                 font-family: 'Font Awesome 5 Free';
                 font-weight: 900;
                 width: 22px;
                 height: 22px;
+                
 
                 cursor: pointer;
             }
@@ -49,35 +63,93 @@
     
 }
 
-.contents {
+.main-mobile {
+    display: none;
     max-width: 1280px;
+
+    margin: 0 auto;
+
+    .mobile-tab {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 50px;
+
+        .member,
+        .nonMember {
+            width: 50%;
+            @include SemiBold-20;
+
+            border-bottom: 2px solid transparent;
+            transition: transform 0.4s cubic-bezier(0.45, 0.46, 0.05, 0.96);
+
+            &.activeTab {
+                border-bottom: 2px solid $primary;
+            }
+        }
+    }
+}
+
+.contents {
+    max-width: $breakpoint-xl;
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 100px;
-    position: relative;
+    // position: relative;
+
+    display: flex;
     
 }
 
 #sec01,
 #sec02 {
-
     padding-top: 60px;
     padding-bottom: 120px;
 
     background-color: $Gray_BW;
+
+    max-width: 49%;
+    
+
+    .inner {
+        padding: 0 65px 0 65px;
+
+        width: 100%;
+    }
 }
 
 #sec01 {
     display: block;
+    width: 100%;
 
-    width: 49%;
+    .idpw-wrap {
+        margin: 0 auto;
+
+        width: 100%;
+
+        #loginForm {
+            width: 100%;
+            .id,
+            .pw {
+                width: 100%;
+
+                .label100 {
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+
 }
+
 .idpw {
     display: flex;
     justify-content: center;
 
     .inputText {
-        width: 470px;
+        width: 100%;
         height: 50px;
     
         margin-bottom: 10px;
@@ -87,7 +159,7 @@
     }
 
     .reserve-Btn {
-        width: 470px;
+        width: 100%;
         height: 50px;
 
         margin-bottom: 30px;
@@ -98,7 +170,6 @@
         @include Medium-16;
 
         text-align: center;
-    
     }
 }
 
@@ -153,7 +224,7 @@
 
     .naver,
     .kakaotalk {
-        width: 470px;
+        width: 100%;
         height: 50px;
 
         margin-bottom: 10px;
@@ -170,10 +241,14 @@
     }
     .naver {
         border-color: #00C63B;
-
+        
         &:hover {
             color: $white;
             background: #00C63B;
+        }
+
+        .naverLog {
+            color: $Gray_55;
         }
     }
     .kakaotalk {
@@ -184,10 +259,14 @@
             color: $white;
             background: #FAE100;
         }
+
+        .kakakoLog {
+            color: $Gray_55;
+        }
     }
 }
 .tel-wrap {
-    width: 470px;
+
     height: 80px;
 
     margin: 0 auto;
@@ -195,6 +274,8 @@
 
     display: flex;
     align-items: center;
+
+    place-items: center;
 
     @include Regular-16;
     color: $Gray_55;
@@ -204,7 +285,9 @@
         width: 50%;
         height: 100%;
 
-        padding: 28px;
+        margin: 0;
+        
+        padding-top: 25px;
 
         border: 1px solid $Gray_C7;
         text-align: center;
@@ -225,10 +308,11 @@
 }
 
 #sec02 {
-    width: 49%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: 50%;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    margin-left:auto ;
     .head-wrap {
         margin-bottom: 54px;
     }
@@ -236,12 +320,20 @@
         margin: 0 auto;
         margin-bottom: 20px;
 
+        width: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        .name {
+            width: 100%;
+            
+        }
         .phone {
             position: relative;
+
+            width: 100%;
 
             .phone-certi {
                 position: absolute;
@@ -256,8 +348,11 @@
                 @include Medium-16;
             }
         }
+        .certi-num {
+            width: 100%;
+        }
         .inputText {
-            width: 470px;
+            width: 100%;
             height: 50px;
 
             margin-bottom: 10px;
@@ -267,7 +362,7 @@
         }
     }
     .scrollBox {
-        width: 470px;
+        width: 100%;
         margin: 0 auto;
         
         margin-bottom: 55px;
@@ -297,7 +392,7 @@
         }
     }
     .rev-btn {
-        width: 470px;
+        width: 100%;
         height: 50px;
 
         text-align: center;
@@ -316,15 +411,16 @@
     }
 }
 
-
 .rev {
     @include SemiBold-30;
     text-align: center;
 
     &::before {
         display: block;
-        content: '';
-        background: url('../images/loginPage_images/user_icon.png') $bg-img;
+        content: '\f007';
+        box-sizing: border-box;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 400;
         width: 30px;
         height: 35px;
 
@@ -340,4 +436,166 @@
 
     @include Regular-16;
     color: $Gray_55;
+}
+
+// 미디어쿼리
+// 768px까지 작은 태블릿 화면
+@media screen and (max-width:$breakpoint-md) {
+    // 이너 상단 타이틀
+    .inner-tit {
+        .inner-wrap {
+            .back-btn {
+                &::after {
+                    display: block;
+                    padding-left: 20px;
+                }
+                
+                
+            }
+            .txt {
+                @include Regular-18;
+            }
+        }
+    }
+    // 섹션 1,2
+    .main-mobile,
+    .contents {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .contents {
+        margin-bottom: 10px
+    }
+    .main-mobile {
+        display: block;
+
+        margin-top: 15px;
+    }
+
+    #sec01,
+    #sec02 {
+        max-width: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+
+        background-color: $white;     
+        
+        .inner {
+            padding: 0 30px 0 30px;
+        }
+        // 탭기능 구현용 클래스
+        .active {
+        display: block;
+        }
+    }
+    .rev {
+        @include Regular-18;
+
+        margin-bottom: 20px;
+
+        &::before {
+            width: 24px;
+            height: 30px;
+            color: $primary;
+
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    .rev-desc {
+        display: none;
+    }
+
+    #sec01 {
+        display: none;
+        
+        &.active {
+            display: block;
+        }
+
+        .member.inner {
+            .idpw-wrap {
+                .idpw {
+                    .reserve-Btn {
+                        margin-bottom: 10px;
+
+                        @include SemiBold-16;
+                    }
+                }
+            }
+
+            .find-wrap {
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            .tel-wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+
+                width: 100%;
+                height: 120px;
+
+                p {
+
+                    width: 100%;
+
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    
+    #sec02 {
+        width: 100%;
+        // position: static;
+        
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        .N-member.inner {
+            .scrollBox {
+                
+                .usercheck {
+                    margin-bottom: 50px;
+                }
+                
+            }
+            .head-wrap {
+                padding-bottom: 0;
+                margin-bottom: 0;
+
+                @include SemiBold-16;
+
+
+            }
+        }
+        .certification-wrap {
+            margin-bottom: 10px;
+        }
+    }
+    // 탭기능 구현용 클래스
+    .active {
+        display: block;
+        
+    }
+}
+
+// 1280px까지 pc화면인데 약간의 사이즈 조정
+@media screen and (max-width:$breakpoint-xl) {
+    #sec02 {
+        .head-wrap {
+            padding-bottom: 20px;
+        }
+    }
 }

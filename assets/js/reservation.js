@@ -42,184 +42,128 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // 비회원 예약
-     // 입력 폼 요소 선택
-     const idFormNot = document.querySelector('#idlog')
-     const pwFormNot = document.querySelector('#pwlog')
-     const nameFormNot = document.querySelector('#ptnm')
-     const phoneFormNot = document.querySelector('#hpno')
-     const certiNumFormNot = document.querySelector('#certi-num')
-     const checkBoxNot = document.querySelector('#userchk')
+    // 입력 폼 요소 선택
+    const idFormNot = document.querySelector('#idlog')
+    const pwFormNot = document.querySelector('#pwlog')
+    const nameFormNot = document.querySelector('#ptnm')
+    const phoneFormNot = document.querySelector('#hpno')
+    const certiNumFormNot = document.querySelector('#certi-num')
+    const checkBoxNot = document.querySelector('#userchk')
 
-     // 버튼 요소 선택
-     const activeReserveBtn = document.querySelector('#reserve-Btn')
-     const certiFormNot = document.querySelector('.phone-certi')
-     const activeNonMember = document.querySelector('.rev-btn')
+    // 버튼 요소 선택
+    const activeReserveBtn = document.querySelector('#reserve-Btn')
+    const certiFormNot = document.querySelector('.phone-certi')
+    const activeNonMember = document.querySelector('.rev-btn')
 
-     // 입력값 검증을 위한 변수 선언
-     let idCheckNot = false
-     let pwCheckNot = false
-     let nameCheck = false
-     let phoneCheck = false
-     let certiNumCheck = false
+    // 입력값 검증을 위한 변수 선언
+    let idCheckNot = false
+    let pwCheckNot = false
+    let nameCheck = false
+    let phoneCheck = false
+    let certiNumCheck = false
 
-     // 비회원 예약 버튼 상태 업데이트 함수
-     function updateMemberButtonState() {
+    // 비회원 예약 버튼 상태 업데이트 함수
+    function updateMemberButtonState() {
         idCheckNot = idFormNot.value.trim().length > 0
         pwCheckNot = pwFormNot.value.trim().length > 0
         activeReserveBtn.disabled = !(idCheckNot && pwCheckNot)
         activeReserveBtn.style.backgroundColor = idCheckNot && pwCheckNot ? '#0B50A1' : '#C7C7C7'
-     }
+    }
 
-     // 인증 버튼 상태 업데이트 함수
-     function updateCertiButtonState() {
-         nameCheck = nameFormNot.value.trim().length > 0
-         phoneCheck = phoneFormNot.value.trim().length === 11
-         certiFormNot.disabled = !(nameCheck && phoneCheck)
-         certiFormNot.style.backgroundColor = nameCheck && phoneCheck ? '#0B50A1' : '#C7C7C7'
-     }
+    // 인증 버튼 상태 업데이트 함수
+    function updateCertiButtonState() {
+        nameCheck = nameFormNot.value.trim().length > 0
+        phoneCheck = phoneFormNot.value.trim().length === 11
+        certiFormNot.disabled = !(nameCheck && phoneCheck)
+        certiFormNot.style.backgroundColor = nameCheck && phoneCheck ? '#0B50A1' : '#C7C7C7'
+    }
 
-     // 비회원 예약 버튼 상태 업데이트 함수
-     function updateActiveNonMemberButtonState() {
-         certiNumCheck = certiNumFormNot.value.trim().length === 4 // 인증번호 4자리 확인
-         let checkBoxCheck = checkBoxNot.checked
-         activeNonMember.disabled = !(nameCheck && phoneCheck && certiNumCheck && checkBoxCheck)
-         activeNonMember.style.backgroundColor =
-             nameCheck && phoneCheck && certiNumCheck && checkBoxCheck ? '#0B50A1' : '#C7C7C7'
-     }
-     // 입력 이벤트 리스너 등록
-     idFormNot.addEventListener('input', updateMemberButtonState)
-     pwFormNot.addEventListener('input', updateMemberButtonState)
-     nameFormNot.addEventListener('input', updateCertiButtonState) // 이름 입력 시 인증 버튼 상태 업데이트
-     phoneFormNot.addEventListener('input', updateCertiButtonState) // 핸드폰 번호 입력 시 인증 버튼 상태 업데이트
-     certiNumFormNot.addEventListener('input', updateActiveNonMemberButtonState) // 인증번호 입력 시 비회원 예약 버튼 상태 업데이트
-     checkBoxNot.addEventListener('change', updateActiveNonMemberButtonState) // 체크박스 변경 시 비회원 예약 버튼 상태 업데이트
-
-
-
-    // const nameForm = document.querySelector('#ptnm')
-    // const phoneForm = document.querySelector('#hpno')
-    // const certiForm = document.querySelector('.phone-certi')
-
-    // const checkBox = document.querySelector('.txtform')
-    // const certiNumForm = document.querySelector('#certi-num')
-    // const activeNonMember = document.querySelector('#confirmBtn')
+    // 비회원 예약 버튼 상태 업데이트 함수
+    function updateActiveNonMemberButtonState() {
+        certiNumCheck = certiNumFormNot.value.trim().length === 4 // 인증번호 4자리 확인
+        let checkBoxCheck = checkBoxNot.checked
+        activeNonMember.disabled = !(nameCheck && phoneCheck && certiNumCheck && checkBoxCheck)
+        activeNonMember.style.backgroundColor =
+            nameCheck && phoneCheck && certiNumCheck && checkBoxCheck ? '#0B50A1' : '#C7C7C7'
+    }
+    // 입력 이벤트 리스너 등록
+    idFormNot.addEventListener('input', updateMemberButtonState)
+    pwFormNot.addEventListener('input', updateMemberButtonState)
+    nameFormNot.addEventListener('input', updateCertiButtonState) // 이름 입력 시 인증 버튼 상태 업데이트
+    phoneFormNot.addEventListener('input', updateCertiButtonState) // 핸드폰 번호 입력 시 인증 버튼 상태 업데이트
+    certiNumFormNot.addEventListener('input', updateActiveNonMemberButtonState) // 인증번호 입력 시 비회원 예약 버튼 상태 업데이트
+    checkBoxNot.addEventListener('change', updateActiveNonMemberButtonState) // 체크박스 변경 시 비회원 예약 버튼 상태 업데이트
 
 
-    // let nameCheck = false;
-    // let phoneCheck = false;
 
-    // let checkBoxCheck = false;
-    // let certiNumCheck = false;
+    // breakpoint-md : 768px 미디어쿼리 자바 스크립트 적용
+    // 예약, 비회원예약 클릭시 섹션 전환
+    // var clickReserveMenus = [
+    //     document.querySelector('.mobile-tab.member'),
+    //     document.querySelector('.mobile-tab.nonMember')
+    // ];
 
-    // const pushValue2 = () => {
-    //     nameForm.addEventListener('input', () => {
-    //         nameCheck = nameForm.value.trim().length > 0;
-    //         updateNonMemberButtonStates();
-    //     })
-    //     phoneForm.addEventListener('input', () => {
-    //         phoneCheck = phoneForm.value.trim().length === 11;
-    //         updateNonMemberButtonStates();
-    //     });
-    //     checkBox.addEventListener('change', () => {
-    //         checkBoxCheck = checkBox.checked;
-    //         updateNonMemberButtonStates();
-    //     });
-    //     certiNumForm.addEventListener('input', () => {
-    //         certiNumCheck = certiNumForm.value.trim().length === 6;
-    //         updateNonMemberButtonStates();
-    //     })
-    // }
-    // pushValue2();
+    // var openSections = [
+    //     document.querySelector('#sec01'),
+    //     document.querySelector('#sec02')
+    // ];
 
-    // nameForm.addEventListener('input', updateCertiButtonState);
-    // phoneForm.addEventListener('input', updateCertiButtonState);
+    // clickReserveMenus.forEach(function(menu, index) {
+    //     var openSection = openSections[index];
+    //     addClickEvent(menu, openSection);
+    // });
 
-    // function updateCertiButtonState() {
-    //     if(nameCheck && phoneCheck) {
-    //         certiForm.style.backgroundColor = '#0b50a1'
-    //         certiForm.disabled = false;
+    // openSections.forEach(function(menu) {
+    //     addClickEvent(menu, menu); 
+        
+    // })
 
-    //     } else {
-    //         certiForm.style.backgroundColor = '#C7C7C7'
-    //         certiForm.disabled = true;
+    // function addClickEvent(menu, openSection) {
+    //     if (menu && openSection) {
+    //         menu.addEventListener('click', function(){
+    //             openDropMenu(openSection)
+    //         })
     //     }
     // }
 
-    
-    // checkBox.addEventListener('change', updateNonMemberButtonStates);
-    // certiNumForm.addEventListener('input', updateNonMemberButtonStates);
-    
-
-    // function updateNonMemberButtonStates() {
-    //     updateCertiButtonState();
-
-    //     certiNumCheck = certiNumForm.value.trim().length === 6 && checkBoxCheck;
-    //     updateActiveNonMemberButtonState();
-    // }
-   
-    
-    // function updateActiveNonMemberButtonState() {
-    //     if ((nameCheck && phoneCheck && checkBoxCheck) && certiNumCheck ) {
-    //         activeNonMember.style.backgroundColor = '#0b50a1';
-    //         activeNonMember.disabled = false;
+    // function openDropMenu(menu) {
+    //     if (menu.style.opacity === '0' || menu.style.display === '') {
+    //         menu.style.opacity = '1';
     //     } else {
-    //         activeNonMember.style.backgroundColor = '#C7C7C7';
-    //         activeNonMember.disabled = true;
+    //         menu.style.opacity = '0';
     //     }
     // }
 
-    // 값 없는경우 클릭시 알림창 활성화
-    
-    function showAlert(message) {
-        alert(message || '내용을 입력해주세요');
+    // 모바일용 선택 탭 선언
+    const memberTab = document.querySelector('.mobile-tab.member');
+    const nonMemberTab = document.querySelector('.mobile-tab.nonMember');
+    // 클릭시 반응하는 섹션 선언
+    const sec01 = document.querySelector('#sec01');
+    const sec02 = document.querySelector('#sec02');
+
+
+    // 회원예약 - 섹션, 보더값 이벤트 리스너 등록
+    memberTab.addEventListener('click', function() {
+        showSection(sec01);
+        hideSection(sec02);
+        memberTab.classList.add('activeTab');
+        nonMemberTab.classList.remove('activeTab');
+    });
+    // 비회원예약 - 섹션, 보더값 이벤트 리스너 등록
+    nonMemberTab.addEventListener('click', function() {
+        showSection(sec02);
+        hideSection(sec01);
+        nonMemberTab.classList.add('activeTab');
+        memberTab.classList.remove('activeTab');
+    });
+
+    // 보더값 보이게 하는 함수
+    function showSection(section) {
+        section.classList.add('active');
     }
-    
-    // 회원 alert
-    const idlogElement = document.querySelector('#idlog');
-    const pwlogElement = document.querySelector('#pwlog');
-    const clickReserveBtn = document.querySelector('#reserve-Btn');
-    
-    function handleMemberReservation() {
-        if (idlogElement.value.trim() === '' || pwlogElement.value.trim() === '') {
-            showAlert();
-        } 
-        return false
+
+    // 보더값 안보이게 하는 함수
+    function hideSection(section) {
+        section.classList.remove('active');
     }
-    
-    clickReserveBtn.addEventListener('click', handleMemberReservation);
-    
-    // 비회원 alert
-    const ptnmValue = document.querySelector('#ptnm');
-    const hpnoValue = document.querySelector('#hpno');
-    const certiNumValue = document.querySelector('#certi-num');
-    const checkAgreeBox = document.querySelector('#userchk');
-    const clickConfirmBtn = document.querySelector('#confirmBtn');
-    
-    function handleNonMemberReservation() {
-        // 값이 비어있는 경우
-        if (
-            ptnmValue.value.trim() === '' ||
-            hpnoValue.value.trim() === '' ||
-            certiNumValue.value.trim() === '' ||
-            !checkAgreeBox.checked
-        ) {
-            alert('내용을 입력해주세요')
-        } 
-        return false
-    }
-    
-    clickConfirmBtn.addEventListener('click', handleNonMemberReservation);
-
-    // 뒤로가기 화살표 클릭시 이전(직전) 페이지로 이동
-
-    const backBtn = document.querySelector('.tit.txt')
-
-    function backHistory () {
-        backBtn.addEventListener('click', function(){
-            window.history.back()
-
-        })
-    }
-    backHistory();
-
 })
