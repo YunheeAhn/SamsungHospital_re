@@ -93,7 +93,6 @@
 
 // 메뉴바들
 
-
 #menu_navi {
   height: $hd-height;
 
@@ -106,61 +105,6 @@
     margin: 0 auto;
     display: flex;
 
-    .mobile {
-      display: none; 
-
-      ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin-left: auto;
-        
-        gap: 8px;
-
-        .mypgM::before {
-          display: block;
-          content: '\f007';
-          box-sizing: border-box;
-          font-family: "Font Awesome 6 Free";
-          width: 25px;
-          height: 25px;
-        }
-
-        .notice::before {
-          display: block;
-          content: '\f0f3';
-          box-sizing: border-box;
-          font-family: "Font Awesome 6 Free";
-          width: 25px;
-          height: 25px;
-        }
-
-        .menusee::before {
-          display: block;
-          content: '\f0c9';
-          box-sizing: border-box;
-          font-family: "Font Awesome 6 Free";
-          font-weight: 900;
-          width: 25px;
-          height: 25px;
-        }
-
-        li {
-          text-align: center;
-          width: 27px;
-
-          padding-left: 2px;
-
-          color: $white;
-
-          .blind {
-            text-indent: -9999px;
-          }
-        }
-      }
-      
-    }
     .wsizewrap {
       display: flex;
       align-items: center;
@@ -413,7 +357,6 @@
   #menu_navi {
     .menu_area {
       .wsizewrap {
-
         .wsize.desktop {
         #menu1, 
         #menu2, 
@@ -537,29 +480,59 @@
 // 768px까지 작은 태블릿 화면
 @media screen and (max-width:$breakpoint-md) {
   // 헤더
-  // 로고크기변경
+  // pc용 헤더는 안보임
   #logo {
-    &::before {
-      width: 140px;
-    }
+    display: none;
   }
   // 검색창
   .gnb_search {
-    width: 190px;
-    .search_bar {
-
-      @include Regular-13;
-
-      &::placeholder {
-        color: $Gray_C7;
-        width: 100%;
+    display: none;    
+  }
+  #menu_navi {
+    .menu_area {
+      .wsizewrap {
+        .wsize.desktop {
+          display: none;
+        }
       }
     }
+  }
+  
+  // 헤더
+  // 모바일용 헤더 보이게
 
-    .search_btn {
-      &::after {
-        width: 20px;
-        height: 20px;
+  #menu_navi {
+    .menu_area {
+      .wsizewrap {
+        .wsize.mobile {
+          display: block;
+          .mobile-wrap {
+            .mobile-wrap__header {
+              display: flex;
+
+              #logoMbile {
+                display: flex;
+                align-items: center;   
+                height: $hd-height;
+                
+                a {
+                  text-indent: -9999px;
+                }
+
+                &::before {
+                  content: '';
+                  display: block;
+                  width: 160px;
+                  height: 80px;
+                  background: url(../images/loginPage_images/logoImages.png) $bg-img;
+                  background-size: 100%;
+                  filter: drop-shadow(1.5px 1.5px 1px $Gray_C7);
+                }
+
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -567,25 +540,38 @@
   #menu_navi {
     .menu_area {
 
-      .mobile {
-        display: none;
-      }
+      .wsizewrap {
 
-      .wsizewrap {        
-        .wsize.desktop {
-          #menu1, 
-          #menu2, 
-          #menu3, 
-          #menu4, 
-          #menu5 {
-            margin-left: 0px;
-            margin-right: 0px;
+        
     
-            padding: 40px 5px 40px 5px;
+            .mypgM::before {
+              display: block;
+              content: '\f007';
+              box-sizing: border-box;
+              font-family: "Font Awesome 6 Free";
+              width: 25px;
+              height: 25px;
+            }
     
-            @include Bold-13;
-          }
-        }
+            .notice::before {
+              display: block;
+              content: '\f0f3';
+              box-sizing: border-box;
+              font-family: "Font Awesome 6 Free";
+              width: 25px;
+              height: 25px;
+            }
+    
+            .menusee::before {
+              display: block;
+              content: '\f0c9';
+              box-sizing: border-box;
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              width: 25px;
+              height: 25px;
+            }
+
       }
     }
   }
