@@ -727,7 +727,7 @@
                     font-size: 20px;
                     line-height: 1.6rem;
                     font-weight: 900;
-                    
+
                     width: 25px;
                     height: 25px;
 
@@ -742,6 +742,41 @@
                 }
 
               }
+            }
+            .mobile-wrap_colRight__mobileMenu {
+              width: 100%;
+              background: $white;
+
+              .mobileMenu-list {
+                width: 100%;
+                padding-left: 10px;
+
+                .mobileMenu-list.menus {
+                  width: 100%;
+
+                  display: flex;
+                  flex-direction: column;
+
+                  .menus_menu1,
+                  .menus_menu2,
+                  .menus_menu3,
+                  .menus_menu4,
+                  .menus_menu5 {
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    .menu_tit {
+                      width: 100%;
+                      background: $Gray_55;
+                    }
+                    
+                  }
+                }
+              }
+
+
             }
           }
         }
