@@ -509,7 +509,7 @@
         display: block;
 
         width: 100%;
-        height: 100vh;
+        // height: 100vh;
 
         margin-left: auto;
 
@@ -747,9 +747,10 @@
               width: 100%;
               background: $white;
 
+              padding-top: 15px;
+
               .mobileMenu-list {
                 width: 100%;
-                padding-left: 10px;
 
                 .mobileMenu-list.menus {
                   width: 100%;
@@ -768,15 +769,37 @@
                     flex-direction: column;
 
                     .menu_tit {
-                      width: 100%;
-                      background: $Gray_55;
+                      // width: 100%;
+                      height: 60px;
+                      background: $Gray_E3;
+
+                      color: $black;
+                      @include SemiBold-20;
+
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+
+                      padding-left: 15px;
+                      padding-right: 15px;
+
+                      &::after {
+                        display: block;
+                        content: '\f078';
+                        box-sizing: border-box;
+                        font-family: "Font Awesome 6 Free";
+                        font-size: 20px;
+                        line-height: 1.6rem;
+                        font-weight: 900;
+
+                        width: 25px;
+                        height: 25px;
+                      }
                     }
                     
                   }
                 }
               }
-
-
             }
           }
         }
