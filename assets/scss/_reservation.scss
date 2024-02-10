@@ -544,7 +544,6 @@
                 height: 120px;
 
                 p {
-
                     width: 100%;
 
                     padding-top: 15px;
@@ -552,7 +551,7 @@
             }
         }
     }
-    
+
     #sec02 {
         width: 100%;
         // position: static;
@@ -569,15 +568,12 @@
                 .usercheck {
                     margin-bottom: 50px;
                 }
-                
             }
             .head-wrap {
                 padding-bottom: 0;
                 margin-bottom: 0;
 
                 @include SemiBold-16;
-
-
             }
         }
         .certification-wrap {
