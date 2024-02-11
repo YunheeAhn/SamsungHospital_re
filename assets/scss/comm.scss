@@ -584,21 +584,34 @@
                   font-weight: 900;
                   width: 25px;
                   height: 25px;
+
+                  cursor: pointer;
                 }
               }
             }
           }
+          .mobile-wrap_colRight.active {
+            right: 0;
+            opacity: 1; 
+            visibility: visible; 
+            transition: right 0.5s ease, opacity 0.5s ease, visibility 0s;
+            
+            
+          }
           .mobile-wrap_colRight {
-            // display: none;
             width: calc(100% - 10px);
-            height: 100vh;
+            height: 100%;
 
             margin-left: auto;
             background: $white;
 
             position: fixed;
             top: 0;
-            right: 0;
+            right: -100%;
+            opacity: 0;
+            visibility: hidden;
+
+            transition: right 0.5s ease, opacity 0.5s ease, visibility 0s linear 0.5s;
 
             .mobile-wrap_colRight__top {
               height: $hd-height;
@@ -609,7 +622,6 @@
               flex-direction: row;
               align-items: center;
 
-              
               .top_list {
                 width: 100%;
                 display: flex;
@@ -631,6 +643,8 @@
                     margin-right: auto;
 
                     margin-left: 10px;
+
+                    cursor: pointer;
                   }
                 }
                 .noti {
@@ -765,6 +779,7 @@
                   .menus_menu4,
                   .menus_menu5 {
                     width: 100%;
+                    height: 100%;
 
                     display: flex;
                     flex-direction: column;
@@ -801,11 +816,14 @@
 
                         width: 25px;
                         height: 25px;
+
+                        &:hover {
+                          color: $primary;
+                        }
                       }
                     }
                   }
                   .menus_menu1 {
-
                     &:hover {
                       .menu101_depth1,
                       .menu102_depth1,
@@ -817,25 +835,24 @@
                     .menu101_depth1,
                     .menu102_depth1,
                     .menu103_depth1 {
-                      @include Regular-16;
-
                       color: $black;
-
+                      @include Regular-16;
+                      
                       width: 100%;
                       height: 40px;
-
+                      
                       display: none;
                       // display: flex;
                       justify-content: space-between;
                       align-items: center;
-
+                      
                       padding-left: 20px;
                       padding-right: 15px;
-
+                      
                       &:hover {
                         color: $primary;
                       }
-
+                      
                       &::after {
                         display: block;
                         content: '\f078';
@@ -844,7 +861,7 @@
                         font-size: 16px;
                         line-height: 1.6rem;
                         font-weight: 600;
-
+                        
                         width: 25px;
                         height: 25px;
                         &:hover {
@@ -861,7 +878,6 @@
                   }
 
                   .menus_menu2 {
-
                     &:hover {
                       .menu201_depth1,
                       .menu202_depth1,
@@ -1129,94 +1145,84 @@
                 }
               }
             }
-            .mobile-wrap_justify {
+            
+            .mobile-wrap_colRight__SNS {
+              background: $white;
+
+              width: 100%;
+              height: 30px;
+              margin-bottom: auto;
+
+              .sns_list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+
+                .sns-twitter {
+                  &::before {
+                    display: block;
+                    content: '\e61b';
+                    box-sizing: border-box;
+                    font-family: "Font Awesome 6 Brands";
+                    font-weight: 400;
+                    width: 22px;
+                    height: 22px;
+
+                    margin-right: 10px;
+                  }
+
+                }
+                .sns-facebook {
+                  &::before {
+                    display: block;
+                    content: '\f09a';
+                    box-sizing: border-box;
+                    font-family: "Font Awesome 6 Brands";
+                    font-weight: 900;
+                    width: 22px;
+                    height: 22px;
+
+                    margin-right: 10px;
+                  }
+                }
+                .sns-youtube {
+                  &::before {
+                    display: block;
+                    content: '\f167';
+                    box-sizing: border-box;
+                    font-family: "Font Awesome 6 Brands";
+                    font-weight: 400;
+                    width: 22px;
+                    height: 22px;
+
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+            .mobile-wrap_colRight_contact {
+              background: $Gray_E3;
+
+              position: absolute;
+              bottom: 0;
 
               display: flex;
-              flex-direction: column ;
-              justify-content: space-between;
+              align-items: center;
+              justify-content: center;
+              
+              width: 100%;
+              height: 60px;
 
-              .mobile-wrap_blank {
-                height: 10px;
+              @include Regular-18;
 
-                
+              .contactTit {
+                margin-right: 10px
               }
-              .mobile-wrap_colRight__SNS {
-                background: $white;
-                
-                width: 100%;
-                height: 30px;
-
-                margin-bottom: auto;
-                
-                .sns_list {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-
-                  width: 100%;
-
-                  .sns-twitter {
-                    &::before {
-                      display: block;
-                      content: '\e61b';
-                      box-sizing: border-box;
-                      font-family: "Font Awesome 6 Brands";
-                      font-weight: 400;
-                      width: 22px;
-                      height: 22px;
-
-                      margin-right: 10px;
-                    }
-
-                  }
-                  .sns-facebook {
-                    &::before {
-                      display: block;
-                      content: '\f09a';
-                      box-sizing: border-box;
-                      font-family: "Font Awesome 6 Brands";
-                      font-weight: 900;
-                      width: 22px;
-                      height: 22px;
-                      
-                      margin-right: 10px;
-                    }
-
-                  }
-                  .sns-youtube {
-                    &::before {
-                      display: block;
-                      content: '\f167';
-                      box-sizing: border-box;
-                      font-family: "Font Awesome 6 Brands";
-                      font-weight: 400;
-                      width: 22px;
-                      height: 22px;
-
-                      margin-right: 10px;
-                    }
-                  }
-                }
-              }
-              .mobile-wrap_colRight_contact {
-                background: $Gray_C7;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                width: 100%;
-                height: 60px;
-
+              .contactTit,
+              .contactNum {
                 @include Regular-18;
-
-                .contactTit {
-                  margin-right: 10px
-                }
-                .contactTit,
-                .contactNum {
-                  @include Regular-18;
-                }
               }
             }
           }
