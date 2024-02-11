@@ -590,13 +590,12 @@
               }
             }
           }
+
           .mobile-wrap_colRight.active {
             right: 0;
             opacity: 1; 
             visibility: visible; 
             transition: right 0.5s ease, opacity 0.5s ease, visibility 0s;
-            
-            
           }
           .mobile-wrap_colRight {
             width: calc(100% - 10px);
