@@ -159,7 +159,6 @@ function tabs() {
   });
 }
 
-
 // 사이드메뉴
 function sidemenubar() {
   window.onscroll = function () {
@@ -167,7 +166,7 @@ function sidemenubar() {
     const scrollY = window.scrollY;
     if (scrollY > 750) {
       console.log(scrollY);
-      sidebar.style.top = scrollY - 580 + "px";
+      sidebar.style.top = scrollY - 540 + "px";
     } else {
       sidebar.style.top = "230px";
     }
@@ -176,4 +175,3 @@ function sidemenubar() {
 
 tabs();
 sidemenubar();
-
