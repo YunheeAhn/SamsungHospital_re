@@ -2,17 +2,6 @@
 
 //이현정 - main
 
-.healthCare-body {
-  //   background: url(../images/healthCarePage_images/healthcare_img.png) no-repeat
-  // center;
-}
-
-// 헤더 display:none
-// .hd-wrap {
-//   display: none;
-// }
-// 레이아웃 - Pc
-
 .healthcare-wrap {
   display: flex;
   max-width: 1280px;
@@ -61,10 +50,9 @@
 }
 // 사이드메뉴
 .sidemenubar {
-  //   background: rgba($color: lightblue, $alpha: 0.3);
   background: $white;
   width: 235px;
-  height: 3248px; //나중에 calc로 계산
+  height: 3285px;
   padding-top: 147px;
   border-left: 1px solid $Gray_C7;
   border-right: 1px solid $Gray_C7;
@@ -78,7 +66,7 @@
 
   .sidemenubar-container {
     position: absolute;
-    top: 230px;
+    top: 180px;
     transition: all 0.5s ease-in-out;
   }
 
@@ -202,8 +190,6 @@
 // 건강정보 내용
 
 .contents-wrap {
-  //   max-width: 950px;
-  //   flex-grow: 1;
   width: calc(100% - 235px - 81px);
   margin: 0 auto;
 }
@@ -211,10 +197,9 @@
 // 질환정보 - PC - 제목과 검색창
 
 .sec-disease-tab {
-  margin-top: 30%;
+  margin-top: 15%;
   position: relative;
   height: 402px;
-  margin-bottom: 13%;
   .sec-tit {
     padding: 7px 0;
   }
@@ -223,7 +208,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 }
 .sec-disease-tab {
@@ -290,7 +275,7 @@
   .tab-box {
     display: none;
     position: absolute;
-    top: 39%;
+    top: 32%;
     left: 0;
     right: 0;
     background: $primary;
@@ -361,7 +346,6 @@
   }
 
   .disease-card-container {
-    margin-top: 20px;
     border-top: 2px solid rgba($Gray_55, $alpha: 0.7);
     border-bottom: 1px solid rgba($Gray_55, $alpha: 0.7);
     display: flex;
@@ -373,8 +357,6 @@
   .disease-card {
     width: 22%;
     margin-bottom: 6%;
-    // height: 220px;
-    // margin-bottom: 40px;
 
     &:hover {
       img {
@@ -522,9 +504,7 @@
       display: none;
     }
   }
-  .slick-list {
-    // padding: 0;
-  }
+
   .slick-slide {
     margin: 0 0.25%;
   }
@@ -534,7 +514,6 @@
     .coach-card {
       padding: 20% 0;
       background: $coach-card-bg;
-      //   box-sizing: border-box;
       text-align: center;
       border-radius: 5px;
       display: flex;
@@ -605,7 +584,7 @@
     margin: 0 5%;
     .contents-wrap {
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 5%;
     }
   }
 }
@@ -615,6 +594,23 @@
 }
 // 반응형 - tablet(768)
 @media screen and (max-width: $breakpoint-md) {
+  .titbox-mb {
+    display: block;
+    height: 45px;
+    background: $Gray_E3;
+    text-align: center;
+    padding: 10px 0;
+    @include Bold-18;
+    &::before {
+      content: "\f104";
+      position: absolute;
+      top: 12.5%;
+      left: 8%;
+      font-family: "Font Awesome 6 Free";
+      font-size: 22px;
+      color: $Gray_55;
+    }
+  }
   .sec-disease-tab {
     .tab-box li {
       width: 27%;
@@ -637,30 +633,6 @@
 }
 // 반응형 - 모바일(576)
 @media screen and (max-width: $breakpoint-sm) {
-  .healthCare-body {
-    // background: url(../images/healthCarePage_images/healthcare_img_mb.png) 50% 0
-    //   no-repeat;
-    margin-top: 110px;
-  }
-
-  .titbox-mb {
-    display: block;
-    height: 45px;
-    background: $Gray_E3;
-    text-align: center;
-    padding: 10px 0;
-    @include Bold-18;
-    &::before {
-      content: "\f104";
-      position: absolute;
-      top: 13.5%;
-      left: 8%;
-      font-family: "Font Awesome 6 Free";
-      font-size: 22px;
-      color: $Gray_55;
-    }
-  }
-
   // 모바일 공통항목
   .sec-tit-mb,
   .sec-tit {
@@ -844,7 +816,6 @@
             text-align: left;
             @include Regular-13;
             margin-top: 10px;
-            // letter-spacing: -0.6px;
           }
         }
       }
