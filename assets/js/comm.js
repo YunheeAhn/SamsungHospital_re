@@ -77,6 +77,27 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.style.display = 'block';
     }
 
+    // 미디어쿼리(max-width:$breakpoint-md)768px 햄버거메뉴 활성화
+    const clickMobileBtn = document.querySelector('.menusee')
+    const ClickMobileBtnHide = document.querySelector('.go-back')
+    const activeMobileMenu = document.querySelector('.mobile-wrap_colRight')
+
+    clickMobileBtn.addEventListener('click', function() {
+        showMobileMenu(activeMobileMenu);
+        activeMobileMenu.classList.add('.active')
+    })
+    ClickMobileBtnHide.addEventListener('click', function() {
+        hideMobileMenu(activeMobileMenu);
+        activeMobileMenu.classList.add('.active')
+    })
+
+    function showMobileMenu(menu) {
+        menu.classList.toggle('active');
+    }
+
+    function hideMobileMenu(menu) {
+        menu.classList.remove('active');
+    }
+
     
 });
-  

@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "workbench.tree.indent": 8,
+    "html.format.indentInnerHtml": true,
+    "html.format.indentHandlebars": true,
+    "indentRainbow.indentSetter": {}
 }
