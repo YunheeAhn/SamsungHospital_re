@@ -52,7 +52,7 @@
 .sidemenubar {
   background: $white;
   width: 235px;
-  height: 3320px;
+  height: 3285px;
   padding-top: 147px;
   border-left: 1px solid $Gray_C7;
   border-right: 1px solid $Gray_C7;
@@ -197,7 +197,7 @@
 // 질환정보 - PC - 제목과 검색창
 
 .sec-disease-tab {
-  margin-top: 13%;
+  margin-top: 15%;
   position: relative;
   height: 402px;
   .sec-tit {
@@ -357,8 +357,6 @@
   .disease-card {
     width: 22%;
     margin-bottom: 6%;
-    // height: 220px;
-    // margin-bottom: 40px;
 
     &:hover {
       img {
@@ -586,7 +584,7 @@
     margin: 0 5%;
     .contents-wrap {
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 5%;
     }
   }
 }
@@ -818,7 +816,6 @@
             text-align: left;
             @include Regular-13;
             margin-top: 10px;
-            // letter-spacing: -0.6px;
           }
         }
       }
