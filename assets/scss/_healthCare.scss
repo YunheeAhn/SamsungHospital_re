@@ -509,7 +509,7 @@
     margin: 0 0.25%;
   }
   .slide-coach-wrapper {
-    width: 94%;
+    width: 100%;
     margin: 2% auto 0;
     .coach-card {
       padding: 20% 0;
@@ -591,6 +591,15 @@
 
 // 반응형 - tablet(992)
 @media screen and (max-width: $breakpoint-lg) {
+  .sec-coach {
+    .slide-coach-wrapper {
+      .coach-card {
+        span {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
 }
 // 반응형 - tablet(768)
 @media screen and (max-width: $breakpoint-md) {
