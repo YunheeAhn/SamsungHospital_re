@@ -2401,7 +2401,7 @@ h2 {
   margin: 0 0.25%;
 }
 .sec-coach .slide-coach-wrapper {
-  width: 94%;
+  width: 100%;
   margin: 2% auto 0;
 }
 .sec-coach .slide-coach-wrapper .coach-card {
@@ -2470,6 +2470,11 @@ h2 {
   .healthcare-wrap .contents-wrap {
     width: 100%;
     margin: 0 auto 5%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sec-coach .slide-coach-wrapper .coach-card span {
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 768px) {
