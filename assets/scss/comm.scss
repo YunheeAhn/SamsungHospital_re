@@ -26,16 +26,15 @@
   height: $hd-height;
 
   a {
-    text-indent: -9999px;
-  }
-
-  &::before {
-    content: '';
     display: block;
+
     width: 160px;
     height: 80px;
-    background: url(../images/loginPage_images/logoImages.png) $bg-img;
-    background-size: 100%;
+
+    img {
+      width: 160px;
+      height: 80px;
+    }
   }
 }
 
@@ -525,24 +524,32 @@
 
             background: $primary;
 
+            #logo {
+              display: flex;
+              align-items: center;
+
+              margin-right: auto;
+            
+              a {
+                display: block;
+            
+                width: 160px;
+                height: 80px;
+            
+                img {
+                  width: 160px;
+                  height: 80px;
+                  filter: drop-shadow(1.5px 0.5px .5px $Gray_C7);
+                }
+              }
+            }
             #logoMobile {
               display: flex;
               align-items: center;
 
               margin-right: auto;
 
-              .blank {
-                text-indent: -9999px;
-              }
-              &::before {
-                content: '';
-                display: block;
-                width: 160px;
-                height: 80px;
-                background: url(../images/loginPage_images/logoImages.png) $bg-img;
-                background-size: 100%;
-                filter: drop-shadow(1.5px 0.5px .5px $Gray_C7);
-              }
+              
             }
             .mobile-wrap_header__menu {
               display: flex;

@@ -314,15 +314,13 @@ legend {
   height: 100px;
 }
 #logo a {
-  text-indent: -9999px;
-}
-#logo::before {
-  content: "";
   display: block;
   width: 160px;
   height: 80px;
-  background: url(../images/loginPage_images/logoImages.png) no-repeat center center;
-  background-size: 100%;
+}
+#logo a img {
+  width: 160px;
+  height: 80px;
 }
 
 .gnb_search {
@@ -684,22 +682,25 @@ legend {
     width: 100%;
     background: #0b50a1;
   }
-  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logoMobile {
+  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logo {
     display: flex;
     align-items: center;
     margin-right: auto;
   }
-  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logoMobile .blank {
-    text-indent: -9999px;
-  }
-  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logoMobile::before {
-    content: "";
+  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logo a {
     display: block;
     width: 160px;
     height: 80px;
-    background: url(../images/loginPage_images/logoImages.png) no-repeat center center;
-    background-size: 100%;
+  }
+  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logo a img {
+    width: 160px;
+    height: 80px;
     filter: drop-shadow(1.5px 0.5px 0.5px #c7c7c7);
+  }
+  #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header #logoMobile {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
   }
   #menu_navi .menu_area .wsize.mobile .mobile-wrap .mobile-wrap_header .mobile-wrap_header__menu {
     display: flex;
