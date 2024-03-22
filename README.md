@@ -1,4 +1,3 @@
-<!-- markdownlint-disable MD033 -->
 <img src="./assets/images/loginPage_images/logoImages.png" width="18%">
 
 <h1 align="center">삼성서울병원 리뉴얼</h1>
@@ -14,6 +13,6 @@
 
 <h2>Team Members</h2>
 
-:hospital @YunheeAhn - 헤더, 풋터, 예약페이지
-:hospital @hyeeons - 건강정보페이지
-:hospital @lgy1543 - 메인페이지
+🏥 @YunheeAhn - 헤더, 풋터, 예약페이지 <br>
+🏥 @hyeeons - 건강정보페이지 <br>
+🏥 @lgy1543 - 메인페이지 <br>
