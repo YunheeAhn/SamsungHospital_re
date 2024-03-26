@@ -29,7 +29,7 @@
 <div display="flex">
   <a href="https://yunheeahn.github.io/SamsungHospital_re/"> 	🏥 메인 페이지 </a>
   <br/>
-  <a href="https://yunheeahn.github.io/SamsungHospital_re/reservation.html"> 	💪 sub 1 - 예약 페이지 </a>
+  <a href="https://yunheeahn.github.io/SamsungHospital_re/reservation.html"> 	📘 sub 1 - 예약 페이지 </a>
   <br />
   <a href="https://yunheeahn.github.io/SamsungHospital_re/healthCare.html"> 	💪 sub 2 - 건강정보 페이지 </a>
 </div>
