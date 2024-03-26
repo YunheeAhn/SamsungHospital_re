@@ -1,3 +1,5 @@
+
+
 <img src="./assets/images/loginPage_images/logoImages.png" width="18%">
 
 <h1 align="center">삼성서울병원 리뉴얼</h1>
@@ -27,7 +29,9 @@
 
 <div display="flex">
   <a href="https://yunheeahn.github.io/SamsungHospital_re/"> 	🏥 메인 페이지 </a>
-  <a href="https://yunheeahn.github.io/SamsungHospital_re/reservation.html"> 	💪 sub 1 - 예 페이지 </a>
+  <br/>
+  <a href="https://yunheeahn.github.io/SamsungHospital_re/reservation.html"> 	📘 sub 1 - 예약 페이지 </a>
+  <br />
   <a href="https://yunheeahn.github.io/SamsungHospital_re/healthCare.html"> 	💪 sub 2 - 건강정보 페이지 </a>
 </div>
 
