@@ -16,17 +16,20 @@
 
 <h2>Team Members</h2>
 
+<div display="flex">
 🏥 @YunheeAhn - 헤더, 풋터, 예약페이지 <br>
 🏥 @hyeeons - 건강정보페이지 <br>
 🏥 @lgy1543 - 메인페이지 <br>
-
+</div>
 
 <h2> Go to Pages </h2>
 아래의 링크를 통해 페이지를 확인해주세요 🎯 <br/>
-<a href="https://yunheeahn.github.io/SamsungHospital_re/"> 	🏥 메인 페이지 </a>
-<a href="https://yunheeahn.github.io/SamsungHospital_re/reservation.html"> 	💪 sub 1 - 예 페이지 </a>
-<a href="https://yunheeahn.github.io/SamsungHospital_re/healthCare.html"> 	💪 sub 2 - 건강정보 페이지 </a>
 
+<div display="flex">
+  <a href="https://yunheeahn.github.io/SamsungHospital_re/"> 	🏥 메인 페이지 </a>
+  <a href="https://yunheeahn.github.io/SamsungHospital_re/reservation.html"> 	💪 sub 1 - 예 페이지 </a>
+  <a href="https://yunheeahn.github.io/SamsungHospital_re/healthCare.html"> 	💪 sub 2 - 건강정보 페이지 </a>
+</div>
 <br/>
 <br/>
 
