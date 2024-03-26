@@ -68,7 +68,7 @@ $(document).ready(function(){
   const tvswiper = new Swiper('.slide-tv', {
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 20,  
+    spaceBetween: 10,  
      scrollbar: {
       el: ".swiper-scrollbar",
       hide: true,
@@ -82,7 +82,7 @@ $(document).ready(function(){
   const infoswiper = new Swiper('.slide-info', {
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 20,    
+    spaceBetween: 10,    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

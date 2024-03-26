@@ -1,470 +1,379 @@
-// 가영님 메인페이지 scss
-
-// section1(메인베너)
-.sec-g{
+.sec1 {
     position: relative;
 }
 .slide-intro {
-  width: 100vw;
-  height: 100vh;
+    height: 100vh;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-  }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+    }
 }
-//section2(메인베너 위 서비스 바로가기)
-//박스 공통 속성
-.servicebox_wrapper{
-    width: 100%;
-    max-width: 1280px;    //반응형
-    position: absolute;
+.servicebox_wrapper {
+    max-width: $breakpoint-xl;
+
     display: flex;
-    top:0;
-    left:50%;
-    transform: translate(-50%,-130%);     
-    z-index: 1;
-    span{
-      @include SemiBold-24; 
-    }
- 
-    .servicebox{
-     width: 25%;
-     height: 300px;
-     margin-right: 16px;
-     border-radius: 10px;
-     color: $white;
-     a{
-        display: inline-block;
-        color: $white;
-        padding: 9.5px 18px;
-        border: 1px solid $white;
-        text-align: center;
-     }
-     a:hover{
-      color: $black;
-      background-color: $white;
-     }
-     .box3-button{
-      padding: 9.5px 60px;
-     }
-    }
-  .service-text{
-      margin-bottom: 100px;           
-  }
+    margin: 0 auto;
+    gap: 20px;
 
-    //박스 개별 속성
-    .servicebox1.show{
-        background-color: $secondary_B4;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transform: translateY(0);
-      }
-    .servicebox1{
-      opacity: 0;     
-      transform: translateY(60px);
-      transition: opacity 3s ease-out, transform 2s ease-out;
-    }
-
-    .servicebox2.show{
-        background-color: $secondary_B3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .servicebox2{
-      opacity: 0;
-      transform: translateY(60px);
-      transition: opacity 3s ease-out, transform 2s ease-out;
-    }
-
-    .servicebox3.show{
-        background-color: $secondary_B2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .servicebox3{
-      opacity: 0; 
-      transform: translateY(60px);
-      transition: opacity 3s ease-out, transform 2s ease-out;
-    }
-
-    .servicebox4.show{
-        background-color: $white;
-        display: block;
-        border-color:$Gray_C7;
-        color:$black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transform: translateY(0);
-
-      .loginbox1 .non-member-text{
-        color: $secondary_B1;
-        @include SemiBold-24; 
-      }
-      .loginbox1 .member-text{
-        color: $black;
-        @include SemiBold-24; 
-      }
-      .loginbox1 a:hover{
-        text-decoration: underline;
-      }
-      .loginbox2 a{
-        color:$black;
-      }
-      .loginbox2 a:hover{
-        text-decoration: underline;
-      }
-      .inputbox{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-      input{
-        padding: 12px 0;
-        width: 239px;
-        margin-top: 7px;
-       }  
-      }
-      button{
-        background-color: $secondary_B4;
-        color: $white;
-        padding: 12px 94px;  
-        margin-bottom: 18px;      
-      }
-    }
-    .servicebox4{
-      opacity: 0; 
-      transform: translateY(60px);
-      transition: opacity 3s ease-out, transform 2s ease-out;
-    }
-
-  }
-  
-//박스 개별 속성
-
-//section3(공지글)
-// .swiper-button-next{
-//   position: relative;
-//   transform: translateX(0);
-// }
-.sec3{
-  background: $primary;
-  width: 100%;
-  height: 390px;
-
-  a{
-    display: block;
-    text-align: center;
-  }
-  .slick-slide{
-    position: relative;
-  }
-  .slick-slide a:nth-child(2){
-    @include SemiBold-18;
-    margin: 15px 0px;
-  }
-  .slick-slide a:nth-child(3){
-    @include Regular-13;
-    margin-top: 30px;
-  }
-  .slick-slide a:nth-child(4){
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-left: 3px;
-  }
-
-  }
-   h2{
-    @include Bold-48;
-  }
-
- .notice-wrapper{
-  display: flex;
-  width: 100%;
-  max-width:1280px;
-  margin: auto;
-  .slick-slide{
-    border-radius: 5px;
-    border: 2px solid $black;
-  }
-  .slick-slide:hover{
-    border:4px solid $secondary_B5;
-  }
-  .notice{
-    width: 70px;
-    height: 40px;
-    background-color:$secondary_B5;
     color: $white;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .notice-text{
-   width:328px;
-   height:260px;
-   color: $white;
-   margin-top: 77px;
-  }
-  .slide-notice{
-    margin-top: 77px;
+
     position: absolute;
-    left:calc(50% - 312px);
-    right: 0;
-    .slick-prev {
-    left: -315px;
-    transform: translateY(283%);
-    }
-    .slick-next{
-      left: -246px;
-      transform: translateY(283%);
-    }
-    .slick-prev::before, .slick-next::before{
-      font-size: 50px;
-    }
-  }
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
 
- .number{
-  color:$Gray_88;
-  @include Regular-13;
- }
+    z-index: 10000;
+
+    .servicebox {
+        width: 304px;
+        height: 300px;
+
+        background: pink;
+
+        border-radius: 10px;
+
+        padding: 30px;
+
+        .service-text {
+            .service-text-tit {
+                @include SemiBold-26;
+
+                padding-top: 8px;
+                padding-bottom: 26px;
+            }
+            :nth-child(2) {
+                @include Regular-18;
+            }
+        }
+        .service-btn {
+            padding-top: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            a {
+                color: $white;
+                border: 1px white solid;
+                padding : 8px 3%;
+
+                @include Regular-13;
+                text-align: center;
+
+                width: 100%;
+
+            }
+        }
+
+        &.servicebox1 {
+            background: $secondary_B4;
+            .service-btn {
+                a:hover {
+                    background: $white;
+                    color: $secondary_B4;
+                }
+            }
+        }
+        &.servicebox2 {
+            background: $secondary_B3;
+            .service-btn {
+                a:hover {
+                    background: $white;
+                    color: $secondary_B3;
+                }
+            }
+        }
+        &.servicebox3 {
+            background: $secondary_B2;
+            .service-btn {
+                a:hover {
+                    background: $white;
+                    color: $secondary_B2;
+                }
+            }
+        }
+        &.servicebox4 {
+            background: $white;
+            
+
+            .loginbox1 {
+                display: flex;
+                align-items: center;
+
+                gap: 8px;
+
+                @include SemiBold-26;
+
+                margin-bottom: 26px;
+
+                .non-member-text {
+                    color : $secondary_B1;
+                }
+                p {
+                    color: $Gray_C7;
+                    @include Regular-16;
+                }
+            }
+            .inputbox {
+                margin-bottom: 9px;
+
+                input {
+                    height: 40px;
+                    width: 100%;
+                    margin-bottom: 9px;
+
+                    border: .8px solid $Gray_C7;
+                    padding-left: 5px;
+
+                    ::placeholder {
+                        @include Regular-16;
+                    }
+                }
+            }
+            .loginbox2 {
+                @include Regular-13;
+
+                color: $Gray_C7;
+
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+
+                margin-bottom: 28px;
+            }
+            button {
+                width: 100%;
+                color: $white;
+                background: $secondary_B4;
+                height: 35px;
+            }
+        }
+    }
 }
-  .slide-notice .slick-slide {
-    background: $white;
-    width: 200px;
-    height: 220px;
-    margin-right: 15px;
-  }
 
- //section4(주요서비스)
- .sec4-h2{
-  @include Bold-48;
-  width: 100%;
-  text-align: center;
-  margin-top: 120px;
-}
-.sec4{
-  padding: 100px 0;
-  margin:120px auto;
-  background-color: $gray_F8;
-  max-width: 100%;
-  border-radius: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sec2 {
+    background: $primary;
 
-  .goto-wrapper{ 
-    margin-top: 20px;
-    width: 1280px;
-    max-width: 100%;
-    ul {
-      display: flex;
-      justify-content:center;
-      align-items: center; 
-      li a{
+    position: relative;
+    
+    .notice-wrapper {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        background-color:#D8EAFF;
-        margin:0px 18px 0 20px;        
-        }
-        li a:hover{
-          background-color: #B8FBFF;
-          @include SemiBold-20;
+
+        margin: 0 auto;
+        max-width: $breakpoint-xl;
+
+        .notice-text {
+            color: $white;
+            margin-top: 70px;
+
+            h2 {
+                @include Bold-48;
+                font-weight: 700;
+                margin-bottom: 24px;
+
+                ::after {
+                    display: block;
+                    content: '+';
+                    width: 22px;
+                    height: 22px;
+
+                    @include Regular-18;
+                    text-align: center;
+
+                    color: white;
+                }
+            }
+            .notice-text-1 {
+                @include Regular-16;
+            }
 
         }
-        img{
-          width: 80px;
-          height:80px;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-        img:hover {
-          animation: rotateAnimation 0.5s 1 linear;
-        }       
-        @keyframes rotateAnimation {
-          from {
-            transform: rotateY(0deg);
-          }
-          to {
-            transform: rotateY(360deg);
-          }
-        }
-        .doc{
-            width: 76px;
-        }
-      }
-    }
-  }
+        .slide-notice {
+            width: 100%;
 
-//section5(건강tv)
-.healthstory-txt{
-  text-align: center;
-  margin-bottom: 80px; 
-}
-.sec5{
-  margin: auto;
-  background: $gray_F8;
-  padding-top: 40px;
-  .healthtv-slide{
-    max-width: 1280px;
-    width: 100%;
-    margin: auto;
-  }
-  h2{  
-    width: 100%;
-    margin-top: 120px;
-    margin-bottom: 16px;
-  }
-  h3{
-    @include SemiBold-30 ;
-    text-align: left;
-    margin-bottom: 30px;
-    strong{
-      color:$primary;
+            .slick-slide {
+                display: flex;
+            }
+        }
+        
     }
-  }
-  .slide-tv{
-    width: 100%;
-    height: 500px;
-    text-align: center;
-    img{
-     width: 550px;
-    }
-    p{
-      @include SemiBold-24;
-      margin-left:20px;
-    }
-    a:hover{
-      text-decoration:underline;
-    }
-
-  .swiper-button-next, .swiper-button-prev{
-    position: absolute;
-    transform: translate(35%, -195%);
-  }
-  .swiper-button-prev{
-    position: absolute;
-    transform: translate(-45%, -195%);
-  }
 }
 
-  .healthinfo-slide{
-  max-width: 1280px;
-  margin: auto;
-  padding-top: 50px;
-  text-align: center;
-  .slide-info{
-    width: 100%;
-    height: 500px;
-      img{
-        width: 550px;
-        margin: 0px 20px 0px 20px; 
+.sec3 {
+    margin-top: 35px;
+    
+    .goto-wrapper {
+        max-width: $breakpoint-xl;
+        margin: 0 auto;
+
+        margin-top: 80px;
+        margin-bottom: 120px;
+
+        .goto-list {
+            display: flex;
+            gap: 14px;
+
+            li {
+                width: 200px;
+                height: 200px;
+
+                border-radius: 50%;
+
+                background: $secondary_B6;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    margin-bottom: 10px;
+                }
+            }
+            li:hover {
+                background: $secondary_No;
+            }
+        }
     }
-    p{
-      @include SemiBold-24;
-      margin-left:20px;
-    }
-    a:hover{
-      text-decoration:underline;
-    }
-  .swiper-button-next{
-    transform: translate(40%, -195%);
-  }
-  .swiper-button-prev{
-    transform: translate(-45%, -195%);
-  }
-   }
-  }
 }
 
-
-//section(last section,오시는길)
-.sec6{
-  max-width:1280px;
-  width: 100%;
-  height: 900px;
-  margin: auto;
-  h2{  
-    @include SemiBold-30;
-    width: 100%;
-    margin-top: 70px;
-    margin-bottom: 16px;
-  }
-  .mapbox-txt{
-    text-align: center;
-  }
-  .mabbox-goto{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:40px;
-  }
-  ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-  }
-  ul li a{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:100px;
-    height:100px;
-  }
-  #map{
-    width: 70%;
-    background-color:$Gray_C7;
-    height:600px;
-    margin-top:40px;
-  }
-
-  .map-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center ;
-  .map-img{
-    overflow: hidden;
-
-  }
-  }
-  .map-info{
-    width: 70%;
-    height: 100px;
-    background-color:$primary;
-    a{
-      padding: 9px 0;
-      text-align: center;
-      background-color:$secondary_B3;
-      display: block;
-      width: 140px;
-      margin-bottom: 15px;
+.sec4 {
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+    
+    .healthstory-txt {
+        @include Bold-48;
+        font-weight: 700;
+        
+        text-align: center;
+        
+        margin-top: 142px;
+        
+        p {
+            margin-top: 40px;
+            margin-bottom: 54px;
+            @include Regular-18;
+        }
     }
-  }
+    
+    .health-video {
+        display: flex;
+        gap: 10px;
+
+        margin-bottom: 190px;
+
+        .healthtv-slide, .healthinfo-slide {
+            width: 50%;
+
+            h4 {
+                text-align: center;
+                margin-bottom: 40px;
+
+                @include SemiBold-26;
+            }
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 230px;
+                        a {
+                            img {
+                                width: 230px;
+                                height: 130px
+                            }
+                        };
+                    }
+                }
+            }
+        }
+    }
 }
 
+.sec5 {
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+    
+    .mapbox-txt {
+        text-align: center;
 
+        h4 {
+            @include Bold-48;
+            font-weight: 700;
+        }
+        p {
+            margin-top: 40px;
+            margin-bottom: 54px;
+            @include Regular-18;
+        }
+    }
+
+    .mapbox-inner {
+        margin-top: 54px;
+        margin-bottom: 140px;
+
+        .mapbox-list {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 75px;
+
+            gap: 150px;
+
+            .mapbox-listItem {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .mapbox-info {
+            #map {
+                width: 100%;
+                height: 597px;
+
+                background: beige;
+            }
+            .map-info_inner {
+                width: 100%;
+                height: 137px;
+
+                background: $primary;
+
+                padding: 20px;
+
+                color: $white;
+
+                display: flex;
+                justify-content: space-between;
+
+                .map-info-txt {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .map-tit {
+                        @include SemiBold-20;
+                    }
+                }
+                .map-btn {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    a {
+                        border: 1px solid $white;
+                        color: $white;
+
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
